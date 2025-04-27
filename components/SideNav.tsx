@@ -10,6 +10,7 @@ import ShieldCheckIcon from './img/sidebar/ShieldCheckIcon';
 import PluginIcon from './img/sidebar/PluginIcon';
 import CommerceIcon from './img/sidebar/CommerceIcon';
 import WebhookIcon from './img/sidebar/WebhookIcon';
+import { useSidebarStore } from '../hooks/useSidebarStore'; 
 
 const items = [
   {
@@ -90,8 +91,14 @@ export function SideNav() {
     setOpenSection((prev) => (prev === title ? null : title));
   };
 
+  const isOpen = useSidebarStore((state) => state.isOpen);
+  const closeSidebar = useSidebarStore((state) => state.close);
+
   return (
-    <nav className="hidden lg:block w-80 h-[calc(100vh-4rem)] sticky top-16 overflow-y-auto border-r border-gray-200 px-4 py-6 text-sm">
+     <nav
+        className={`fixed top-[130px] left-0 z-50 h-full w-full bg-white border-r border-gray-200 px-4 py-6 text-sm transform transition-transform ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        } lg:translate-x-0 lg:static lg:h-[calc(100vh-4rem)] lg:block`}>
       <ul className="space-y-6">
         {items.map((section) => {
           const Icon = section.icon;
