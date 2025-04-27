@@ -1,0 +1,30 @@
+{
+	"name": "docs-v2",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"serve": "PORT=3010 NODE_PATH=. pm2 start npm --name docs-v2 -- start"
+	},
+	"dependencies": {
+		"@markdoc/markdoc": "latest",
+		"@markdoc/next.js": "latest",
+		"@tailwindcss/postcss": "^4.1.4",
+		"next": "latest",
+		"postcss": "^8.5.3",
+		"prismjs": "latest",
+		"react": "latest",
+		"react-dom": "latest",
+		"tailwindcss": "^4.1.4"
+	},
+
+	"devDependencies": {
+		"@svgr/webpack": "^8.1.0",
+		"@types/node": "latest",
+		"@types/react": "latest",
+		"@types/react-dom": "latest",
+		"typescript": "latest"
+
+	}
+}
