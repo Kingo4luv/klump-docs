@@ -96,7 +96,7 @@ export function SideNav() {
 
   return (
      <nav
-        className={`fixed top-[130px] left-0 z-50 h-full w-full bg-white border-r border-gray-200 px-4 py-6 text-sm transform transition-transform ${
+        className={`fixed top-[130px] left-0 z-50 h-full w-full lg:w-72 bg-white border-r border-gray-200 px-4 py-6 text-sm transform transition-transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } lg:translate-x-0 lg:static lg:h-[calc(100vh-4rem)] lg:block`}>
       <ul className="space-y-6">
@@ -117,7 +117,7 @@ export function SideNav() {
                 <Icon className="w-4 h-4 shrink-0" />
                 <Link
                   href={section.href}
-                  
+                  onClick={closeSidebar}
                 >
                   {section.title}
                 </Link>
@@ -148,6 +148,7 @@ export function SideNav() {
                             ? 'text-[#192C69] font-medium'
                               : 'text-gray-800 hover:text-gray-900'
                             }`}
+                            onClick={closeSidebar}
                         >
                           {link.label}
                         </Link>
