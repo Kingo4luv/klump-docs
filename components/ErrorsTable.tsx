@@ -1,4 +1,4 @@
-'use client';
+
 
 export default function ErrorsTable() {
     const errors = [

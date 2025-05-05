@@ -1,4 +1,4 @@
-'use client';
+
 
 import EnvIcon from '../img/EnvIcon';
 import IntegrateIcon from '../img/IntegrateIcon';

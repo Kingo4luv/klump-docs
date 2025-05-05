@@ -16,6 +16,8 @@
 		"prismjs": "latest",
 		"react": "latest",
 		"react-dom": "latest",
+		"react-syntax-highlighter": "^15.6.1",
+		"remove": "^0.1.5",
 		"tailwindcss": "^4.1.4",
 		"zustand": "^5.0.3"
 	},
@@ -24,6 +26,7 @@
 		"@types/node": "latest",
 		"@types/react": "latest",
 		"@types/react-dom": "latest",
+		"shiki": "^3.3.0",
 		"typescript": "latest"
 	}
 }

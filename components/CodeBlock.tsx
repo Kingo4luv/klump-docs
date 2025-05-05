@@ -1,35 +1,19 @@
-import Prism from 'prismjs';
+// components/CodeBlock.client.tsx
+'use client';
 
-import * as React from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-export function CodeBlock({children, 'data-language': language}) {
-  const ref = React.useRef(null);
-
-  React.useEffect(() => {
-    if (ref.current) Prism.highlightElement(ref.current, false);
-  }, [children]);
-
+export default function CodeBlock({
+  code,
+  lang = 'bash',
+}: {
+  code: string;
+  lang?: string;
+}) {
   return (
-    <div className="code" aria-live="polite">
-      <pre
-        ref={ref}
-        className={`language-${language}`}
-      >
-        {children}
-      </pre>
-      <style jsx>
-        {`
-          .code {
-            position: relative;
-          }
-
-          /* Override Prism styles */
-          .code :global(pre[class*='language-']) {
-            text-shadow: none;
-            border-radius: 4px;
-          }
-        `}
-      </style>
-    </div>
+    <SyntaxHighlighter language={lang} style={vscDarkPlus} customStyle={{ borderRadius: '8px', maxHeight:'600px', overflowY: 'auto' }}>
+      {code}
+    </SyntaxHighlighter>
   );
 }

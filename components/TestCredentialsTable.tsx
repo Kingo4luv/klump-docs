@@ -1,5 +1,5 @@
 // components/TestCredentials.tsx
-'use client';
+
 
 export default function TestCredentials() {
     const credentials = [

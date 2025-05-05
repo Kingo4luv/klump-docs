@@ -1,4 +1,4 @@
-'use client';
+
 
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -48,35 +48,22 @@ const items = [
     icon: WebhookIcon,
     href: '/docs/webhooks',
     links: [
-      { href: '/docs/webhook-getting-started', label: 'Webhook Getting Started' },
-      { href: '/docs/environme', label: 'Environments' },
-      { href: '/docs/test-card', label: 'Test credentials' },
-      { href: '/docs/errors', label: 'Errors' },
-      { href: '/docs/api-keys-authorization', label: 'API Keys & Authorization' },
+      { href: '/docs/webhook-getting-started', label: 'Getting Started' },
+      { href: '/docs/setting-up-webhook', label: 'Setting up Webhook' },
+      { href: '/docs/resend-webhook', label: 'Resend Webhook' },
     ],
   },
   {
     title: 'Plugins & Library',
     icon: PluginIcon,
     href: '/docs/plugins',
-    links: [
-      { href: '/docs/j', label: 'Introduction' },
-      { href: '/docs/environ', label: 'Environments' },
-      { href: '/docs/test-card', label: 'Test credentials' },
-      { href: '/docs/errors', label: 'Errors' },
-      { href: '/docs/api-keys-authorization', label: 'API Keys & Authorization' },
-    ],
   },
   {
     title: 'Klump Commerce',
     icon: CommerceIcon,
     href: '/docs/commerce',
     links: [
-      { href: '/docs/i', label: 'Introduction' },
-      { href: '/docs/enviro', label: 'Environments' },
-      { href: '/docs/test-card', label: 'Test credentials' },
-      { href: '/docs/errors', label: 'Errors' },
-      { href: '/docs/api-keys-authorization', label: 'API Keys & Authorization' },
+      { href: '/docs/inventory-management', label: 'Inventory Management' },
     ],
   },
 ];

@@ -1,71 +1,85 @@
-import React from 'react';
-import Link from 'next/link';
+'use client';
 
-export function TableOfContents({toc}) {
-  const items = toc.filter(
-    (item) => item.id && (item.level === 2 || item.level === 3)
-  );
+import { useEffect, useState } from 'react';
 
-  if (items.length <= 1) {
-    return null;
-  }
+interface TocItem {
+  id: string;
+  label: string;
+}
+
+interface TableOfContentsProps {
+  sections: TocItem[];
+}
+
+export default function TableOfContents({ sections }: TableOfContentsProps) {
+  const [activeId, setActiveId] = useState<string>('');
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const initialId = hash.replace('#', '');
+      setActiveId(initialId);
+    } else if (sections.length > 0) {
+      setActiveId(sections[0].id);
+    }
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0.1,
+      }
+    );
+
+    const targets = sections
+      .map(({ id }) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+
+    targets.forEach((el) => observer.observe(el));
+
+    return () => targets.forEach((el) => observer.unobserve(el));
+  }, [sections]);
 
   return (
-    <nav className="toc">
-      <ul className="flex column">
-        {items.map((item) => {
-          const href = `#${item.id}`;
-          const active =
-            typeof window !== 'undefined' && window.location.hash === href;
-          return (
-            <li
-              key={item.title}
-              className={[
-                active ? 'active' : undefined,
-                item.level === 3 ? 'padded' : undefined,
-              ]
-                .filter(Boolean)
-                .join(' ')}
-            >
-              <Link href={href}>
-                {item.title}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-      <style jsx>
-        {`
-          nav {
-            position: sticky;
-            top: calc(2.5rem + var(--top-nav-height));
-            max-height: calc(100vh - var(--top-nav-height));
-            flex: 0 0 auto;
-            align-self: flex-start;
-            margin-bottom: 1rem;
-            padding: 0.5rem 0 0;
-            border-left: 1px solid var(--border-color);
-          }
-          ul {
-            margin: 0;
-            padding: 0 1.5rem;
-          }
-          li {
-            list-style-type: none;
-            margin: 0 0 1rem;
-          }
-          li :global(a) {
-            text-decoration: none;
-          }
-          li :global(a:hover),
-          li.active :global(a) {
-            text-decoration: underline;
-          }
-          li.padded {
-            padding-left: 1rem;
-          }
-        `}
-      </style>
-    </nav>
+    <aside className="hidden lg:block w-1/4">
+      <div className="sticky top-24 pt-4">
+        <h5 className="text-sm font-semibold text-gray-700 mb-2">On this page</h5>
+        <ul className="border-l border-gray-200 pl-4 text-sm text-gray-600 space-y-2">
+          {sections.map(({ id, label }) => {
+            const isActive = activeId === id;
+            return (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  onClick={() => setActiveId(id)}
+                  className={`flex items-center space-x-2 ${isActive
+                    ? 'text-[#192C69] font-medium'
+                    : 'text-gray-600 hover:text-[#192C69]'
+                    }`}
+                >
+                  <span
+                    className={`rounded-full block ${isActive
+                      ? 'h-3 w-3 border bg-[#192C69] flex items-center justify-center'
+                      : 'h-2 w-2 bg-gray-300'
+                      }`}
+                  >
+                    {isActive && <span className="h-1 w-1 rounded-full bg-white block" />}
+                  </span>
+                  <span>{label}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </aside>
   );
 }

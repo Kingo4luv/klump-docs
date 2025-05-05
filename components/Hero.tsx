@@ -1,4 +1,4 @@
-'use client';
+
 import HeroCode from "./img/HeroCode";
 import HeroWidget from "./img/HeroWidget";
 

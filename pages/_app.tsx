@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 
-import { SideNav, TableOfContents, TopNav } from '../components';
+import { SideNav, TopNav } from '../components';
 
 import 'prismjs';
 // Import other Prism themes here
@@ -65,6 +65,8 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
     ? collectHeadings(pageProps.markdoc.content)
     : [];
 
+  const hiddenPaths = ['/', '/integrating-klump'];
+
   return (
     <>
       <Head>
@@ -80,11 +82,10 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         <Link href="/docs">Docs</Link>
       </TopNav>
       <div className="flex">
-        {pathname !== '/' && <SideNav />}
+        {!hiddenPaths.includes(pathname) && <SideNav />}
         <main className="w-full flex-1">
           <Component {...pageProps} />
         </main>
-        {/* <TableOfContents toc={toc} /> */}
       </div>
 
     </>

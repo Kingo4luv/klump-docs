@@ -1,9 +1,10 @@
-'use client';
+
 
 import type { ReactNode } from 'react';
 import { FeedbackBox } from '../home/FeedbackBox';
 import Callout from '../Callout';
 import IntoPageImage from '../img/intro/PageImage';
+import TableOfContents from '../TableOfContents';
 
 interface IntoLayoutProps {
     children: ReactNode;
@@ -76,19 +77,11 @@ export default function IntoLayout({ children, readingTime, date, title }: IntoL
                 <FeedbackBox />
             </div>
 
-            {/* Sidebar */}
-            <aside className="hidden lg:block w-1/4">
-                <div className="sticky top-24 pt-4">
-                    <h5 className="text-sm font-semibold text-gray-700 mb-2">On this page</h5>
-                    <ul className="border-l border-gray-200 pl-4 text-sm text-gray-600">
-                        <li className='flex space-x-1 items-center'>
-                            <span className="h-3 w-3 border rounded-full bg-[#192C69] flex items-center justify-center">
-                                <span className="h-1 w-1 rounded-full bg-white block"></span>
-                            </span>
-                            <a href="#introduction" className="text-[#192C69] font-medium">Introduction</a></li>
-                    </ul>
-                </div>
-            </aside>
+            <TableOfContents
+                sections={[
+                    { id: 'introduction', label: 'Introduction' },
+                ]}
+            />
         </div>
     );
 }
