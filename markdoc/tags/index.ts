@@ -16,3 +16,6 @@ export * from './paymentpages.markdoc';
 export * from './verification.markdoc';
 export * from './transactionverification.markdoc';
 export * from './webhook.markdoc';
+export * from './webhookgettingstarted.markdoc';
+export * from './settingupwebhooks.markdoc';
+export * from './resendwebhooks.markdoc';
