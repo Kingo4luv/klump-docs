@@ -19,3 +19,6 @@ export * from './webhook.markdoc';
 export * from './webhookgettingstarted.markdoc';
 export * from './settingupwebhooks.markdoc';
 export * from './resendwebhooks.markdoc';
+export * from './plugins.markdoc';
+export * from './commerce.markdoc';
+export * from './inventorymanagemnt.markdoc'

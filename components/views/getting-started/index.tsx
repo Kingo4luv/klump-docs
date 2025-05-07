@@ -3,12 +3,14 @@ import StartUsingKlump from "../../getting-started/StartUsingKlump";
 import { FeedbackBox } from "../../home/FeedbackBox";
 
 export default function GettingStarted() {
-    
+
     return (
         <>
             <GetStarted />
             <StartUsingKlump />
-            <FeedbackBox />
+            <div className="max-w-[826px] mx-auto">
+                <FeedbackBox />
+            </div>
         </>
     );
 }

@@ -8,7 +8,9 @@ export default function VerificationHome() {
         <>
             <Verification />
             <StartUsingKlump />
-            <FeedbackBox />
+            <div className="max-w-[826px] mx-auto">
+                <FeedbackBox />
+            </div>
         </>
     );
 }
