@@ -9,621 +9,621 @@ const PluginIcon = (props) => (
         xmlnsXlink="http://www.w3.org/1999/xlink"
         {...props}
     >
-        <g clipPath="url(#a)">
-            <rect width={300} height={157} rx={8} fill="#fff" />
-            <g clipPath="url(#b)" fill="#F1F1F1">
-                <circle cx={1.5} cy={1.5} r={1.5} />
-                <circle cx={10.5} cy={1.5} r={1.5} />
-                <circle cx={19.5} cy={1.5} r={1.5} />
-                <circle cx={28.5} cy={1.5} r={1.5} />
-                <circle cx={37.5} cy={1.5} r={1.5} />
-                <circle cx={46.5} cy={1.5} r={1.5} />
-                <circle cx={55.5} cy={1.5} r={1.5} />
-                <circle cx={64.5} cy={1.5} r={1.5} />
-                <circle cx={73.5} cy={1.5} r={1.5} />
-                <circle cx={82.5} cy={1.5} r={1.5} />
-                <circle cx={91.5} cy={1.5} r={1.5} />
-                <circle cx={100.5} cy={1.5} r={1.5} />
-                <circle cx={109.5} cy={1.5} r={1.5} />
-                <circle cx={118.5} cy={1.5} r={1.5} />
-                <circle cx={127.5} cy={1.5} r={1.5} />
-                <circle cx={136.5} cy={1.5} r={1.5} />
-                <circle cx={145.5} cy={1.5} r={1.5} />
-                <circle cx={154.5} cy={1.5} r={1.5} />
-                <circle cx={163.5} cy={1.5} r={1.5} />
-                <circle cx={172.5} cy={1.5} r={1.5} />
-                <circle cx={181.5} cy={1.5} r={1.5} />
-                <circle cx={190.5} cy={1.5} r={1.5} />
-                <circle cx={199.5} cy={1.5} r={1.5} />
-                <circle cx={208.5} cy={1.5} r={1.5} />
-                <circle cx={217.5} cy={1.5} r={1.5} />
-                <circle cx={226.5} cy={1.5} r={1.5} />
-                <circle cx={235.5} cy={1.5} r={1.5} />
-                <circle cx={244.5} cy={1.5} r={1.5} />
-                <circle cx={253.5} cy={1.5} r={1.5} />
-                <circle cx={262.5} cy={1.5} r={1.5} />
-                <circle cx={271.5} cy={1.5} r={1.5} />
-                <circle cx={280.5} cy={1.5} r={1.5} />
-                <circle cx={289.5} cy={1.5} r={1.5} />
-                <circle cx={298.5} cy={1.5} r={1.5} />
-                <circle cx={1.5} cy={10.5} r={1.5} />
-                <circle cx={10.5} cy={10.5} r={1.5} />
-                <circle cx={19.5} cy={10.5} r={1.5} />
-                <circle cx={28.5} cy={10.5} r={1.5} />
-                <circle cx={37.5} cy={10.5} r={1.5} />
-                <circle cx={46.5} cy={10.5} r={1.5} />
-                <circle cx={55.5} cy={10.5} r={1.5} />
-                <circle cx={64.5} cy={10.5} r={1.5} />
-                <circle cx={73.5} cy={10.5} r={1.5} />
-                <circle cx={82.5} cy={10.5} r={1.5} />
-                <circle cx={91.5} cy={10.5} r={1.5} />
-                <circle cx={100.5} cy={10.5} r={1.5} />
-                <circle cx={109.5} cy={10.5} r={1.5} />
-                <circle cx={118.5} cy={10.5} r={1.5} />
-                <circle cx={127.5} cy={10.5} r={1.5} />
-                <circle cx={136.5} cy={10.5} r={1.5} />
-                <circle cx={145.5} cy={10.5} r={1.5} />
-                <circle cx={154.5} cy={10.5} r={1.5} />
-                <circle cx={163.5} cy={10.5} r={1.5} />
-                <circle cx={172.5} cy={10.5} r={1.5} />
-                <circle cx={181.5} cy={10.5} r={1.5} />
-                <circle cx={190.5} cy={10.5} r={1.5} />
-                <circle cx={199.5} cy={10.5} r={1.5} />
-                <circle cx={208.5} cy={10.5} r={1.5} />
-                <circle cx={217.5} cy={10.5} r={1.5} />
-                <circle cx={226.5} cy={10.5} r={1.5} />
-                <circle cx={235.5} cy={10.5} r={1.5} />
-                <circle cx={244.5} cy={10.5} r={1.5} />
-                <circle cx={253.5} cy={10.5} r={1.5} />
-                <circle cx={262.5} cy={10.5} r={1.5} />
-                <circle cx={271.5} cy={10.5} r={1.5} />
-                <circle cx={280.5} cy={10.5} r={1.5} />
-                <circle cx={289.5} cy={10.5} r={1.5} />
-                <circle cx={298.5} cy={10.5} r={1.5} />
-                <circle cx={1.5} cy={19.5} r={1.5} />
-                <circle cx={10.5} cy={19.5} r={1.5} />
-                <circle cx={19.5} cy={19.5} r={1.5} />
-                <circle cx={28.5} cy={19.5} r={1.5} />
-                <circle cx={37.5} cy={19.5} r={1.5} />
-                <circle cx={46.5} cy={19.5} r={1.5} />
-                <circle cx={55.5} cy={19.5} r={1.5} />
-                <circle cx={64.5} cy={19.5} r={1.5} />
-                <circle cx={73.5} cy={19.5} r={1.5} />
-                <circle cx={82.5} cy={19.5} r={1.5} />
-                <circle cx={91.5} cy={19.5} r={1.5} />
-                <circle cx={100.5} cy={19.5} r={1.5} />
-                <circle cx={109.5} cy={19.5} r={1.5} />
-                <circle cx={118.5} cy={19.5} r={1.5} />
-                <circle cx={127.5} cy={19.5} r={1.5} />
-                <circle cx={136.5} cy={19.5} r={1.5} />
-                <circle cx={145.5} cy={19.5} r={1.5} />
-                <circle cx={154.5} cy={19.5} r={1.5} />
-                <circle cx={163.5} cy={19.5} r={1.5} />
-                <circle cx={172.5} cy={19.5} r={1.5} />
-                <circle cx={181.5} cy={19.5} r={1.5} />
-                <circle cx={190.5} cy={19.5} r={1.5} />
-                <circle cx={199.5} cy={19.5} r={1.5} />
-                <circle cx={208.5} cy={19.5} r={1.5} />
-                <circle cx={217.5} cy={19.5} r={1.5} />
-                <circle cx={226.5} cy={19.5} r={1.5} />
-                <circle cx={235.5} cy={19.5} r={1.5} />
-                <circle cx={244.5} cy={19.5} r={1.5} />
-                <circle cx={253.5} cy={19.5} r={1.5} />
-                <circle cx={262.5} cy={19.5} r={1.5} />
-                <circle cx={271.5} cy={19.5} r={1.5} />
-                <circle cx={280.5} cy={19.5} r={1.5} />
-                <circle cx={289.5} cy={19.5} r={1.5} />
-                <circle cx={298.5} cy={19.5} r={1.5} />
-                <circle cx={1.5} cy={28.5} r={1.5} />
-                <circle cx={10.5} cy={28.5} r={1.5} />
-                <circle cx={19.5} cy={28.5} r={1.5} />
-                <circle cx={28.5} cy={28.5} r={1.5} />
-                <circle cx={37.5} cy={28.5} r={1.5} />
-                <circle cx={46.5} cy={28.5} r={1.5} />
-                <circle cx={55.5} cy={28.5} r={1.5} />
-                <circle cx={64.5} cy={28.5} r={1.5} />
-                <circle cx={73.5} cy={28.5} r={1.5} />
-                <circle cx={82.5} cy={28.5} r={1.5} />
-                <circle cx={91.5} cy={28.5} r={1.5} />
-                <circle cx={100.5} cy={28.5} r={1.5} />
-                <circle cx={109.5} cy={28.5} r={1.5} />
-                <circle cx={118.5} cy={28.5} r={1.5} />
-                <circle cx={127.5} cy={28.5} r={1.5} />
-                <circle cx={136.5} cy={28.5} r={1.5} />
-                <circle cx={145.5} cy={28.5} r={1.5} />
-                <circle cx={154.5} cy={28.5} r={1.5} />
-                <circle cx={163.5} cy={28.5} r={1.5} />
-                <circle cx={172.5} cy={28.5} r={1.5} />
-                <circle cx={181.5} cy={28.5} r={1.5} />
-                <circle cx={190.5} cy={28.5} r={1.5} />
-                <circle cx={199.5} cy={28.5} r={1.5} />
-                <circle cx={208.5} cy={28.5} r={1.5} />
-                <circle cx={217.5} cy={28.5} r={1.5} />
-                <circle cx={226.5} cy={28.5} r={1.5} />
-                <circle cx={235.5} cy={28.5} r={1.5} />
-                <circle cx={244.5} cy={28.5} r={1.5} />
-                <circle cx={253.5} cy={28.5} r={1.5} />
-                <circle cx={262.5} cy={28.5} r={1.5} />
-                <circle cx={271.5} cy={28.5} r={1.5} />
-                <circle cx={280.5} cy={28.5} r={1.5} />
-                <circle cx={289.5} cy={28.5} r={1.5} />
-                <circle cx={298.5} cy={28.5} r={1.5} />
-                <circle cx={1.5} cy={37.5} r={1.5} />
-                <circle cx={10.5} cy={37.5} r={1.5} />
-                <circle cx={19.5} cy={37.5} r={1.5} />
-                <circle cx={28.5} cy={37.5} r={1.5} />
-                <circle cx={37.5} cy={37.5} r={1.5} />
-                <circle cx={46.5} cy={37.5} r={1.5} />
-                <circle cx={55.5} cy={37.5} r={1.5} />
-                <circle cx={64.5} cy={37.5} r={1.5} />
-                <circle cx={73.5} cy={37.5} r={1.5} />
-                <circle cx={82.5} cy={37.5} r={1.5} />
-                <circle cx={91.5} cy={37.5} r={1.5} />
-                <circle cx={100.5} cy={37.5} r={1.5} />
-                <circle cx={109.5} cy={37.5} r={1.5} />
-                <circle cx={118.5} cy={37.5} r={1.5} />
-                <circle cx={127.5} cy={37.5} r={1.5} />
-                <circle cx={136.5} cy={37.5} r={1.5} />
-                <circle cx={145.5} cy={37.5} r={1.5} />
-                <circle cx={154.5} cy={37.5} r={1.5} />
-                <circle cx={163.5} cy={37.5} r={1.5} />
-                <circle cx={172.5} cy={37.5} r={1.5} />
-                <circle cx={181.5} cy={37.5} r={1.5} />
-                <circle cx={190.5} cy={37.5} r={1.5} />
-                <circle cx={199.5} cy={37.5} r={1.5} />
-                <circle cx={208.5} cy={37.5} r={1.5} />
-                <circle cx={217.5} cy={37.5} r={1.5} />
-                <circle cx={226.5} cy={37.5} r={1.5} />
-                <circle cx={235.5} cy={37.5} r={1.5} />
-                <circle cx={244.5} cy={37.5} r={1.5} />
-                <circle cx={253.5} cy={37.5} r={1.5} />
-                <circle cx={262.5} cy={37.5} r={1.5} />
-                <circle cx={271.5} cy={37.5} r={1.5} />
-                <circle cx={280.5} cy={37.5} r={1.5} />
-                <circle cx={289.5} cy={37.5} r={1.5} />
-                <circle cx={298.5} cy={37.5} r={1.5} />
-                <circle cx={1.5} cy={46.5} r={1.5} />
-                <circle cx={10.5} cy={46.5} r={1.5} />
-                <circle cx={19.5} cy={46.5} r={1.5} />
-                <circle cx={28.5} cy={46.5} r={1.5} />
-                <circle cx={37.5} cy={46.5} r={1.5} />
-                <circle cx={46.5} cy={46.5} r={1.5} />
-                <circle cx={55.5} cy={46.5} r={1.5} />
-                <circle cx={64.5} cy={46.5} r={1.5} />
-                <circle cx={73.5} cy={46.5} r={1.5} />
-                <circle cx={82.5} cy={46.5} r={1.5} />
-                <circle cx={91.5} cy={46.5} r={1.5} />
-                <circle cx={100.5} cy={46.5} r={1.5} />
-                <circle cx={109.5} cy={46.5} r={1.5} />
-                <circle cx={118.5} cy={46.5} r={1.5} />
-                <circle cx={127.5} cy={46.5} r={1.5} />
-                <circle cx={136.5} cy={46.5} r={1.5} />
-                <circle cx={145.5} cy={46.5} r={1.5} />
-                <circle cx={154.5} cy={46.5} r={1.5} />
-                <circle cx={163.5} cy={46.5} r={1.5} />
-                <circle cx={172.5} cy={46.5} r={1.5} />
-                <circle cx={181.5} cy={46.5} r={1.5} />
-                <circle cx={190.5} cy={46.5} r={1.5} />
-                <circle cx={199.5} cy={46.5} r={1.5} />
-                <circle cx={208.5} cy={46.5} r={1.5} />
-                <circle cx={217.5} cy={46.5} r={1.5} />
-                <circle cx={226.5} cy={46.5} r={1.5} />
-                <circle cx={235.5} cy={46.5} r={1.5} />
-                <circle cx={244.5} cy={46.5} r={1.5} />
-                <circle cx={253.5} cy={46.5} r={1.5} />
-                <circle cx={262.5} cy={46.5} r={1.5} />
-                <circle cx={271.5} cy={46.5} r={1.5} />
-                <circle cx={280.5} cy={46.5} r={1.5} />
-                <circle cx={289.5} cy={46.5} r={1.5} />
-                <circle cx={298.5} cy={46.5} r={1.5} />
-                <circle cx={1.5} cy={55.5} r={1.5} />
-                <circle cx={10.5} cy={55.5} r={1.5} />
-                <circle cx={19.5} cy={55.5} r={1.5} />
-                <circle cx={28.5} cy={55.5} r={1.5} />
-                <circle cx={37.5} cy={55.5} r={1.5} />
-                <circle cx={46.5} cy={55.5} r={1.5} />
-                <circle cx={55.5} cy={55.5} r={1.5} />
-                <circle cx={64.5} cy={55.5} r={1.5} />
-                <circle cx={73.5} cy={55.5} r={1.5} />
-                <circle cx={82.5} cy={55.5} r={1.5} />
-                <circle cx={91.5} cy={55.5} r={1.5} />
-                <circle cx={100.5} cy={55.5} r={1.5} />
-                <circle cx={109.5} cy={55.5} r={1.5} />
-                <circle cx={118.5} cy={55.5} r={1.5} />
-                <circle cx={127.5} cy={55.5} r={1.5} />
-                <circle cx={136.5} cy={55.5} r={1.5} />
-                <circle cx={145.5} cy={55.5} r={1.5} />
-                <circle cx={154.5} cy={55.5} r={1.5} />
-                <circle cx={163.5} cy={55.5} r={1.5} />
-                <circle cx={172.5} cy={55.5} r={1.5} />
-                <circle cx={181.5} cy={55.5} r={1.5} />
-                <circle cx={190.5} cy={55.5} r={1.5} />
-                <circle cx={199.5} cy={55.5} r={1.5} />
-                <circle cx={208.5} cy={55.5} r={1.5} />
-                <circle cx={217.5} cy={55.5} r={1.5} />
-                <circle cx={226.5} cy={55.5} r={1.5} />
-                <circle cx={235.5} cy={55.5} r={1.5} />
-                <circle cx={244.5} cy={55.5} r={1.5} />
-                <circle cx={253.5} cy={55.5} r={1.5} />
-                <circle cx={262.5} cy={55.5} r={1.5} />
-                <circle cx={271.5} cy={55.5} r={1.5} />
-                <circle cx={280.5} cy={55.5} r={1.5} />
-                <circle cx={289.5} cy={55.5} r={1.5} />
-                <circle cx={298.5} cy={55.5} r={1.5} />
-                <circle cx={1.5} cy={64.5} r={1.5} />
-                <circle cx={10.5} cy={64.5} r={1.5} />
-                <circle cx={19.5} cy={64.5} r={1.5} />
-                <circle cx={28.5} cy={64.5} r={1.5} />
-                <circle cx={37.5} cy={64.5} r={1.5} />
-                <circle cx={46.5} cy={64.5} r={1.5} />
-                <circle cx={55.5} cy={64.5} r={1.5} />
-                <circle cx={64.5} cy={64.5} r={1.5} />
-                <circle cx={73.5} cy={64.5} r={1.5} />
-                <circle cx={82.5} cy={64.5} r={1.5} />
-                <circle cx={91.5} cy={64.5} r={1.5} />
-                <circle cx={100.5} cy={64.5} r={1.5} />
-                <circle cx={109.5} cy={64.5} r={1.5} />
-                <circle cx={118.5} cy={64.5} r={1.5} />
-                <circle cx={127.5} cy={64.5} r={1.5} />
-                <circle cx={136.5} cy={64.5} r={1.5} />
-                <circle cx={145.5} cy={64.5} r={1.5} />
-                <circle cx={154.5} cy={64.5} r={1.5} />
-                <circle cx={163.5} cy={64.5} r={1.5} />
-                <circle cx={172.5} cy={64.5} r={1.5} />
-                <circle cx={181.5} cy={64.5} r={1.5} />
-                <circle cx={190.5} cy={64.5} r={1.5} />
-                <circle cx={199.5} cy={64.5} r={1.5} />
-                <circle cx={208.5} cy={64.5} r={1.5} />
-                <circle cx={217.5} cy={64.5} r={1.5} />
-                <circle cx={226.5} cy={64.5} r={1.5} />
-                <circle cx={235.5} cy={64.5} r={1.5} />
-                <circle cx={244.5} cy={64.5} r={1.5} />
-                <circle cx={253.5} cy={64.5} r={1.5} />
-                <circle cx={262.5} cy={64.5} r={1.5} />
-                <circle cx={271.5} cy={64.5} r={1.5} />
-                <circle cx={280.5} cy={64.5} r={1.5} />
-                <circle cx={289.5} cy={64.5} r={1.5} />
-                <circle cx={298.5} cy={64.5} r={1.5} />
-                <circle cx={1.5} cy={73.5} r={1.5} />
-                <circle cx={10.5} cy={73.5} r={1.5} />
-                <circle cx={19.5} cy={73.5} r={1.5} />
-                <circle cx={28.5} cy={73.5} r={1.5} />
-                <circle cx={37.5} cy={73.5} r={1.5} />
-                <circle cx={46.5} cy={73.5} r={1.5} />
-                <circle cx={55.5} cy={73.5} r={1.5} />
-                <circle cx={64.5} cy={73.5} r={1.5} />
-                <circle cx={73.5} cy={73.5} r={1.5} />
-                <circle cx={82.5} cy={73.5} r={1.5} />
-                <circle cx={91.5} cy={73.5} r={1.5} />
-                <circle cx={100.5} cy={73.5} r={1.5} />
-                <circle cx={109.5} cy={73.5} r={1.5} />
-                <circle cx={118.5} cy={73.5} r={1.5} />
-                <circle cx={127.5} cy={73.5} r={1.5} />
-                <circle cx={136.5} cy={73.5} r={1.5} />
-                <circle cx={145.5} cy={73.5} r={1.5} />
-                <circle cx={154.5} cy={73.5} r={1.5} />
-                <circle cx={163.5} cy={73.5} r={1.5} />
-                <circle cx={172.5} cy={73.5} r={1.5} />
-                <circle cx={181.5} cy={73.5} r={1.5} />
-                <circle cx={190.5} cy={73.5} r={1.5} />
-                <circle cx={199.5} cy={73.5} r={1.5} />
-                <circle cx={208.5} cy={73.5} r={1.5} />
-                <circle cx={217.5} cy={73.5} r={1.5} />
-                <circle cx={226.5} cy={73.5} r={1.5} />
-                <circle cx={235.5} cy={73.5} r={1.5} />
-                <circle cx={244.5} cy={73.5} r={1.5} />
-                <circle cx={253.5} cy={73.5} r={1.5} />
-                <circle cx={262.5} cy={73.5} r={1.5} />
-                <circle cx={271.5} cy={73.5} r={1.5} />
-                <circle cx={280.5} cy={73.5} r={1.5} />
-                <circle cx={289.5} cy={73.5} r={1.5} />
-                <circle cx={298.5} cy={73.5} r={1.5} />
-                <circle cx={1.5} cy={82.5} r={1.5} />
-                <circle cx={10.5} cy={82.5} r={1.5} />
-                <circle cx={19.5} cy={82.5} r={1.5} />
-                <circle cx={28.5} cy={82.5} r={1.5} />
-                <circle cx={37.5} cy={82.5} r={1.5} />
-                <circle cx={46.5} cy={82.5} r={1.5} />
-                <circle cx={55.5} cy={82.5} r={1.5} />
-                <circle cx={64.5} cy={82.5} r={1.5} />
-                <circle cx={73.5} cy={82.5} r={1.5} />
-                <circle cx={82.5} cy={82.5} r={1.5} />
-                <circle cx={91.5} cy={82.5} r={1.5} />
-                <circle cx={100.5} cy={82.5} r={1.5} />
-                <circle cx={109.5} cy={82.5} r={1.5} />
-                <circle cx={118.5} cy={82.5} r={1.5} />
-                <circle cx={127.5} cy={82.5} r={1.5} />
-                <circle cx={136.5} cy={82.5} r={1.5} />
-                <circle cx={145.5} cy={82.5} r={1.5} />
-                <circle cx={154.5} cy={82.5} r={1.5} />
-                <circle cx={163.5} cy={82.5} r={1.5} />
-                <circle cx={172.5} cy={82.5} r={1.5} />
-                <circle cx={181.5} cy={82.5} r={1.5} />
-                <circle cx={190.5} cy={82.5} r={1.5} />
-                <circle cx={199.5} cy={82.5} r={1.5} />
-                <circle cx={208.5} cy={82.5} r={1.5} />
-                <circle cx={217.5} cy={82.5} r={1.5} />
-                <circle cx={226.5} cy={82.5} r={1.5} />
-                <circle cx={235.5} cy={82.5} r={1.5} />
-                <circle cx={244.5} cy={82.5} r={1.5} />
-                <circle cx={253.5} cy={82.5} r={1.5} />
-                <circle cx={262.5} cy={82.5} r={1.5} />
-                <circle cx={271.5} cy={82.5} r={1.5} />
-                <circle cx={280.5} cy={82.5} r={1.5} />
-                <circle cx={289.5} cy={82.5} r={1.5} />
-                <circle cx={298.5} cy={82.5} r={1.5} />
-                <circle cx={1.5} cy={91.5} r={1.5} />
-                <circle cx={10.5} cy={91.5} r={1.5} />
-                <circle cx={19.5} cy={91.5} r={1.5} />
-                <circle cx={28.5} cy={91.5} r={1.5} />
-                <circle cx={37.5} cy={91.5} r={1.5} />
-                <circle cx={46.5} cy={91.5} r={1.5} />
-                <circle cx={55.5} cy={91.5} r={1.5} />
-                <circle cx={64.5} cy={91.5} r={1.5} />
-                <circle cx={73.5} cy={91.5} r={1.5} />
-                <circle cx={82.5} cy={91.5} r={1.5} />
-                <circle cx={91.5} cy={91.5} r={1.5} />
-                <circle cx={100.5} cy={91.5} r={1.5} />
-                <circle cx={109.5} cy={91.5} r={1.5} />
-                <circle cx={118.5} cy={91.5} r={1.5} />
-                <circle cx={127.5} cy={91.5} r={1.5} />
-                <circle cx={136.5} cy={91.5} r={1.5} />
-                <circle cx={145.5} cy={91.5} r={1.5} />
-                <circle cx={154.5} cy={91.5} r={1.5} />
-                <circle cx={163.5} cy={91.5} r={1.5} />
-                <circle cx={172.5} cy={91.5} r={1.5} />
-                <circle cx={181.5} cy={91.5} r={1.5} />
-                <circle cx={190.5} cy={91.5} r={1.5} />
-                <circle cx={199.5} cy={91.5} r={1.5} />
-                <circle cx={208.5} cy={91.5} r={1.5} />
-                <circle cx={217.5} cy={91.5} r={1.5} />
-                <circle cx={226.5} cy={91.5} r={1.5} />
-                <circle cx={235.5} cy={91.5} r={1.5} />
-                <circle cx={244.5} cy={91.5} r={1.5} />
-                <circle cx={253.5} cy={91.5} r={1.5} />
-                <circle cx={262.5} cy={91.5} r={1.5} />
-                <circle cx={271.5} cy={91.5} r={1.5} />
-                <circle cx={280.5} cy={91.5} r={1.5} />
-                <circle cx={289.5} cy={91.5} r={1.5} />
-                <circle cx={298.5} cy={91.5} r={1.5} />
-                <circle cx={1.5} cy={100.5} r={1.5} />
-                <circle cx={10.5} cy={100.5} r={1.5} />
-                <circle cx={19.5} cy={100.5} r={1.5} />
-                <circle cx={28.5} cy={100.5} r={1.5} />
-                <circle cx={37.5} cy={100.5} r={1.5} />
-                <circle cx={46.5} cy={100.5} r={1.5} />
-                <circle cx={55.5} cy={100.5} r={1.5} />
-                <circle cx={64.5} cy={100.5} r={1.5} />
-                <circle cx={73.5} cy={100.5} r={1.5} />
-                <circle cx={82.5} cy={100.5} r={1.5} />
-                <circle cx={91.5} cy={100.5} r={1.5} />
-                <circle cx={100.5} cy={100.5} r={1.5} />
-                <circle cx={109.5} cy={100.5} r={1.5} />
-                <circle cx={118.5} cy={100.5} r={1.5} />
-                <circle cx={127.5} cy={100.5} r={1.5} />
-                <circle cx={136.5} cy={100.5} r={1.5} />
-                <circle cx={145.5} cy={100.5} r={1.5} />
-                <circle cx={154.5} cy={100.5} r={1.5} />
-                <circle cx={163.5} cy={100.5} r={1.5} />
-                <circle cx={172.5} cy={100.5} r={1.5} />
-                <circle cx={181.5} cy={100.5} r={1.5} />
-                <circle cx={190.5} cy={100.5} r={1.5} />
-                <circle cx={199.5} cy={100.5} r={1.5} />
-                <circle cx={208.5} cy={100.5} r={1.5} />
-                <circle cx={217.5} cy={100.5} r={1.5} />
-                <circle cx={226.5} cy={100.5} r={1.5} />
-                <circle cx={235.5} cy={100.5} r={1.5} />
-                <circle cx={244.5} cy={100.5} r={1.5} />
-                <circle cx={253.5} cy={100.5} r={1.5} />
-                <circle cx={262.5} cy={100.5} r={1.5} />
-                <circle cx={271.5} cy={100.5} r={1.5} />
-                <circle cx={280.5} cy={100.5} r={1.5} />
-                <circle cx={289.5} cy={100.5} r={1.5} />
-                <circle cx={298.5} cy={100.5} r={1.5} />
-                <circle cx={1.5} cy={109.5} r={1.5} />
-                <circle cx={10.5} cy={109.5} r={1.5} />
-                <circle cx={19.5} cy={109.5} r={1.5} />
-                <circle cx={28.5} cy={109.5} r={1.5} />
-                <circle cx={37.5} cy={109.5} r={1.5} />
-                <circle cx={46.5} cy={109.5} r={1.5} />
-                <circle cx={55.5} cy={109.5} r={1.5} />
-                <circle cx={64.5} cy={109.5} r={1.5} />
-                <circle cx={73.5} cy={109.5} r={1.5} />
-                <circle cx={82.5} cy={109.5} r={1.5} />
-                <circle cx={91.5} cy={109.5} r={1.5} />
-                <circle cx={100.5} cy={109.5} r={1.5} />
-                <circle cx={109.5} cy={109.5} r={1.5} />
-                <circle cx={118.5} cy={109.5} r={1.5} />
-                <circle cx={127.5} cy={109.5} r={1.5} />
-                <circle cx={136.5} cy={109.5} r={1.5} />
-                <circle cx={145.5} cy={109.5} r={1.5} />
-                <circle cx={154.5} cy={109.5} r={1.5} />
-                <circle cx={163.5} cy={109.5} r={1.5} />
-                <circle cx={172.5} cy={109.5} r={1.5} />
-                <circle cx={181.5} cy={109.5} r={1.5} />
-                <circle cx={190.5} cy={109.5} r={1.5} />
-                <circle cx={199.5} cy={109.5} r={1.5} />
-                <circle cx={208.5} cy={109.5} r={1.5} />
-                <circle cx={217.5} cy={109.5} r={1.5} />
-                <circle cx={226.5} cy={109.5} r={1.5} />
-                <circle cx={235.5} cy={109.5} r={1.5} />
-                <circle cx={244.5} cy={109.5} r={1.5} />
-                <circle cx={253.5} cy={109.5} r={1.5} />
-                <circle cx={262.5} cy={109.5} r={1.5} />
-                <circle cx={271.5} cy={109.5} r={1.5} />
-                <circle cx={280.5} cy={109.5} r={1.5} />
-                <circle cx={289.5} cy={109.5} r={1.5} />
-                <circle cx={298.5} cy={109.5} r={1.5} />
-                <circle cx={1.5} cy={118.5} r={1.5} />
-                <circle cx={10.5} cy={118.5} r={1.5} />
-                <circle cx={19.5} cy={118.5} r={1.5} />
-                <circle cx={28.5} cy={118.5} r={1.5} />
-                <circle cx={37.5} cy={118.5} r={1.5} />
-                <circle cx={46.5} cy={118.5} r={1.5} />
-                <circle cx={55.5} cy={118.5} r={1.5} />
-                <circle cx={64.5} cy={118.5} r={1.5} />
-                <circle cx={73.5} cy={118.5} r={1.5} />
-                <circle cx={82.5} cy={118.5} r={1.5} />
-                <circle cx={91.5} cy={118.5} r={1.5} />
-                <circle cx={100.5} cy={118.5} r={1.5} />
-                <circle cx={109.5} cy={118.5} r={1.5} />
-                <circle cx={118.5} cy={118.5} r={1.5} />
-                <circle cx={127.5} cy={118.5} r={1.5} />
-                <circle cx={136.5} cy={118.5} r={1.5} />
-                <circle cx={145.5} cy={118.5} r={1.5} />
-                <circle cx={154.5} cy={118.5} r={1.5} />
-                <circle cx={163.5} cy={118.5} r={1.5} />
-                <circle cx={172.5} cy={118.5} r={1.5} />
-                <circle cx={181.5} cy={118.5} r={1.5} />
-                <circle cx={190.5} cy={118.5} r={1.5} />
-                <circle cx={199.5} cy={118.5} r={1.5} />
-                <circle cx={208.5} cy={118.5} r={1.5} />
-                <circle cx={217.5} cy={118.5} r={1.5} />
-                <circle cx={226.5} cy={118.5} r={1.5} />
-                <circle cx={235.5} cy={118.5} r={1.5} />
-                <circle cx={244.5} cy={118.5} r={1.5} />
-                <circle cx={253.5} cy={118.5} r={1.5} />
-                <circle cx={262.5} cy={118.5} r={1.5} />
-                <circle cx={271.5} cy={118.5} r={1.5} />
-                <circle cx={280.5} cy={118.5} r={1.5} />
-                <circle cx={289.5} cy={118.5} r={1.5} />
-                <circle cx={298.5} cy={118.5} r={1.5} />
-                <circle cx={1.5} cy={127.5} r={1.5} />
-                <circle cx={10.5} cy={127.5} r={1.5} />
-                <circle cx={19.5} cy={127.5} r={1.5} />
-                <circle cx={28.5} cy={127.5} r={1.5} />
-                <circle cx={37.5} cy={127.5} r={1.5} />
-                <circle cx={46.5} cy={127.5} r={1.5} />
-                <circle cx={55.5} cy={127.5} r={1.5} />
-                <circle cx={64.5} cy={127.5} r={1.5} />
-                <circle cx={73.5} cy={127.5} r={1.5} />
-                <circle cx={82.5} cy={127.5} r={1.5} />
-                <circle cx={91.5} cy={127.5} r={1.5} />
-                <circle cx={100.5} cy={127.5} r={1.5} />
-                <circle cx={109.5} cy={127.5} r={1.5} />
-                <circle cx={118.5} cy={127.5} r={1.5} />
-                <circle cx={127.5} cy={127.5} r={1.5} />
-                <circle cx={136.5} cy={127.5} r={1.5} />
-                <circle cx={145.5} cy={127.5} r={1.5} />
-                <circle cx={154.5} cy={127.5} r={1.5} />
-                <circle cx={163.5} cy={127.5} r={1.5} />
-                <circle cx={172.5} cy={127.5} r={1.5} />
-                <circle cx={181.5} cy={127.5} r={1.5} />
-                <circle cx={190.5} cy={127.5} r={1.5} />
-                <circle cx={199.5} cy={127.5} r={1.5} />
-                <circle cx={208.5} cy={127.5} r={1.5} />
-                <circle cx={217.5} cy={127.5} r={1.5} />
-                <circle cx={226.5} cy={127.5} r={1.5} />
-                <circle cx={235.5} cy={127.5} r={1.5} />
-                <circle cx={244.5} cy={127.5} r={1.5} />
-                <circle cx={253.5} cy={127.5} r={1.5} />
-                <circle cx={262.5} cy={127.5} r={1.5} />
-                <circle cx={271.5} cy={127.5} r={1.5} />
-                <circle cx={280.5} cy={127.5} r={1.5} />
-                <circle cx={289.5} cy={127.5} r={1.5} />
-                <circle cx={298.5} cy={127.5} r={1.5} />
-                <circle cx={1.5} cy={136.5} r={1.5} />
-                <circle cx={10.5} cy={136.5} r={1.5} />
-                <circle cx={19.5} cy={136.5} r={1.5} />
-                <circle cx={28.5} cy={136.5} r={1.5} />
-                <circle cx={37.5} cy={136.5} r={1.5} />
-                <circle cx={46.5} cy={136.5} r={1.5} />
-                <circle cx={55.5} cy={136.5} r={1.5} />
-                <circle cx={64.5} cy={136.5} r={1.5} />
-                <circle cx={73.5} cy={136.5} r={1.5} />
-                <circle cx={82.5} cy={136.5} r={1.5} />
-                <circle cx={91.5} cy={136.5} r={1.5} />
-                <circle cx={100.5} cy={136.5} r={1.5} />
-                <circle cx={109.5} cy={136.5} r={1.5} />
-                <circle cx={118.5} cy={136.5} r={1.5} />
-                <circle cx={127.5} cy={136.5} r={1.5} />
-                <circle cx={136.5} cy={136.5} r={1.5} />
-                <circle cx={145.5} cy={136.5} r={1.5} />
-                <circle cx={154.5} cy={136.5} r={1.5} />
-                <circle cx={163.5} cy={136.5} r={1.5} />
-                <circle cx={172.5} cy={136.5} r={1.5} />
-                <circle cx={181.5} cy={136.5} r={1.5} />
-                <circle cx={190.5} cy={136.5} r={1.5} />
-                <circle cx={199.5} cy={136.5} r={1.5} />
-                <circle cx={208.5} cy={136.5} r={1.5} />
-                <circle cx={217.5} cy={136.5} r={1.5} />
-                <circle cx={226.5} cy={136.5} r={1.5} />
-                <circle cx={235.5} cy={136.5} r={1.5} />
-                <circle cx={244.5} cy={136.5} r={1.5} />
-                <circle cx={253.5} cy={136.5} r={1.5} />
-                <circle cx={262.5} cy={136.5} r={1.5} />
-                <circle cx={271.5} cy={136.5} r={1.5} />
-                <circle cx={280.5} cy={136.5} r={1.5} />
-                <circle cx={289.5} cy={136.5} r={1.5} />
-                <circle cx={298.5} cy={136.5} r={1.5} />
-                <circle cx={1.5} cy={145.5} r={1.5} />
-                <circle cx={10.5} cy={145.5} r={1.5} />
-                <circle cx={19.5} cy={145.5} r={1.5} />
-                <circle cx={28.5} cy={145.5} r={1.5} />
-                <circle cx={37.5} cy={145.5} r={1.5} />
-                <circle cx={46.5} cy={145.5} r={1.5} />
-                <circle cx={55.5} cy={145.5} r={1.5} />
-                <circle cx={64.5} cy={145.5} r={1.5} />
-                <circle cx={73.5} cy={145.5} r={1.5} />
-                <circle cx={82.5} cy={145.5} r={1.5} />
-                <circle cx={91.5} cy={145.5} r={1.5} />
-                <circle cx={100.5} cy={145.5} r={1.5} />
-                <circle cx={109.5} cy={145.5} r={1.5} />
-                <circle cx={118.5} cy={145.5} r={1.5} />
-                <circle cx={127.5} cy={145.5} r={1.5} />
-                <circle cx={136.5} cy={145.5} r={1.5} />
-                <circle cx={145.5} cy={145.5} r={1.5} />
-                <circle cx={154.5} cy={145.5} r={1.5} />
-                <circle cx={163.5} cy={145.5} r={1.5} />
-                <circle cx={172.5} cy={145.5} r={1.5} />
-                <circle cx={181.5} cy={145.5} r={1.5} />
-                <circle cx={190.5} cy={145.5} r={1.5} />
-                <circle cx={199.5} cy={145.5} r={1.5} />
-                <circle cx={208.5} cy={145.5} r={1.5} />
-                <circle cx={217.5} cy={145.5} r={1.5} />
-                <circle cx={226.5} cy={145.5} r={1.5} />
-                <circle cx={235.5} cy={145.5} r={1.5} />
-                <circle cx={244.5} cy={145.5} r={1.5} />
-                <circle cx={253.5} cy={145.5} r={1.5} />
-                <circle cx={262.5} cy={145.5} r={1.5} />
-                <circle cx={271.5} cy={145.5} r={1.5} />
-                <circle cx={280.5} cy={145.5} r={1.5} />
-                <circle cx={289.5} cy={145.5} r={1.5} />
-                <circle cx={298.5} cy={145.5} r={1.5} />
-                <circle cx={1.5} cy={154.5} r={1.5} />
-                <circle cx={10.5} cy={154.5} r={1.5} />
-                <circle cx={19.5} cy={154.5} r={1.5} />
-                <circle cx={28.5} cy={154.5} r={1.5} />
-                <circle cx={37.5} cy={154.5} r={1.5} />
-                <circle cx={46.5} cy={154.5} r={1.5} />
-                <circle cx={55.5} cy={154.5} r={1.5} />
-                <circle cx={64.5} cy={154.5} r={1.5} />
-                <circle cx={73.5} cy={154.5} r={1.5} />
-                <circle cx={82.5} cy={154.5} r={1.5} />
-                <circle cx={91.5} cy={154.5} r={1.5} />
-                <circle cx={100.5} cy={154.5} r={1.5} />
-                <circle cx={109.5} cy={154.5} r={1.5} />
-                <circle cx={118.5} cy={154.5} r={1.5} />
-                <circle cx={127.5} cy={154.5} r={1.5} />
-                <circle cx={136.5} cy={154.5} r={1.5} />
-                <circle cx={145.5} cy={154.5} r={1.5} />
-                <circle cx={154.5} cy={154.5} r={1.5} />
-                <circle cx={163.5} cy={154.5} r={1.5} />
-                <circle cx={172.5} cy={154.5} r={1.5} />
-                <circle cx={181.5} cy={154.5} r={1.5} />
-                <circle cx={190.5} cy={154.5} r={1.5} />
-                <circle cx={199.5} cy={154.5} r={1.5} />
-                <circle cx={208.5} cy={154.5} r={1.5} />
-                <circle cx={217.5} cy={154.5} r={1.5} />
-                <circle cx={226.5} cy={154.5} r={1.5} />
-                <circle cx={235.5} cy={154.5} r={1.5} />
-                <circle cx={244.5} cy={154.5} r={1.5} />
-                <circle cx={253.5} cy={154.5} r={1.5} />
-                <circle cx={262.5} cy={154.5} r={1.5} />
-                <circle cx={271.5} cy={154.5} r={1.5} />
-                <circle cx={280.5} cy={154.5} r={1.5} />
-                <circle cx={289.5} cy={154.5} r={1.5} />
-                <circle cx={298.5} cy={154.5} r={1.5} />
+        <g clipPath="url(#clip0_157_28924)">
+            <rect width={300} height={157} rx={8} fill="white" />
+            <g clipPath="url(#clip1_157_28924)">
+                <circle cx={1.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={1.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={10.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={19.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={28.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={37.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={46.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={55.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={64.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={73.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={82.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={91.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={100.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={109.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={118.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={127.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={136.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={145.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={1.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={10.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={19.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={28.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={37.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={46.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={55.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={64.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={73.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={82.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={91.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={100.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={109.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={118.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={127.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={136.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={145.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={154.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={163.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={172.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={181.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={190.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={199.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={208.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={217.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={226.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={235.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={244.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={253.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={262.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={271.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={280.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={289.5} cy={154.5} r={1.5} fill="#F1F1F1" />
+                <circle cx={298.5} cy={154.5} r={1.5} fill="#F1F1F1" />
             </g>
             <rect
                 x={48.5}
@@ -631,26 +631,33 @@ const PluginIcon = (props) => (
                 width={203}
                 height={122}
                 rx={5.5}
-                fill="#fff"
+                fill="white"
                 stroke="#FFE0B4"
             />
-            <mask id="c" fill="#fff">
-                <path d="M49 24a5 5 0 0 1 5-5h192a5 5 0 0 1 5 5v17H49z" />
+            <mask id="path-616-inside-1_157_28924" fill="white">
+                <path d="M49 24C49 21.2386 51.2386 19 54 19H246C248.761 19 251 21.2386 251 24V41H49V24Z" />
             </mask>
-            <path d="M49 24a5 5 0 0 1 5-5h192a5 5 0 0 1 5 5v17H49z" fill="#F9FAFC" />
             <path
-                d="M49 19h202zm202 23H49v-2h202zM49 41V19zm202-22v22z"
+                d="M49 24C49 21.2386 51.2386 19 54 19H246C248.761 19 251 21.2386 251 24V41H49V24Z"
+                fill="#F9FAFC"
+            />
+            <path
+                d="M49 19H251H49ZM251 42H49V40H251V42ZM49 41V19V41ZM251 19V41V19Z"
                 fill="#E3E8EE"
-                mask="url(#c)"
+                mask="url(#path-616-inside-1_157_28924)"
             />
             <rect x={63} y={87} width={173} height={8} rx={4} fill="#E3E8EE" />
             <rect x={63} y={98} width={138} height={8} rx={4} fill="#E3E8EE" />
             <path
-                d="M101.854 72v-7.046h2.906c1.484 0 2.475.957 2.475 2.407v.01c0 1.45-.991 2.407-2.475 2.407h-1.431V72zm2.544-5.879h-1.069v2.505h1.069c.845 0 1.343-.45 1.343-1.25v-.01c0-.8-.498-1.245-1.343-1.245M108.5 72v-7.432h1.426V72zm4.678.112c-1.206 0-1.826-.732-1.826-2.011v-3.477h1.425v3.15c0 .761.288 1.157.962 1.157.703 0 1.084-.474 1.084-1.201v-3.106h1.426V72h-1.426v-.83h-.088c-.244.586-.791.942-1.557.942m6.875 1.778c-1.49 0-2.354-.625-2.471-1.538v-.025h1.411l.005.02c.078.312.449.527 1.084.527.762 0 1.206-.356 1.206-.981v-1.001h-.088c-.298.566-.864.874-1.611.874-1.353 0-2.188-1.045-2.188-2.574v-.01c0-1.581.835-2.646 2.212-2.646.738 0 1.314.361 1.602.967h.068v-.879h1.426v5.21c0 1.26-1.03 2.056-2.656 2.056m.019-3.218c.772 0 1.231-.6 1.231-1.484v-.01c0-.884-.464-1.485-1.231-1.485-.766 0-1.211.6-1.211 1.485v.01c0 .883.44 1.484 1.211 1.484m4.79-4.873a.8.8 0 0 1-.805-.791c0-.444.366-.796.805-.796s.801.352.801.796c0 .44-.361.79-.801.79M124.145 72v-5.376h1.425V72zm2.861 0v-5.376h1.426v.83h.088c.244-.581.776-.947 1.542-.947 1.197 0 1.841.732 1.841 2.016V72h-1.425v-3.154c0-.757-.313-1.157-.987-1.157-.659 0-1.059.473-1.059 1.2V72zm8.418.112c-1.46 0-2.29-.654-2.393-1.577l-.005-.02h1.402l.01.02c.112.332.439.571 1 .571.547 0 .918-.234.918-.59v-.01c0-.288-.214-.469-.761-.591l-.899-.19c-1.025-.22-1.533-.723-1.533-1.529v-.005c0-1.01.899-1.684 2.241-1.684 1.411 0 2.193.703 2.251 1.567v.02h-1.323l-.005-.025c-.078-.288-.395-.556-.928-.556-.493 0-.844.23-.844.59v.005c0 .288.2.454.757.577l.893.19c1.074.23 1.577.679 1.577 1.475v.005c0 1.064-.981 1.757-2.358 1.757m8.379.02c-1.499 0-2.466-.776-2.466-1.973v-.01c0-.815.41-1.406 1.323-1.884l.308-.166c-.669-.747-.879-1.138-.879-1.612v-.01c0-.966.849-1.64 2.002-1.64s1.972.664 1.972 1.611v.01c0 .698-.415 1.27-1.445 1.846l1.348 1.41c.176-.41.263-.883.263-1.41v-.225h1.197l-.005.318c.005.859-.195 1.606-.601 2.216l1.314 1.382V72h-1.597l-.503-.552c-.581.43-1.328.684-2.231.684m-.489-5.6c0 .307.142.541.66 1.093.669-.366.903-.674.903-1.084v-.01c0-.425-.313-.742-.776-.742-.455 0-.787.308-.787.733zm-.644 3.51c0 .63.518 1.055 1.279 1.055.547 0 .996-.176 1.343-.46l-1.646-1.796-.209.107c-.508.264-.767.625-.767 1.084zM151.698 72v-7.046h1.475v5.83h3.135V72zm6.533-6.201a.8.8 0 0 1-.805-.791c0-.444.366-.796.805-.796s.801.352.801.796c0 .44-.361.79-.801.79M157.514 72v-5.376h1.425V72zm6.035.083c-.762 0-1.333-.337-1.611-.918h-.088V72h-1.426v-7.432h1.426v2.915h.088c.273-.586.874-.947 1.611-.947 1.362 0 2.182 1.04 2.182 2.769v.01c0 1.718-.839 2.768-2.182 2.768m-.488-1.182c.756 0 1.22-.595 1.22-1.587v-.01c0-.98-.469-1.586-1.22-1.586-.748 0-1.226.605-1.226 1.592v.01c0 .986.474 1.581 1.226 1.581M166.889 72v-5.376h1.425v.835h.088c.171-.581.66-.923 1.358-.923.19 0 .39.03.532.069v1.245a3 3 0 0 0-.654-.083c-.811 0-1.324.464-1.324 1.225V72zm5.722.083c-1.025 0-1.753-.635-1.753-1.611v-.01c0-.967.747-1.533 2.085-1.611l1.299-.079v-.444c0-.464-.317-.727-.903-.727-.513 0-.84.18-.952.498l-.01.02h-1.318l.004-.045c.113-.942 1.001-1.567 2.354-1.567 1.426 0 2.231.674 2.231 1.821V72h-1.406v-.713h-.088c-.273.498-.84.796-1.543.796m-.361-1.7c0 .41.347.66.84.66.659 0 1.152-.435 1.152-1.001v-.395l-1.084.068c-.61.039-.908.268-.908.659zM177.045 72v-5.376h1.426v.835h.088c.17-.581.659-.923 1.357-.923.19 0 .391.03.532.069v1.245a3 3 0 0 0-.654-.083c-.811 0-1.323.464-1.323 1.225V72zm5.093 1.894c-.166 0-.347-.004-.513-.014v-1.074c.098.01.239.014.371.014.508 0 .801-.195.903-.615l.049-.205-1.889-5.376h1.567l1.128 4.072h.098l1.127-4.072h1.504l-1.831 5.371c-.478 1.421-1.186 1.9-2.514 1.9M89.684 124v-5.637h3.734v.973h-2.555v1.359h2.41v.907h-2.41v1.425h2.555V124zm6.398.066c-1.074 0-1.746-.839-1.746-2.214v-.008c0-1.383.656-2.215 1.746-2.215.59 0 1.07.289 1.285.758h.07v-2.332h1.141V124h-1.14v-.668h-.07c-.224.465-.68.734-1.286.734m.387-.945c.605 0 .98-.476.98-1.266v-.007c0-.789-.379-1.274-.98-1.274-.602 0-.973.485-.973 1.27v.008c0 .793.371 1.269.973 1.269m3.289.879v-4.301h1.14v.672h.071c.183-.484.629-.766 1.191-.766.586 0 1.02.297 1.195.793h.071c.195-.476.695-.793 1.297-.793.855 0 1.39.555 1.39 1.442V124h-1.14v-2.668q.001-.78-.711-.781c-.461 0-.758.34-.758.804V124h-1.141v-2.719c0-.461-.261-.73-.707-.73s-.758.363-.758.855V124zm9.371.09c-1.324 0-2.121-.84-2.121-2.238v-.008c0-1.387.808-2.239 2.121-2.239s2.121.848 2.121 2.239v.008c0 1.402-.797 2.238-2.121 2.238m0-.895c.605 0 .953-.496.953-1.343v-.008c0-.84-.352-1.344-.953-1.344-.606 0-.953.504-.953 1.344v.008c0 .847.344 1.343.953 1.343m3.051.805v-4.301h1.14v.664h.071c.195-.465.621-.758 1.234-.758.957 0 1.473.586 1.473 1.614V124h-1.141v-2.523c0-.606-.25-.926-.789-.926-.527 0-.848.379-.848.961V124zm6.558.066c-1.074 0-1.746-.839-1.746-2.214v-.008c0-1.383.656-2.215 1.746-2.215.59 0 1.071.289 1.285.758h.071v-2.332h1.14V124h-1.14v-.668h-.071c-.222.465-.679.734-1.285.734m.387-.945c.605 0 .98-.476.98-1.266v-.007c0-.789-.378-1.274-.98-1.274s-.973.485-.973 1.27v.008c0 .793.371 1.269.973 1.269m5.465.879v-5.637h2.465c1.093 0 1.746.535 1.746 1.403v.007c0 .594-.442 1.114-1.02 1.2v.07c.746.059 1.289.617 1.289 1.34v.008c0 .988-.746 1.609-1.949 1.609zm2.164-4.762h-.984v1.469h.886c.637 0 .985-.266.985-.73v-.008c0-.457-.325-.731-.887-.731m.039 2.246h-1.023v1.637h1.05c.68 0 1.047-.289 1.047-.824v-.008c0-.523-.379-.805-1.074-.805m5.121 2.606c-1.309 0-2.102-.856-2.102-2.235v-.003c0-1.368.801-2.247 2.055-2.247s2.035.86 2.035 2.161v.355h-2.961c.012.707.391 1.117.997 1.117.5 0 .777-.265.855-.429l.012-.024h1.062l-.008.039c-.132.539-.687 1.266-1.945 1.266m-.027-3.629c-.496 0-.864.336-.934.945h1.856c-.071-.625-.426-.945-.922-.945m2.949 3.539v-4.301h1.141v.664h.07c.195-.465.621-.758 1.234-.758.957 0 1.473.586 1.473 1.614V124h-1.141v-2.523c0-.606-.25-.926-.789-.926-.527 0-.847.379-.847.961V124zm6.734.09c-1.168 0-1.832-.524-1.914-1.262l-.004-.016h1.121l.008.016c.09.266.352.457.801.457.438 0 .734-.187.734-.473v-.007c0-.231-.171-.375-.609-.473l-.719-.152c-.82-.176-1.226-.578-1.226-1.223v-.004c0-.808.718-1.348 1.793-1.348 1.129 0 1.754.563 1.8 1.254v.016h-1.058l-.004-.02c-.063-.23-.316-.445-.742-.445-.395 0-.676.184-.676.473v.004c0 .23.16.363.605.461l.715.152c.86.184 1.262.543 1.262 1.18v.004c0 .851-.785 1.406-1.887 1.406m4.731 0c-1.324 0-2.121-.84-2.121-2.238v-.008c0-1.387.808-2.239 2.121-2.239s2.121.848 2.121 2.239v.008c0 1.402-.797 2.238-2.121 2.238m0-.895c.605 0 .953-.496.953-1.343v-.008c0-.84-.352-1.344-.953-1.344-.606 0-.953.504-.953 1.344v.008c0 .847.343 1.343.953 1.343m3.051.805v-4.301h1.14v.664h.07c.196-.465.622-.758 1.235-.758.957 0 1.473.586 1.473 1.614V124h-1.141v-2.523c0-.606-.25-.926-.789-.926-.528 0-.848.379-.848.961V124z"
+                d="M101.854 72V64.9541H104.76C106.244 64.9541 107.235 65.9111 107.235 67.3613V67.3711C107.235 68.8213 106.244 69.7783 104.76 69.7783H103.329V72H101.854ZM104.398 66.1211H103.329V68.626H104.398C105.243 68.626 105.741 68.1768 105.741 67.376V67.3662C105.741 66.5654 105.243 66.1211 104.398 66.1211ZM108.5 72V64.5684H109.926V72H108.5ZM113.178 72.1123C111.972 72.1123 111.352 71.3799 111.352 70.1006V66.624H112.777V69.7734C112.777 70.5352 113.065 70.9307 113.739 70.9307C114.442 70.9307 114.823 70.457 114.823 69.7295V66.624H116.249V72H114.823V71.1699H114.735C114.491 71.7559 113.944 72.1123 113.178 72.1123ZM120.053 73.8896C118.563 73.8896 117.699 73.2646 117.582 72.3516V72.3271H118.993L118.998 72.3467C119.076 72.6592 119.447 72.874 120.082 72.874C120.844 72.874 121.288 72.5176 121.288 71.8926V70.8916H121.2C120.902 71.458 120.336 71.7656 119.589 71.7656C118.236 71.7656 117.401 70.7207 117.401 69.1924V69.1826C117.401 67.6006 118.236 66.5361 119.613 66.5361C120.351 66.5361 120.927 66.8975 121.215 67.5029H121.283V66.624H122.709V71.834C122.709 73.0938 121.679 73.8896 120.053 73.8896ZM120.072 70.6719C120.844 70.6719 121.303 70.0713 121.303 69.1875V69.1777C121.303 68.2939 120.839 67.6934 120.072 67.6934C119.306 67.6934 118.861 68.2939 118.861 69.1777V69.1875C118.861 70.0713 119.301 70.6719 120.072 70.6719ZM124.862 65.7988C124.423 65.7988 124.057 65.4473 124.057 65.0078C124.057 64.5635 124.423 64.2119 124.862 64.2119C125.302 64.2119 125.663 64.5635 125.663 65.0078C125.663 65.4473 125.302 65.7988 124.862 65.7988ZM124.145 72V66.624H125.57V72H124.145ZM127.006 72V66.624H128.432V67.4541H128.52C128.764 66.873 129.296 66.5068 130.062 66.5068C131.259 66.5068 131.903 67.2393 131.903 68.5234V72H130.478V68.8457C130.478 68.0889 130.165 67.6885 129.491 67.6885C128.832 67.6885 128.432 68.1621 128.432 68.8896V72H127.006ZM135.424 72.1123C133.964 72.1123 133.134 71.458 133.031 70.5352L133.026 70.5156H134.428L134.438 70.5352C134.55 70.8672 134.877 71.1064 135.438 71.1064C135.985 71.1064 136.356 70.8721 136.356 70.5156V70.5059C136.356 70.2178 136.142 70.0371 135.595 69.915L134.696 69.7246C133.671 69.5049 133.163 69.002 133.163 68.1963V68.1914C133.163 67.1807 134.062 66.5068 135.404 66.5068C136.815 66.5068 137.597 67.21 137.655 68.0742V68.0938H136.332L136.327 68.0693C136.249 67.7812 135.932 67.5127 135.399 67.5127C134.906 67.5127 134.555 67.7422 134.555 68.1035V68.1084C134.555 68.3965 134.755 68.5625 135.312 68.6846L136.205 68.875C137.279 69.1045 137.782 69.5537 137.782 70.3496V70.3545C137.782 71.4189 136.801 72.1123 135.424 72.1123ZM143.803 72.1318C142.304 72.1318 141.337 71.3555 141.337 70.1592V70.1494C141.337 69.334 141.747 68.7432 142.66 68.2646L142.968 68.0986C142.299 67.3516 142.089 66.9609 142.089 66.4873V66.4775C142.089 65.5107 142.938 64.8369 144.091 64.8369C145.243 64.8369 146.063 65.501 146.063 66.4482V66.458C146.063 67.1562 145.648 67.7275 144.618 68.3037L145.966 69.7148C146.142 69.3047 146.229 68.8311 146.229 68.3037V68.0791H147.426L147.421 68.3965C147.426 69.2559 147.226 70.0029 146.82 70.6133L148.134 71.9951V72H146.537L146.034 71.4482C145.453 71.8779 144.706 72.1318 143.803 72.1318ZM143.314 66.5312C143.314 66.8389 143.456 67.0732 143.974 67.625C144.643 67.2588 144.877 66.9512 144.877 66.541V66.5312C144.877 66.1064 144.564 65.7891 144.101 65.7891C143.646 65.7891 143.314 66.0967 143.314 66.5215V66.5312ZM142.67 70.042C142.67 70.6719 143.188 71.0967 143.949 71.0967C144.496 71.0967 144.945 70.9209 145.292 70.6377L143.646 68.8408L143.437 68.9482C142.929 69.2119 142.67 69.5732 142.67 70.0322V70.042ZM151.698 72V64.9541H153.173V70.7842H156.308V72H151.698ZM158.231 65.7988C157.792 65.7988 157.426 65.4473 157.426 65.0078C157.426 64.5635 157.792 64.2119 158.231 64.2119C158.671 64.2119 159.032 64.5635 159.032 65.0078C159.032 65.4473 158.671 65.7988 158.231 65.7988ZM157.514 72V66.624H158.939V72H157.514ZM163.549 72.083C162.787 72.083 162.216 71.7461 161.938 71.165H161.85V72H160.424V64.5684H161.85V67.4834H161.938C162.211 66.8975 162.812 66.5361 163.549 66.5361C164.911 66.5361 165.731 67.5762 165.731 69.3047V69.3145C165.731 71.0332 164.892 72.083 163.549 72.083ZM163.061 70.9014C163.817 70.9014 164.281 70.3057 164.281 69.3145V69.3047C164.281 68.3232 163.812 67.7178 163.061 67.7178C162.313 67.7178 161.835 68.3232 161.835 69.3096V69.3193C161.835 70.3057 162.309 70.9014 163.061 70.9014ZM166.889 72V66.624H168.314V67.459H168.402C168.573 66.8779 169.062 66.5361 169.76 66.5361C169.95 66.5361 170.15 66.5654 170.292 66.6045V67.8496C170.077 67.8008 169.857 67.7666 169.638 67.7666C168.827 67.7666 168.314 68.2305 168.314 68.9922V72H166.889ZM172.611 72.083C171.586 72.083 170.858 71.4482 170.858 70.4717V70.4619C170.858 69.4951 171.605 68.9287 172.943 68.8506L174.242 68.7725V68.3281C174.242 67.8643 173.925 67.6006 173.339 67.6006C172.826 67.6006 172.499 67.7812 172.387 68.0986L172.377 68.1182H171.059L171.063 68.0742C171.176 67.1318 172.064 66.5068 173.417 66.5068C174.843 66.5068 175.648 67.1807 175.648 68.3281V72H174.242V71.2871H174.154C173.881 71.7852 173.314 72.083 172.611 72.083ZM172.25 70.3838C172.25 70.7939 172.597 71.043 173.09 71.043C173.749 71.043 174.242 70.6084 174.242 70.042V69.6465L173.158 69.7148C172.548 69.7539 172.25 69.9834 172.25 70.374V70.3838ZM177.045 72V66.624H178.471V67.459H178.559C178.729 66.8779 179.218 66.5361 179.916 66.5361C180.106 66.5361 180.307 66.5654 180.448 66.6045V67.8496C180.233 67.8008 180.014 67.7666 179.794 67.7666C178.983 67.7666 178.471 68.2305 178.471 68.9922V72H177.045ZM182.138 73.8945C181.972 73.8945 181.791 73.8896 181.625 73.8799V72.8057C181.723 72.8154 181.864 72.8203 181.996 72.8203C182.504 72.8203 182.797 72.625 182.899 72.2051L182.948 72L181.059 66.624H182.626L183.754 70.6963H183.852L184.979 66.624H186.483L184.652 71.9951C184.174 73.416 183.466 73.8945 182.138 73.8945Z"
                 fill="#1F1F2D"
             />
             <path
-                d="M64.2 33.145c-1.165 0-1.872-.692-1.903-1.75v-.032h1.144v.024c.024.433.282.738.743.738.5 0 .761-.3.761-.867v-3.895h1.18v3.903c0 1.187-.707 1.879-1.926 1.879m4.292-.079c-.82 0-1.402-.507-1.402-1.289v-.008c0-.773.597-1.226 1.668-1.288l1.039-.063v-.355c0-.372-.254-.582-.723-.582-.41 0-.672.144-.761.398l-.008.015H67.25l.004-.035c.09-.754.8-1.254 1.883-1.254 1.14 0 1.785.54 1.785 1.457V33h-1.125v-.57h-.07c-.22.398-.672.636-1.235.636m-.289-1.359c0 .328.278.527.672.527.527 0 .922-.347.922-.8v-.317l-.867.055c-.489.031-.727.215-.727.527zM72.04 33v-4.3h1.14v.663h.071c.195-.465.621-.758 1.234-.758.957 0 1.473.586 1.473 1.614V33h-1.14v-2.523c0-.606-.25-.926-.79-.926-.527 0-.847.379-.847.96V33zm7.086 0v-.793l1.816-1.793c.793-.77 1.008-1.055 1.008-1.45v-.01c0-.481-.328-.817-.867-.817-.55 0-.93.367-.93.902v.02h-1.09l-.003-.016c0-1.082.843-1.824 2.078-1.824 1.16 0 1.972.664 1.972 1.636v.012c0 .64-.332 1.172-1.359 2.121l-1.043.973v.09h2.484V33zm5.148 0v-.793l1.817-1.793c.793-.77 1.008-1.055 1.008-1.45v-.01c0-.481-.329-.817-.867-.817-.551 0-.93.367-.93.902v.02h-1.09l-.004-.016c0-1.082.844-1.824 2.078-1.824 1.16 0 1.973.664 1.973 1.636v.012c0 .64-.332 1.172-1.36 2.121l-1.042.973v.09h2.484V33zm8.63 0v-4.734h-.067l-1.418 1.011v-.859l1.484-1.055h.875V33zm4.46.137c-1.3 0-2.082-1.137-2.082-2.953v-.008c0-1.817.781-2.95 2.082-2.95 1.297 0 2.082 1.133 2.082 2.95v.008c0 1.816-.785 2.953-2.082 2.953m0-.727c.754 0 1.2-.847 1.2-2.226v-.008c0-1.38-.446-2.219-1.2-2.219-.757 0-1.199.84-1.199 2.219v.008c0 1.378.442 2.226 1.2 2.226m3.836-3.137a.567.567 0 0 1-.574-.57c0-.32.25-.57.574-.57s.571.25.571.57c0 .317-.247.57-.571.57m0 2.954a.567.567 0 0 1-.574-.57c0-.321.25-.571.574-.571s.571.25.571.57c0 .317-.247.57-.571.57m3.836.91c-1.301 0-2.082-1.137-2.082-2.953v-.008c0-1.817.781-2.95 2.082-2.95 1.297 0 2.082 1.133 2.082 2.95v.008c0 1.816-.785 2.953-2.082 2.953m0-.727c.754 0 1.199-.847 1.199-2.226v-.008c0-1.38-.445-2.219-1.199-2.219-.758 0-1.199.84-1.199 2.219v.008c0 1.378.441 2.226 1.199 2.226m5.195.727c-1.3 0-2.082-1.137-2.082-2.953v-.008c0-1.817.782-2.95 2.082-2.95 1.297 0 2.082 1.133 2.082 2.95v.008c0 1.816-.785 2.953-2.082 2.953m0-.727c.754 0 1.2-.847 1.2-2.226v-.008c0-1.38-.446-2.219-1.2-2.219-.757 0-1.199.84-1.199 2.219v.008c0 1.378.442 2.226 1.199 2.226m5.059.59 2.035-5.637h.946L120.305 33h-.922l-.508-1.523h-2.156L116.207 33zm2.473-4.648-.809 2.421h1.688l-.813-2.421zM121.285 33v-5.637h1.008l1.797 4.496h.062l1.797-4.496h1.008V33h-.797v-4.137h-.058L124.445 33h-.648l-1.652-4.137h-.063V33z"
+                d="M89.6836 124V118.363H93.418V119.336H90.8633V120.695H93.2734V121.602H90.8633V123.027H93.418V124H89.6836ZM96.082 124.066C95.0078 124.066 94.3359 123.227 94.3359 121.852V121.844C94.3359 120.461 94.9922 119.629 96.082 119.629C96.6719 119.629 97.1523 119.918 97.3672 120.387H97.4375V118.055H98.5781V124H97.4375V123.332H97.3672C97.1445 123.797 96.6875 124.066 96.082 124.066ZM96.4688 123.121C97.0742 123.121 97.4492 122.645 97.4492 121.855V121.848C97.4492 121.059 97.0703 120.574 96.4688 120.574C95.8672 120.574 95.4961 121.059 95.4961 121.844V121.852C95.4961 122.645 95.8672 123.121 96.4688 123.121ZM99.7578 124V119.699H100.898V120.371H100.969C101.152 119.887 101.598 119.605 102.16 119.605C102.746 119.605 103.18 119.902 103.355 120.398H103.426C103.621 119.922 104.121 119.605 104.723 119.605C105.578 119.605 106.113 120.16 106.113 121.047V124H104.973V121.332C104.973 120.812 104.738 120.551 104.262 120.551C103.801 120.551 103.504 120.891 103.504 121.355V124H102.363V121.281C102.363 120.82 102.102 120.551 101.656 120.551C101.211 120.551 100.898 120.914 100.898 121.406V124H99.7578ZM109.129 124.09C107.805 124.09 107.008 123.25 107.008 121.852V121.844C107.008 120.457 107.816 119.605 109.129 119.605C110.441 119.605 111.25 120.453 111.25 121.844V121.852C111.25 123.254 110.453 124.09 109.129 124.09ZM109.129 123.195C109.734 123.195 110.082 122.699 110.082 121.852V121.844C110.082 121.004 109.73 120.5 109.129 120.5C108.523 120.5 108.176 121.004 108.176 121.844V121.852C108.176 122.699 108.52 123.195 109.129 123.195ZM112.18 124V119.699H113.32V120.363H113.391C113.586 119.898 114.012 119.605 114.625 119.605C115.582 119.605 116.098 120.191 116.098 121.219V124H114.957V121.477C114.957 120.871 114.707 120.551 114.168 120.551C113.641 120.551 113.32 120.93 113.32 121.512V124H112.18ZM118.738 124.066C117.664 124.066 116.992 123.227 116.992 121.852V121.844C116.992 120.461 117.648 119.629 118.738 119.629C119.328 119.629 119.809 119.918 120.023 120.387H120.094V118.055H121.234V124H120.094V123.332H120.023C119.801 123.797 119.344 124.066 118.738 124.066ZM119.125 123.121C119.73 123.121 120.105 122.645 120.105 121.855V121.848C120.105 121.059 119.727 120.574 119.125 120.574C118.523 120.574 118.152 121.059 118.152 121.844V121.852C118.152 122.645 118.523 123.121 119.125 123.121ZM124.59 124V118.363H127.055C128.148 118.363 128.801 118.898 128.801 119.766V119.773C128.801 120.367 128.359 120.887 127.781 120.973V121.043C128.527 121.102 129.07 121.66 129.07 122.383V122.391C129.07 123.379 128.324 124 127.121 124H124.59ZM126.754 119.238H125.77V120.707H126.656C127.293 120.707 127.641 120.441 127.641 119.977V119.969C127.641 119.512 127.316 119.238 126.754 119.238ZM126.793 121.484H125.77V123.121H126.82C127.5 123.121 127.867 122.832 127.867 122.297V122.289C127.867 121.766 127.488 121.484 126.793 121.484ZM131.914 124.09C130.605 124.09 129.812 123.234 129.812 121.855V121.852C129.812 120.484 130.613 119.605 131.867 119.605C133.121 119.605 133.902 120.465 133.902 121.766V122.121H130.941C130.953 122.828 131.332 123.238 131.938 123.238C132.438 123.238 132.715 122.973 132.793 122.809L132.805 122.785H133.867L133.859 122.824C133.727 123.363 133.172 124.09 131.914 124.09ZM131.887 120.461C131.391 120.461 131.023 120.797 130.953 121.406H132.809C132.738 120.781 132.383 120.461 131.887 120.461ZM134.836 124V119.699H135.977V120.363H136.047C136.242 119.898 136.668 119.605 137.281 119.605C138.238 119.605 138.754 120.191 138.754 121.219V124H137.613V121.477C137.613 120.871 137.363 120.551 136.824 120.551C136.297 120.551 135.977 120.93 135.977 121.512V124H134.836ZM141.57 124.09C140.402 124.09 139.738 123.566 139.656 122.828L139.652 122.812H140.773L140.781 122.828C140.871 123.094 141.133 123.285 141.582 123.285C142.02 123.285 142.316 123.098 142.316 122.812V122.805C142.316 122.574 142.145 122.43 141.707 122.332L140.988 122.18C140.168 122.004 139.762 121.602 139.762 120.957V120.953C139.762 120.145 140.48 119.605 141.555 119.605C142.684 119.605 143.309 120.168 143.355 120.859V120.875H142.297L142.293 120.855C142.23 120.625 141.977 120.41 141.551 120.41C141.156 120.41 140.875 120.594 140.875 120.883V120.887C140.875 121.117 141.035 121.25 141.48 121.348L142.195 121.5C143.055 121.684 143.457 122.043 143.457 122.68V122.684C143.457 123.535 142.672 124.09 141.57 124.09ZM146.301 124.09C144.977 124.09 144.18 123.25 144.18 121.852V121.844C144.18 120.457 144.988 119.605 146.301 119.605C147.613 119.605 148.422 120.453 148.422 121.844V121.852C148.422 123.254 147.625 124.09 146.301 124.09ZM146.301 123.195C146.906 123.195 147.254 122.699 147.254 121.852V121.844C147.254 121.004 146.902 120.5 146.301 120.5C145.695 120.5 145.348 121.004 145.348 121.844V121.852C145.348 122.699 145.691 123.195 146.301 123.195ZM149.352 124V119.699H150.492V120.363H150.562C150.758 119.898 151.184 119.605 151.797 119.605C152.754 119.605 153.27 120.191 153.27 121.219V124H152.129V121.477C152.129 120.871 151.879 120.551 151.34 120.551C150.812 120.551 150.492 120.93 150.492 121.512V124H149.352Z"
+                fill="#1F1F2D"
+            />
+            <path
+                d="M64.1992 33.1445C63.0352 33.1445 62.3281 32.4531 62.2969 31.3945V31.3633H63.4414V31.3867C63.4648 31.8203 63.7227 32.125 64.1836 32.125C64.6836 32.125 64.9453 31.8242 64.9453 31.2578V27.3633H66.125V31.2656C66.125 32.4531 65.418 33.1445 64.1992 33.1445ZM68.4922 33.0664C67.6719 33.0664 67.0898 32.5586 67.0898 31.7773V31.7695C67.0898 30.9961 67.6875 30.543 68.7578 30.4805L69.7969 30.418V30.0625C69.7969 29.6914 69.543 29.4805 69.0742 29.4805C68.6641 29.4805 68.4023 29.625 68.3125 29.8789L68.3047 29.8945H67.25L67.2539 29.8594C67.3438 29.1055 68.0547 28.6055 69.1367 28.6055C70.2773 28.6055 70.9219 29.1445 70.9219 30.0625V33H69.7969V32.4297H69.7266C69.5078 32.8281 69.0547 33.0664 68.4922 33.0664ZM68.2031 31.707C68.2031 32.0352 68.4805 32.2344 68.875 32.2344C69.4023 32.2344 69.7969 31.8867 69.7969 31.4336V31.1172L68.9297 31.1719C68.4414 31.2031 68.2031 31.3867 68.2031 31.6992V31.707ZM72.0391 33V28.6992H73.1797V29.3633H73.25C73.4453 28.8984 73.8711 28.6055 74.4844 28.6055C75.4414 28.6055 75.957 29.1914 75.957 30.2188V33H74.8164V30.4766C74.8164 29.8711 74.5664 29.5508 74.0273 29.5508C73.5 29.5508 73.1797 29.9297 73.1797 30.5117V33H72.0391ZM79.125 33V32.207L80.9414 30.4141C81.7344 29.6445 81.9492 29.3594 81.9492 28.9648V28.9531C81.9492 28.4727 81.6211 28.1367 81.082 28.1367C80.5312 28.1367 80.1523 28.5039 80.1523 29.0391V29.0586H79.0625L79.0586 29.043C79.0586 27.9609 79.9023 27.2188 81.1367 27.2188C82.2969 27.2188 83.1094 27.8828 83.1094 28.8555V28.8672C83.1094 29.5078 82.7773 30.0391 81.75 30.9883L80.707 31.9609V32.0508H83.1914V33H79.125ZM84.2734 33V32.207L86.0898 30.4141C86.8828 29.6445 87.0977 29.3594 87.0977 28.9648V28.9531C87.0977 28.4727 86.7695 28.1367 86.2305 28.1367C85.6797 28.1367 85.3008 28.5039 85.3008 29.0391V29.0586H84.2109L84.207 29.043C84.207 27.9609 85.0508 27.2188 86.2852 27.2188C87.4453 27.2188 88.2578 27.8828 88.2578 28.8555V28.8672C88.2578 29.5078 87.9258 30.0391 86.8984 30.9883L85.8555 31.9609V32.0508H88.3398V33H84.2734ZM92.9023 33V28.2656H92.8359L91.418 29.2773V28.418L92.9023 27.3633H93.7773V33H92.9023ZM97.3633 33.1367C96.0625 33.1367 95.2812 32 95.2812 30.1836V30.1758C95.2812 28.3594 96.0625 27.2266 97.3633 27.2266C98.6602 27.2266 99.4453 28.3594 99.4453 30.1758V30.1836C99.4453 32 98.6602 33.1367 97.3633 33.1367ZM97.3633 32.4102C98.1172 32.4102 98.5625 31.5625 98.5625 30.1836V30.1758C98.5625 28.7969 98.1172 27.957 97.3633 27.957C96.6055 27.957 96.1641 28.7969 96.1641 30.1758V30.1836C96.1641 31.5625 96.6055 32.4102 97.3633 32.4102ZM101.199 29.2734C100.875 29.2734 100.625 29.0195 100.625 28.7031C100.625 28.3828 100.875 28.1328 101.199 28.1328C101.523 28.1328 101.77 28.3828 101.77 28.7031C101.77 29.0195 101.523 29.2734 101.199 29.2734ZM101.199 32.2266C100.875 32.2266 100.625 31.9727 100.625 31.6562C100.625 31.3359 100.875 31.0859 101.199 31.0859C101.523 31.0859 101.77 31.3359 101.77 31.6562C101.77 31.9727 101.523 32.2266 101.199 32.2266ZM105.035 33.1367C103.734 33.1367 102.953 32 102.953 30.1836V30.1758C102.953 28.3594 103.734 27.2266 105.035 27.2266C106.332 27.2266 107.117 28.3594 107.117 30.1758V30.1836C107.117 32 106.332 33.1367 105.035 33.1367ZM105.035 32.4102C105.789 32.4102 106.234 31.5625 106.234 30.1836V30.1758C106.234 28.7969 105.789 27.957 105.035 27.957C104.277 27.957 103.836 28.7969 103.836 30.1758V30.1836C103.836 31.5625 104.277 32.4102 105.035 32.4102ZM110.23 33.1367C108.93 33.1367 108.148 32 108.148 30.1836V30.1758C108.148 28.3594 108.93 27.2266 110.23 27.2266C111.527 27.2266 112.312 28.3594 112.312 30.1758V30.1836C112.312 32 111.527 33.1367 110.23 33.1367ZM110.23 32.4102C110.984 32.4102 111.43 31.5625 111.43 30.1836V30.1758C111.43 28.7969 110.984 27.957 110.23 27.957C109.473 27.957 109.031 28.7969 109.031 30.1758V30.1836C109.031 31.5625 109.473 32.4102 110.23 32.4102ZM115.289 33L117.324 27.3633H118.27L120.305 33H119.383L118.875 31.4766H116.719L116.207 33H115.289ZM117.762 28.3516L116.953 30.7734H118.641L117.828 28.3516H117.762ZM121.285 33V27.3633H122.293L124.09 31.8594H124.152L125.949 27.3633H126.957V33H126.16V28.8633H126.102L124.445 33H123.797L122.145 28.8633H122.082V33H121.285Z"
                 fill="#444453"
             />
             <rect
@@ -659,48 +666,71 @@ const PluginIcon = (props) => (
                 width={29}
                 height={29}
                 rx={5.5}
-                fill="#fff"
+                fill="white"
                 stroke="#E3E8EE"
             />
-            <g clipPath="url(#d)" fill="#F99F1C">
-                <path d="M74.546 63.213a.35.35 0 0 0-.505.012c-2.097 2.308-.956 7.3-.837 7.793l-2.102 2.102a.35.35 0 0 0 0 .494l1.267 1.266a.35.35 0 0 0 .493 0l2.102-2.101a14.6 14.6 0 0 0 3.433.42c1.358 0 3.216-.219 4.36-1.257a.35.35 0 0 0 .013-.505zm3.037 2.077a.35.35 0 0 0 .494 0l2.605-2.605a.97.97 0 0 0 .287-.69.97.97 0 0 0-.287-.691.97.97 0 0 0-.69-.286.97.97 0 0 0-.691.285l-2.606 2.606a.35.35 0 0 0 0 .494zm7.131.046a.97.97 0 0 0-.69-.286.97.97 0 0 0-.692.286l-2.605 2.606a.35.35 0 0 0 0 .493l.888.888a.347.347 0 0 0 .493 0l2.606-2.606c.381-.38.381-1 0-1.381" />
+            <g clipPath="url(#clip2_157_28924)">
+                <path
+                    d="M74.5462 63.2127C74.4786 63.1451 74.3858 63.1078 74.291 63.1105C74.1956 63.1129 74.1052 63.1542 74.041 63.2247C71.9442 65.533 73.0849 70.5241 73.2045 71.0178L71.1022 73.1203C71.0368 73.1857 71 73.2745 71 73.3671C71 73.4596 71.0368 73.5486 71.1022 73.614L72.3689 74.8805C72.437 74.9484 72.5264 74.9827 72.6157 74.9827C72.705 74.9827 72.7945 74.9488 72.8625 74.8805L74.9643 72.7788C75.9876 73.0416 77.2676 73.1985 78.3975 73.1985C79.7547 73.1985 81.6127 72.9803 82.7576 71.942C82.8283 71.8778 82.8697 71.7875 82.872 71.6919C82.8745 71.5963 82.8373 71.5041 82.7697 71.4366L74.5462 63.2127Z"
+                    fill="#F99F1C"
+                />
+                <path
+                    d="M77.583 65.2909C77.6512 65.359 77.7405 65.3931 77.8299 65.3931C77.9193 65.3931 78.0086 65.359 78.0768 65.2907L80.6824 62.6851C80.867 62.5006 80.9685 62.2552 80.9685 61.9943C80.9685 61.7333 80.8668 61.4879 80.6824 61.3035C80.4979 61.119 80.2527 61.0176 79.9917 61.0176C79.7308 61.0176 79.4854 61.1191 79.3007 61.3035L76.695 63.9093C76.5587 64.0456 76.5587 64.2666 76.695 64.403L77.583 65.2909Z"
+                    fill="#F99F1C"
+                />
+                <path
+                    d="M84.7141 65.336C84.5296 65.1515 84.2844 65.0498 84.0234 65.0498C83.7622 65.0498 83.5169 65.1513 83.3325 65.3359L80.7267 67.9417C80.6611 68.0071 80.6243 68.0959 80.6243 68.1885C80.6243 68.2811 80.6611 68.3698 80.7267 68.4354L81.6147 69.3231C81.6827 69.3913 81.772 69.4255 81.8616 69.4255C81.9508 69.4255 82.0403 69.3914 82.1084 69.3231L84.7144 66.7173C85.0953 66.3362 85.0953 65.7166 84.7141 65.336Z"
+                    fill="#F99F1C"
+                />
             </g>
             <rect x={66} y={112} width={18} height={18} rx={9} fill="#D9D9D9" />
-            <rect x={66} y={112} width={18} height={18} rx={9} fill="url(#e)" />
-            <path fill="url(#f)" d="M0 0h300v157H0z" />
+            <rect
+                x={66}
+                y={112}
+                width={18}
+                height={18}
+                rx={9}
+                fill="url(#pattern0_157_28924)"
+            />
+            <rect width={300} height={157} fill="url(#paint0_linear_157_28924)" />
         </g>
         <rect x={0.5} y={0.5} width={299} height={156} rx={7.5} stroke="#E3E8EE" />
         <defs>
-            <clipPath id="a">
-                <rect width={300} height={157} rx={8} fill="#fff" />
-            </clipPath>
-            <clipPath id="b">
-                <path fill="#fff" d="M0 0h300v157H0z" />
-            </clipPath>
-            <clipPath id="d">
-                <path fill="#fff" d="M71 61h14v14H71z" />
-            </clipPath>
+            <pattern
+                id="pattern0_157_28924"
+                patternContentUnits="objectBoundingBox"
+                width={1}
+                height={1}
+            >
+                <use xlinkHref="#image0_157_28924" transform="scale(0.000976562)" />
+            </pattern>
             <linearGradient
-                id="f"
+                id="paint0_linear_157_28924"
                 x1={150}
                 y1={0}
                 x2={150}
                 y2={157}
                 gradientUnits="userSpaceOnUse"
             >
-                <stop offset={0.295} stopColor="#fff" stopOpacity={0.2} />
-                <stop offset={1} stopColor="#fff" />
+                <stop offset={0.295} stopColor="white" stopOpacity={0.2} />
+                <stop offset={1} stopColor="white" />
             </linearGradient>
-            <pattern
-                id="e"
-                patternContentUnits="objectBoundingBox"
-                width={1}
-                height={1}
-            >
-                <use xlinkHref="#g" transform="scale(.00098)" />
-            </pattern>
+            <clipPath id="clip0_157_28924">
+                <rect width={300} height={157} rx={8} fill="white" />
+            </clipPath>
+            <clipPath id="clip1_157_28924">
+                <rect width={300} height={157} fill="white" />
+            </clipPath>
+            <clipPath id="clip2_157_28924">
+                <rect
+                    width={14}
+                    height={14}
+                    fill="white"
+                    transform="translate(71 61)"
+                />
+            </clipPath>
             <image
-                id="g"
+                id="image0_157_28924"
                 width={1024}
                 height={1024}
                 preserveAspectRatio="none"
