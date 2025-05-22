@@ -1,1 +1,1 @@
-{% integratingklumplayout %}
+{% integratingklumpview %}

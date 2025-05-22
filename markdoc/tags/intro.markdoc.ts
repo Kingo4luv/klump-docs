@@ -1,7 +1,7 @@
-import ErrorsLayout  from '../../components/Layouts/ErrorsLayout';
+import Intro  from '../../components/views/home/Intro';
 
-export const errorslayout = {
-    render: ErrorsLayout,
+export const intro = {
+    render: Intro,
     attributes: {
         title: { type: String, required: true },
         readingTime: { type: String },

@@ -11,6 +11,7 @@
 		"@markdoc/markdoc": "latest",
 		"@markdoc/next.js": "latest",
 		"@tailwindcss/postcss": "^4.1.4",
+		"lodash": "^4.17.21",
 		"next": "latest",
 		"postcss": "^8.5.3",
 		"prismjs": "latest",

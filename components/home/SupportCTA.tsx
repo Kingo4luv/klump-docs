@@ -1,3 +1,5 @@
+import supportContent from '../../data/content/views/home/support.json';
+
 export default function SupportCTA() {
     return (
         <section className="px-4 lg:px-6 bg-white">
@@ -44,62 +46,47 @@ export default function SupportCTA() {
                 </div>
 
                 <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-[#697DBF]">
-                    <div className="text-center md:text-left px-6 py-12 flex flex-col items-center gap-3">
-                        <div className="mb-2">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 25.0135C1.2308 30.3103 8.7536 30.3091 8.9836 25.0135V21.0215H4.9916C2.7948 21.0215 1 22.8163 1 25.0135Z" fill="#CE3056" />
-                                <path d="M25.0132 18.9785C27.2104 18.9785 29.0052 17.1837 29.0052 14.9865V4.99168C28.7756 -0.302719 21.2524 -0.306319 21.0216 4.99168V14.9869C21.0212 17.1837 22.816 18.9785 25.0132 18.9785Z" fill="#5BB381" />
-                                <path d="M14.9868 21.0215C12.79 21.0215 10.9952 22.8163 10.9952 25.0135V35.0083C11.2248 40.3027 18.748 40.3063 18.9788 35.0083V25.0131C18.9788 22.8163 17.184 21.0215 14.9868 21.0215Z" fill="#CE3056" />
-                                <path d="M39 14.9868C38.7692 9.69 31.2464 9.6912 31.0164 14.9868V18.9788H35.0084C37.2052 18.9788 39 17.184 39 14.9868Z" fill="#5BB381" />
-                                <path d="M4.992 18.9787H14.9872C20.2816 18.7491 20.2852 11.2259 14.9872 10.9951H4.992C-0.303198 11.2251 -0.305198 18.7479 4.992 18.9787Z" fill="#61C3EC" />
-                                <path d="M25.0132 31.0166H21.0212V35.0086C21.0212 37.2058 22.816 39.0006 25.0132 39.0006C30.3096 38.7694 30.3084 31.2466 25.0132 31.0166Z" fill="#E4B34B" />
-                                <path d="M35.008 21.0215H25.0132C19.718 21.2515 19.716 28.7743 25.0132 29.0051H35.0084C40.3024 28.7755 40.306 21.2527 35.008 21.0215Z" fill="#E4B34B" />
-                                <path d="M14.9868 1C9.69 1.2308 9.6912 8.7536 14.9868 8.9836H18.9788V4.9916C18.9788 2.7948 17.184 1 14.9868 1Z" fill="#61C3EC" />
-                            </svg>
+                    {supportContent.sections.map((section, index) => (
+                        <div key={index} className="text-center md:text-left px-6 py-12 flex flex-col items-center gap-3">
+                            <div className="mb-2">
+                                {index === 0 ? (
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 25.0135C1.2308 30.3103 8.7536 30.3091 8.9836 25.0135V21.0215H4.9916C2.7948 21.0215 1 22.8163 1 25.0135Z" fill="#CE3056" />
+                                        <path d="M25.0132 18.9785C27.2104 18.9785 29.0052 17.1837 29.0052 14.9865V4.99168C28.7756 -0.302719 21.2524 -0.306319 21.0216 4.99168V14.9869C21.0212 17.1837 22.816 18.9785 25.0132 18.9785Z" fill="#5BB381" />
+                                        <path d="M14.9868 21.0215C12.79 21.0215 10.9952 22.8163 10.9952 25.0135V35.0083C11.2248 40.3027 18.748 40.3063 18.9788 35.0083V25.0131C18.9788 22.8163 17.184 21.0215 14.9868 21.0215Z" fill="#CE3056" />
+                                        <path d="M39 14.9868C38.7692 9.69 31.2464 9.6912 31.0164 14.9868V18.9788H35.0084C37.2052 18.9788 39 17.184 39 14.9868Z" fill="#5BB381" />
+                                        <path d="M4.992 18.9787H14.9872C20.2816 18.7491 20.2852 11.2259 14.9872 10.9951H4.992C-0.303198 11.2251 -0.305198 18.7479 4.992 18.9787Z" fill="#61C3EC" />
+                                        <path d="M25.0132 31.0166H21.0212V35.0086C21.0212 37.2058 22.816 39.0006 25.0132 39.0006C30.3096 38.7694 30.3084 31.2466 25.0132 31.0166Z" fill="#E4B34B" />
+                                        <path d="M35.008 21.0215H25.0132C19.718 21.2515 19.716 28.7743 25.0132 29.0051H35.0084C40.3024 28.7755 40.306 21.2527 35.008 21.0215Z" fill="#E4B34B" />
+                                        <path d="M14.9868 1C9.69 1.2308 9.6912 8.7536 14.9868 8.9836H18.9788V4.9916C18.9788 2.7948 17.184 1 14.9868 1Z" fill="#61C3EC" />
+                                    </svg>
+                                ) : (
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_157_25436)">
+                                            <path d="M31.6667 6.66667H29.8317C29.0567 2.86833 25.69 0 21.6667 0H8.33333C3.73833 0 0 3.73833 0 8.33333V29.7567C0 31.08 0.725 32.29 1.89 32.9133C2.42 33.1983 3.00167 33.3383 3.58167 33.3383C4.275 33.3383 4.96667 33.1367 5.565 32.7383L10.4817 29.46C11.6333 32.685 14.7167 35 18.3333 35H27.8283L34.435 39.405C35.035 39.805 35.725 40.0067 36.4183 40.0067C36.9983 40.0067 37.5783 39.865 38.11 39.58C39.2767 38.9567 40 37.7467 40 36.4233V15C40 10.405 36.2617 6.66667 31.6667 6.66667ZM3.71667 29.965C3.685 29.985 3.59167 30.045 3.46333 29.9767C3.33167 29.9067 3.33167 29.795 3.33167 29.7583V8.33333C3.33167 5.57667 5.575 3.33333 8.33167 3.33333H21.665C24.4217 3.33333 26.665 5.57667 26.665 8.33333V20C26.665 22.7567 24.4217 25 21.665 25H11.665C11.12 25 10.7633 25.265 10.7233 25.2917L3.71667 29.965ZM36.6667 36.425C36.6667 36.46 36.6667 36.5733 36.535 36.6433C36.4033 36.7117 36.3133 36.6517 36.2833 36.6317L29.2583 31.9467C28.985 31.765 28.6633 31.6667 28.3333 31.6667H18.3333C16.16 31.6667 14.3083 30.2733 13.62 28.3333H21.6667C26.2617 28.3333 30 24.595 30 20V10H31.6667C34.4233 10 36.6667 12.2433 36.6667 15V36.425Z" fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_157_25436">
+                                                <rect width="40" height="40" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                )}
+                            </div>
+                            <h3 className="text-xl font-semibold">{section.title}</h3>
+                            <p className="text-sm text-white max-w-xs text-center">
+                                {section.description}
+                            </p>
+                            <a href={section.cta.url} className="inline-flex items-center text-base font-medium text-white mt-2 hover:underline space-x-1">
+                                <span>{section.cta.text}</span>
+                                <span>
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.25 5L3.75 2.75V7.25L7.25 5Z" fill="white" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </span>
+                            </a>
                         </div>
-                        <h3 className="text-xl font-semibold">Join our Slack</h3>
-                        <p className="text-sm text-white max-w-xs text-center">
-                            Join our official Discord server to chat with us directly and become a part of the community.
-                        </p>
-                        <a href="#" className="inline-flex items-center text-base font-medium text-white mt-2 hover:underline space-x-1">
-                            <span>Join Slack </span>
-                            <span>
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.25 5L3.75 2.75V7.25L7.25 5Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
-
-                    <div className="text-center md:text-left px-6 py-12 flex flex-col items-center gap-3">
-                        <div className="mb-2">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_157_25436)">
-                                    <path d="M31.6667 6.66667H29.8317C29.0567 2.86833 25.69 0 21.6667 0H8.33333C3.73833 0 0 3.73833 0 8.33333V29.7567C0 31.08 0.725 32.29 1.89 32.9133C2.42 33.1983 3.00167 33.3383 3.58167 33.3383C4.275 33.3383 4.96667 33.1367 5.565 32.7383L10.4817 29.46C11.6333 32.685 14.7167 35 18.3333 35H27.8283L34.435 39.405C35.035 39.805 35.725 40.0067 36.4183 40.0067C36.9983 40.0067 37.5783 39.865 38.11 39.58C39.2767 38.9567 40 37.7467 40 36.4233V15C40 10.405 36.2617 6.66667 31.6667 6.66667ZM3.71667 29.965C3.685 29.985 3.59167 30.045 3.46333 29.9767C3.33167 29.9067 3.33167 29.795 3.33167 29.7583V8.33333C3.33167 5.57667 5.575 3.33333 8.33167 3.33333H21.665C24.4217 3.33333 26.665 5.57667 26.665 8.33333V20C26.665 22.7567 24.4217 25 21.665 25H11.665C11.12 25 10.7633 25.265 10.7233 25.2917L3.71667 29.965ZM36.6667 36.425C36.6667 36.46 36.6667 36.5733 36.535 36.6433C36.4033 36.7117 36.3133 36.6517 36.2833 36.6317L29.2583 31.9467C28.985 31.765 28.6633 31.6667 28.3333 31.6667H18.3333C16.16 31.6667 14.3083 30.2733 13.62 28.3333H21.6667C26.2617 28.3333 30 24.595 30 20V10H31.6667C34.4233 10 36.6667 12.2433 36.6667 15V36.425Z" fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_157_25436">
-                                        <rect width="40" height="40" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-
-                        </div>
-                        <h3 className="text-xl font-semibold">Need help?</h3>
-                        <p className="text-sm text-white max-w-xs text-center">
-                            Contact us through Discord, Twitter, or email to receive answers to your questions and learn more.
-                        </p>
-                        <a href="#" className="inline-flex items-center text-sm font-medium text-white mt-2 hover:underline space-x-1">
-                        <span>
-                                Get help 
-                        </span>
-                            <span>
-                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.25 5L3.75 2.75V7.25L7.25 5Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </a>
-                    </div>
+                    ))}
                 </div>
             </div>
         </section>

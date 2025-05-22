@@ -1,20 +1,18 @@
-
-
 import type { ReactNode } from 'react';
-import { FeedbackBox } from '../home/FeedbackBox';
-import Callout from '../Callout';
-import IntoPageImage from '../img/intro/PageImage';
-import EnvironmentTable from '../EnvironmentTable';
+import { FeedbackBox } from '../../home/FeedbackBox';
+import Callout from '../../Callout';
+import IntoPageImage from '../../img/intro/PageImage';
+import TableOfContents from '../../TableOfContents';
+import introContent from '../../../data/content/views/home/intro.json';
 
-interface EnvironmentLayoutProps {
+interface IntoLayoutProps {
     children: ReactNode;
-
     title: string;
     date?: string;
     readingTime?: string;
 }
 
-export default function EnvironmentLayout({ children, readingTime, date, title }: EnvironmentLayoutProps) {
+export default function Intro({ children, readingTime, date, title }: IntoLayoutProps) {
     return (
         <div className="max-w-7xl mx-auto px-4 lg:px-6 py-6 lg:flex gap-8">
             {/* Main Column */}
@@ -57,45 +55,33 @@ export default function EnvironmentLayout({ children, readingTime, date, title }
                     </span>
                         <span className="text-[#444453]">Published</span>
                         <span className="text-[#1F1F2D]"> {date} </span>
-                    </div>}
+                        </div>}
                 </div>
 
                 <h1 className="text-3xl font-bold text-gray-900 my-6 lg:my-12">
                     {title}
                 </h1>
+               <div className="w-full lg:w-[821px] h-[419px ">
+                    <IntoPageImage />
+               </div>
 
                 <article className="prose prose-blue max-w-none space-y-4 my-6 lg:my-10 text-base text-[#1F1F2D]">
-                    {children}
+                    {introContent.content.mainText.map((paragraph, index) => (
+                        <p key={index}>{paragraph}</p>
+                    ))}
                 </article>
 
-                <EnvironmentTable />
-
-                <Callout title="Please note." type="warning">
-                    <div className="text-[#1F1F2D] space-y-2">
-                        <p>
-                            During development, go to your Klump merchant dashboard and change the application state to 'TEST.' This way, you can test using the public and secret keys of the test credentials. When you're ready to go live and start accepting real time transactions, please change your application state to ‘LIVE’ and use your live keys.
-                        </p>
-                        <p>
-                            We recommend storing these credentials in environment variables or using a key management tool to keep track of them. You could use one of the following: AWS Secret Manager, HashiCorp Vault, Azure Secret Manager, and so on.
-                        </p>
-                    </div>
+                <Callout title={introContent.content.callout.title} type="help">
+                    {introContent.content.callout.message} <a href={introContent.content.callout.link.url} className='text-indigo-600'>{introContent.content.callout.link.text}</a>
                 </Callout>
                 <FeedbackBox />
             </div>
 
-            {/* Sidebar */}
-            <aside className="hidden lg:block w-1/4">
-                <div className="sticky top-24 pt-4">
-                    <h5 className="text-sm font-semibold text-gray-700 mb-2">On this page</h5>
-                    <ul className="border-l border-gray-200 pl-4 text-sm text-gray-600">
-                        <li className='flex space-x-1 items-center'>
-                            <span className="h-3 w-3 border rounded-full bg-[#192C69] flex items-center justify-center">
-                                <span className="h-1 w-1 rounded-full bg-white block"></span>
-                            </span>
-                            <a href="#environment" className="text-[#192C69] font-medium">Environment</a></li>
-                    </ul>
-                </div>
-            </aside>
+            <TableOfContents
+                sections={[
+                    { id: 'introduction', label: 'Introduction' },
+                ]}
+            />
         </div>
     );
 }

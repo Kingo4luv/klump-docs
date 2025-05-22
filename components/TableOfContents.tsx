@@ -27,15 +27,21 @@ export default function TableOfContents({ sections }: TableOfContentsProps) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
+        // Get all entries that are currently intersecting
+        const intersectingEntries = entries.filter(entry => entry.isIntersecting);
+        
+        if (intersectingEntries.length > 0) {
+          // Get the one closest to the top of the viewport
+          const topEntry = intersectingEntries.reduce((prev, current) => {
+            return prev.boundingClientRect.top > current.boundingClientRect.top ? current : prev;
+          });
+          
+          setActiveId(topEntry.target.id);
+        }
       },
       {
-        rootMargin: '-50% 0px -50% 0px',
-        threshold: 0.1,
+        rootMargin: '-20px 0px -80% 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1]
       }
     );
 

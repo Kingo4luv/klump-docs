@@ -1,0 +1,24 @@
+{
+    "paymentPages": {
+        "merchantDashboard": {
+            "title": "Create Payment Pages via Merchant Dashboard",
+            "description": [
+                "The Klump payment page builder allows you to create payment pages for various purposes. An example could be a fundraiser for a birthday party or product/service you wish to sell to your customers.",
+                "You can create a Klump Payment Page directly from the merchant dashboard. Simply log in, locate and click on Payment Pages in the sidebar menu. Follow the prompt to create your first payment page."
+            ]
+        },
+        "api": {
+            "title": "Create Payment Pages via API",
+            "description": [
+                "You can also create payment pages programmatically by making an API call to our payment page endpoint.",
+                "The process is pretty straightforward. When you make this request, a payment page URL will be generated which can then be used to collect payments."
+            ],
+            "example": {
+                "code": "curl --location --request GET 'https://api.useklump.com/v1/transactions/:reference/resend-webhook' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}'\\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair"
+            }
+        },
+        "sections": [
+            { "id": "payment-pages", "label": "Payment Pages" }
+        ]
+    }
+}

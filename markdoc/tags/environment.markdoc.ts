@@ -1,7 +1,7 @@
-import ApiKeysLayout from '../../components/Layouts/ApiKeysLayout';
+import Environment  from '../../components/views/home/Environment';
 
-export const apikeyslayout = {
-    render: ApiKeysLayout,
+export const environment = {
+    render: Environment,
     attributes: {
         title: { type: String, required: true },
         readingTime: { type: String },

@@ -16,7 +16,7 @@ import '../public/globals.css'
 import type { AppProps } from 'next/app'
 import type { MarkdocNextJsPageProps } from '@markdoc/next.js'
 
-const TITLE = 'Markdoc';
+const TITLE = 'Klump Documentation';
 const DESCRIPTION = 'A powerful, flexible, Markdown-based authoring framework';
 
 function collectHeadings(node, sections = []) {

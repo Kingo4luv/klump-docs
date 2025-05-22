@@ -1,0 +1,84 @@
+{
+    "introduction": {
+        "title": "Klump Access via Merchant Dashboard",
+        "description": "Below are some of the plugins and libraries that make integrating with Klump super easy. This isn't an exhaustive list. We are continuously adding to this list."
+    },
+    "sections": [
+        { "id": "plugins-and-library", "label": "Plugins & Library" }
+    ],
+    "plugins": {
+        "title": "Plugins",
+        "items": [
+            {
+                "name": "WooCommerce",
+                "url": "https://wordpress.org/plugins/klump-wc-payment-gateway",
+                "icon": "woocommerce"
+            },
+            {
+                "name": "WordPress",
+                "url": "https://wordpress.org/plugins/klump-wc-payment-gateway",
+                "icon": "wordpress"
+            },
+            {
+                "name": "PrestaShop",
+                "url": "https://github.com/Klump-Inc/prestashop-plugin",
+                "icon": "prestashop"
+            },
+            {
+                "name": "Magento",
+                "url": "https://github.com/Klump-Inc/klump-magento2-module",
+                "icon": "magento"
+            }
+        ]
+    },
+    "libraries": {
+        "title": "Libraries",
+        "items": [
+            {
+                "name": "VueJS",
+                "url": "https://github.com/Klump-Inc/klump-vue",
+                "icon": "vuejs"
+            },
+            {
+                "name": "VueJS 3",
+                "url": "https://github.com/Klump-Inc/klump-vue-3",
+                "icon": "vuejs"
+            },
+            {
+                "name": "AngularJS",
+                "url": "https://github.com/Klump-Inc/klump-angular",
+                "icon": "angular"
+            },
+            {
+                "name": "ReactJS",
+                "url": "https://github.com/Klump-Inc/klump-react",
+                "icon": "react"
+            }
+        ]
+    },
+    "packages": {
+        "title": "Packages",
+        "items": [
+            {
+                "name": "Flutter",
+                "url": "https://pub.dev/packages/klump_checkout",
+                "icon": "flutter"
+            },
+            {
+                "name": "Laravel",
+                "url": "https://packagist.org/packages/klump/laravel-klump",
+                "icon": "laravel"
+            }
+        ]
+    },
+    "communityContributions": {
+        "title": "Community Contribution",
+        "items": [
+            {
+                "name": "WHMCS",
+                "url": "https://github.com/coderatio/pay-with-klump",
+                "icon": "whmcs"
+            }
+        ]
+    }
+}

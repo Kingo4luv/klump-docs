@@ -1,0 +1,11 @@
+{
+    "settingUpWebhooks": {
+        "description": [
+            "In other to take advantage of webhooks, you will have to first set up a publicly available URL that Klump can have access to. To set up one, kindly go to your merchant dashboard, click on the Settings link and check under the API Keys & Webhook tabs, there, you will find an input box for your webhook.",
+            "Klump allows you to set up different webhook endpoints based on your environment. When your account is set to Test, the webhook URL you set up here will receive all transaction that happens when your test keys are used, consequently, when your account is set to Live, the webhook URL you set up here will receive all transaction that happens when your live keys are used."
+        ],
+        "sections": [
+            { "id": "Setting-up-webhook", "label": "Setting up Webhook" }
+        ]
+    }
+}

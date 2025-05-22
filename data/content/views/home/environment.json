@@ -1,0 +1,15 @@
+{
+    "content": {
+        "main": "Klump makes use of a single base API endpoint for both sandbox/development and production environment. The major difference here is the keys you use to communicate with the APIs and widgets.",
+        "callout": {
+            "title": "Please note.",
+            "content": [
+                "During development, go to your Klump merchant dashboard and change the application state to 'TEST.' This way, you can test using the public and secret keys of the test credentials. When you're ready to go live and start accepting real time transactions, please change your application state to 'LIVE' and use your live keys.",
+                "We recommend storing these credentials in environment variables or using a key management tool to keep track of them. You could use one of the following: AWS Secret Manager, HashiCorp Vault, Azure Secret Manager, and so on."
+            ]
+        }
+    },
+    "sections": [
+        { "id": "environment", "label": "Environment" }
+    ]
+}

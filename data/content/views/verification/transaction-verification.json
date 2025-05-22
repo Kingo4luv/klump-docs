@@ -1,0 +1,25 @@
+{
+    "transactionVerification": {
+        "intro": {
+            "description": "After a successful transaction, you must verify that the transaction was successful before providing value to a customer. Every transaction is assigned an ID, which must be supplied when attempting to confirm a transaction. To use the transaction verification API to confirm a transaction, the merchant must provide their Klump Secret Key, which can be found in their Klump dashboard",
+            "checkpoints": [
+                "Verify the data.currency matches what you're expecting"
+            ],
+            "additionalNote": "Also, depending on your need, data.is_live will return a boolean. If the boolean is true this signifies that the transaction happened in production and you can proceed to issue real value, else, you don't have to."
+        },
+        "codeExamples": {
+            "verificationRequest": {
+                "description": "Sample code used in transaction verification",
+                "note": ":reference is the expected transaction ID",
+                "code": "curl --location --request GET 'https://api.useklump.com/v1/transactions/:reference/verify' \\\n--header 'Content-Type: application/json' \\\n--header 'klump-secret-key: {{KLUMP_SEC_KEY}}'"
+            },
+            "verificationResponse": {
+                "description": "Sample transaction verification response",
+                "code": "{\n    \"state\": \"success\",\n    \"data\": {\n        \"id\": \"2dab6b4e-7db5-4dcc-bc03-470e3a417e97\",\n        \"reference\": \"KLP-1644-083962-4231\",\n        \"amount\": \"1183.85\",\n        \"status\": \"successful\",\n        \"currency\": \"NGN\",\n        \"meta_data\": null,\n        \"is_live\": false,\n        \"items\": []\n    }\n}"
+            }
+        },
+        "sections": [
+            { "id": "transaction-verification", "label": "Transaction Verification" }
+        ]
+    }
+}

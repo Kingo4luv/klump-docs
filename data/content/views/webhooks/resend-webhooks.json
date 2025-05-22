@@ -1,0 +1,16 @@
+{
+    "resendWebhooks": {
+        "description": [
+            "Things happen; systems go down, Murphy's law decides to raise its ugly head, whatever the case when these things happen, we want to make sure that you're covered. To this end, we have an endpoint that allows you to resend a webhook if you had missed one. It doesn't matter how long ago a transaction happened, you can always trigger a webhook \"resend\" using the transaction reference Klump generated at the end of that transaction.",
+            "When a resend happens, Klump will send you the most recent state of that webhook event.",
+            "Sample code to resend webhook."
+        ],
+        "note": ":reference is a required field.",
+        "sections": [
+            {
+                "id": "resend-webhook",
+                "label": "Resend Webhook"
+            }
+        ]
+    }
+}

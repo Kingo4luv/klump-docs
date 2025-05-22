@@ -1,0 +1,36 @@
+{
+    "title": "Explore by feature",
+    "description": "Precisely control access with customisable options tailored to meet the complex security needs of BNPL solutions.",
+    "features": [
+        {
+            "title": "Environments",
+            "description": "Klump makes use of a single base API endpoint for both sandbox/development and production environment.",
+            "icon": "EnvIcon"
+        },
+        {
+            "title": "Integrating Klump",
+            "description": "Fast-track local development with the essential tools needed for a Klump integration.",
+            "icon": "IntegrateIcon"
+        },
+        {
+            "title": "Klump Commerce",
+            "description": "Create an online store easily, update product inventory and reach more customers—no website needed.",
+            "icon": "CommerceIcon"
+        },
+        {
+            "title": "Webhooks",
+            "description": "Learn how to listen to events whenever certain actions occur on your integration.",
+            "icon": "WebhookIcon"
+        },
+        {
+            "title": "Verification",
+            "description": "Complete your verification process to unlock access to powerful payment solutions and integration options tailored to your business needs.",
+            "icon": "VerifyIcon"
+        },
+        {
+            "title": "Plugins & Library",
+            "description": "Below are some of the plugins and libraries that make integrating with Klump super easy.",
+            "icon": "PluginsIcon"
+        }
+    ]
+}

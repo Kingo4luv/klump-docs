@@ -1,0 +1,49 @@
+{
+    "gettingStarted": {
+        "intro": "Learn how to listen to events whenever certain actions occur on your integration.",
+        "whatAreWebhooks": {
+            "title": "What are webhooks?",
+            "description": "During a transaction lifecycle, Klump sends events that your application can listen to. A webhook is an accessible URL on your server to which we send payloads. For example, Klump sends two webhook events; when a transaction is initiated klump.payment.transaction.initiated, klump.payment.transaction.abandoned  for when a transaction has been abandoned and when it's completed klump.payment.transaction.successful.",
+            "integration": "By using webhooks, you can tightly integrate your backend application with Klump. The platform currently supports one kind of webhook: Transaction. Webhook follow a common set of rules:",
+            "rules": [
+                "Webhook should be reachable from the public internet. During development and you are on localhost, tunnelling services like Ngrok are supported",
+                "Webhook should accept HTTP POST requests with JSON payload",
+                "Webhook should respond with response codes 200 or 201",
+                "Webhook should respond as fast as possible.",
+                "Webhook should be ready to accept the same call multiple times: in case of network or remote server failure."
+            ],
+            "retryNote": "Klump will retry the request every hour for the next 72 hours. If after 72 hours Klump doesn't get a positive response(200 or 201) from the server, the request will be abandoned.",
+            "abandonedNote": "An abandoned transaction can come always become successful, this happens when a user goes back to pay for an abandoned transaction via the periodic reminder email that Klump sends. And the this happens, the webhook event changes accordingly."
+        },
+        "securityAndPerformance": {
+            "title": "Security and Performance",
+            "description": "We highly recommend following common security guidelines to make your webhook integration safe and fast:",
+            "guidelines": [
+                "Use HTTPS with a certificate from a trusted authority (eg. Let's Encrypt, Cloudflare)",
+                "Verify the \"X-Klump-Signature\" header",
+                "Be highly available",
+                "Offload the processing of the message if possible to a background job."
+            ]
+        },
+        "signatureVerification": {
+            "title": "Signature and webhook verification",
+            "description": "All HTTP requests can be verified as coming from Klump (and not tampered with by a 3rd party) by analyzing the signature attached to the request. Every request includes an HTTP header called \"X-Klump-Signature\" containing a cryptographic signature of the message. Your webhook endpoint can validate that payload and signature match."
+        },
+        "respondingToEvent": {
+            "title": "Responding to an event",
+            "description": "You should respond to a webhook event with a 200 OK. We consider this an acknowledgement of your application. If your application responds with any status outside of the 2xx range, we will consider it unacknowledged and thus, continue to send it every hour for 72 hours."
+        },
+        "supportedEvent": {
+            "title": "Supported event",
+            "description": "Below are some of the supported webhook events on Klump today. Please note, when you get the klump.payment.transaction.initiated you aren't meant to do anything. It's just an FYI..",
+            "idempotentNote": "We strongly suggest you make webhooks idempotent. That means, you should always check the webhook ID and make sure that you're not processing the same webhook more than once."
+        }
+    },
+    "sections": [
+        { "id": "what-are-webhooks", "label": "What are webhooks" },
+        { "id": "security-and-performance", "label": "Security and performance" },
+        { "id": "signature-and-webhook-verification", "label": "Signature and webhook verification" },
+        { "id": "responding-to-event", "label": "Responding to an event" },
+        { "id": "supported-event", "label": "Supported event" }
+    ]
+}

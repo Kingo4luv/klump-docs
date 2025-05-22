@@ -1,8 +1,6 @@
-
 import HeroCode from "./img/HeroCode";
 import HeroWidget from "./img/HeroWidget";
-
-// import Image from 'next/image';
+import heroContent from "../data/content/views/home/hero.json";
 
 export function Hero() {
     return (
@@ -11,15 +9,20 @@ export function Hero() {
                 {/* Left: Text Content */}
                 <div className="text-center lg:text-left">
                     <p className="text-xs tracking-widest uppercase text-blue-200">
-                        BNPL Solution at your fingertips
+                        {heroContent.tagline}
                     </p>
                     <h1 className="mt-4 text-4xl font-bold sm:text-6xl leading-tight">
-                        Klump <br className="hidden lg:block" /> Developer<br />Documentation
+                        {heroContent.title.split(' ').map((word, i, arr) => (
+                            <>
+                                {word}
+                                {i < arr.length - 1 && (i === 1 ? <br className="hidden lg:block" /> : ' ')}
+                            </>
+                        ))}
                     </h1>
                     <p className="mt-6 text-base text-blue-200 md:max-w-lg mx-auto xl:mx-0 text-center lg:text-left">
-                        From development to deployment, our documentation, tools, and frameworks simplify the process.{' '}
+                        {heroContent.description}{' '}
                         <span className="text-[#90AAFB]">
-                            Learn to integrate and build Buy Now, Pay Later (BNPL) solutions with ease.
+                            {heroContent.highlight}
                         </span>
                     </p>
                 </div>

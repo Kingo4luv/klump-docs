@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import Callout from '../../Callout';
 import WebhookHeadersTable from '../../WebhookHeadersTable';
 import { CodeTabs } from '../../Codetabs';
+import content from '../../../data/content/views/webhooks/getting-started.json';
 
 interface WebhookGettingStartedViewProps {
     children: ReactNode;
@@ -14,11 +15,12 @@ interface WebhookGettingStartedViewProps {
 }
 
 export default function WebhookGettingStarted({ children, readingTime, date, title }: WebhookGettingStartedViewProps) {
-
     const CodeBlock = dynamic(() => import('../../CodeBlock'), {
         ssr: false,
     });
 
+    const { gettingStarted } = content;
+    
     const code =
     `
     const crypto = require('crypto');
@@ -291,79 +293,37 @@ export default function WebhookGettingStarted({ children, readingTime, date, tit
                 <article className="prose prose-blue max-w-none space-y-8 my-6  text-base text-[#1F1F2D]">
                     {/* {children} */}
                     <div>
-                        <p>Learn how to listen to events whenever certain actions occur on your integration.</p>
+                        <p>{gettingStarted.intro}</p>
                     </div>
                     <div>
                         <div id="what-are-webhooks" className="text-base text-[#1F1F2D] space-y-2">
                             <h2 className='text-xl font-semibold'>
-                                What are webhooks?
+                                {gettingStarted.whatAreWebhooks.title}
                             </h2>
-                            <p>
-                                During a transaction lifecycle, Klump sends events that your application can listen to. A webhook is an accessible URL on your server to which we send payloads. For example, Klump sends two webhook events; when a transaction is initiated klump.payment.transaction.initiated, klump.payment.transaction.abandoned  for when a transaction has been abandoned and when it's completed klump.payment.transaction.successful.
-                            </p>
-                            <p>
-                                By using webhooks, you can tightly integrate your backend application with Klump. The platform currently supports one kind of webhook: Transaction. Webhook follow a common set of rules:
-                            </p>
+                            <p>{gettingStarted.whatAreWebhooks.description}</p>
+                            <p>{gettingStarted.whatAreWebhooks.integration}</p>
                             <ul className='space-y-1 my-4'>
-                                <li className='flex items-center space-x-1'>
-                                    <span>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
-                                            <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
-                                        </svg>
-                                    </span>
-                                    <span>Webhook should be reachable from the public internet. During development and you are on localhost, tunnelling services like Ngrok are supported</span>
-                                </li>
-                                <li className='flex items-center space-x-1'>
-                                    <span>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
-                                            <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
-                                        </svg>
-                                    </span>
-                                    <span>Webhook should accept HTTP POST requests with JSON payload</span>
-                                </li>
-                                <li className='flex items-center space-x-1'>
-                                    <span>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
-                                            <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
-                                        </svg>
-                                    </span>
-                                    <span>Webhook should respond with response codes 200 or 201</span>
-                                </li>
-                                <li className='flex items-center space-x-1'>
-                                    <span>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
-                                            <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
-                                        </svg>
-                                    </span>
-                                    <span>Webhook should respond as fast as possible.</span>
-                                </li>
-                                <li className='flex items-center space-x-1'>
-                                    <span>
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
-                                            <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
-                                        </svg>
-                                    </span>
-                                    <span>Webhook should be ready to accept the same call multiple times: in case of network or remote server failure.</span>
-                                </li>
+                                {gettingStarted.whatAreWebhooks.rules.map((rule, index) => (
+                                    <li key={index} className='flex items-center space-x-1'>
+                                        <span>
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
+                                                <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
+                                            </svg>
+                                        </span>
+                                        <span>{rule}</span>
+                                    </li>
+                                ))}
                             </ul>
                             <div className='mt-4 space-y-4'>
                                 <Callout title="" type="help">
                                     <div className="text-[#1F1F2D] space-y-3">
-                                        <p>
-                                            Klump will retry the request every hour for the next 72 hours. If after 72 hours Klump doesn't get a positive response(200 or 201) from the server, the request will be abandoned.
-                                        </p>
+                                        <p>{gettingStarted.whatAreWebhooks.retryNote}</p>
                                     </div>
                                 </Callout>
                                 <Callout title="Abandoned Transaction" type="warning">
                                     <div className="text-[#1F1F2D] space-y-3">
-                                        <p>
-                                            An abandoned transaction can come always become successful, this happens when a user goes back to pay for an abandoned transaction via the periodic reminder email that Klump sends. And the this happens, the webhook event changes accordingly.
-                                        </p>
+                                        <p>{gettingStarted.whatAreWebhooks.abandonedNote}</p>
                                     </div>
                                 </Callout>
                             </div>
@@ -375,78 +335,49 @@ export default function WebhookGettingStarted({ children, readingTime, date, tit
                     </div>
                     <div id="security-and-performance" className="text-base text-[#1F1F2D] space-y-2 border-b border-t border-gray-200 py-4">
                         <h2 className='text-xl font-semibold'>
-                            Security and Performance
+                            {gettingStarted.securityAndPerformance.title}
                         </h2>
-                        <p>
-                            We highly recommend following common security guidelines to make your webhook integration safe and fast:
-                        </p>
+                        <p>{gettingStarted.securityAndPerformance.description}</p>
                         <ul className='space-y-1 my-4'>
-                            <li className='flex items-center space-x-1'>
-                                <span>
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
-                                        <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
-                                    </svg>
-                                </span>
-                                <span>Use HTTPS with a certificate from a trusted authority (eg. Let's Encrypt, Cloudflare)</span>
-                            </li>
-                            <li className='flex items-center space-x-1'>
-                                <span>
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
-                                        <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
-                                    </svg>
-                                </span>
-                                <span>Verify the "X-Klump-Signature" header</span>
-                            </li>
-                            <li className='flex items-center space-x-1'>
-                                <span>
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
-                                        <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
-                                    </svg>
-                                </span>
-                                <span>Be highly available</span>
-                            </li>
-                            <li className='flex items-center space-x-1'>
-                                <span>
-                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
-                                        <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
-                                    </svg>
-                                </span>
-                                <span>Offload the processing of the message if possible to a background job.</span>
-                            </li>
+                            {gettingStarted.securityAndPerformance.guidelines.map((guideline, index) => (
+                                <li key={index} className='flex items-center space-x-1'>
+                                    <span>
+                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.46233 9.62717C3.49899 9.65001 3.62816 9.71434 3.75783 9.60334L8.90599 5.20784C8.96616 5.15634 9.00066 5.08051 9.00066 4.99967C9.00066 4.91884 8.96616 4.84301 8.90599 4.79151L3.75783 0.396008C3.70183 0.348174 3.64599 0.333008 3.59766 0.333008C3.53399 0.333008 3.48316 0.359341 3.46233 0.372174C3.38149 0.421841 3.30783 0.526341 3.34299 0.670508L4.36549 4.85417C4.38883 4.94934 4.38883 5.05001 4.36549 5.14517L3.34299 9.32884C3.30783 9.47301 3.38149 9.57751 3.46233 9.62717Z" fill="black" />
+                                            <path d="M2 6C2.55228 6 3 5.55228 3 5C3 4.44772 2.55228 4 2 4C1.44772 4 1 4.44772 1 5C1 5.55228 1.44772 6 2 6Z" fill="black" />
+                                        </svg>
+                                    </span>
+                                    <span>{guideline}</span>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div id="signature-and-webhook-verification" className="text-base text-[#1F1F2D] space-y-2">
                         <h2 className='text-xl font-semibold'>
-                            Signature and webhook verification
+                            {gettingStarted.signatureVerification.title}
                         </h2>
-                        <p>All HTTP requests can be verified as coming from Klump (and not tampered with by a 3rd party) by analyzing the signature attached to the request. Every request includes an HTTP header called "X-Klump-Signature" containing a cryptographic signature of the message. Your webhook endpoint can validate that payload and signature match.</p>
+                        <p>{gettingStarted.signatureVerification.description}</p>
                         <div className='py-2 w-full h-full'>
                             <CodeBlock code={code} lang="javascript" />
                         </div>
                     </div>
                     <div id="responding-to-event" className="text-base text-[#1F1F2D] space-y-2 border-b border-t border-gray-200 py-6">
                         <h2 className='text-xl font-semibold'>
-                            Responding to an event
+                            {gettingStarted.respondingToEvent.title}
                         </h2>
-                        <p>You should respond to a webhook event with a 200 OK. We consider this an acknowledgement of your application. If your application responds with any status outside of the 2xx range, we will consider it unacknowledged and thus, continue to send it every hour for 72 hours.</p>
+                        <p>{gettingStarted.respondingToEvent.description}</p>
                     </div>
                     <div id="supported-event" className="text-base text-[#1F1F2D] space-y-3">
                         <h2 className='text-xl font-semibold'>
-                            Supported event
+                            {gettingStarted.supportedEvent.title}
                         </h2>
-                        <p>Below are some of the supported webhook events on Klump today. Please note, when you get the <code className='font-mono bg-gray-100 px-1'>klump.payment.transaction.initiated you</code> aren't meant to do anything. It's just an FYI..</p>
+                        <p>{gettingStarted.supportedEvent.description}</p>
                         <div className='py-2 w-full h-full'>
                             <CodeTabs tabs={codeSamples}/>
                         </div>
                         <Callout title="Idempotent Webhooks" type="warning">
                             <div className="text-[#1F1F2D] space-y-3">
-                                <p>
-                                    We strongly suggest you make webhooks idempotent. That means, you should always check the webhook ID and make sure that you're not processing the same webhook more than once.
-                                </p>
+                                <p>{gettingStarted.supportedEvent.idempotentNote}</p>
                             </div>
                         </Callout>
                     </div>
@@ -458,15 +389,7 @@ export default function WebhookGettingStarted({ children, readingTime, date, tit
                 </div>
             </div>
 
-            <TableOfContents
-                sections={[
-                    { id: 'what-are-webhooks', label: 'What are webhooks' },
-                    { id: 'security-and-performance', label: 'Security and performance' },
-                    { id: 'signature-and-webhook-verification', label: 'Signature and webhook verification' },
-                    { id: 'responding-to-event', label: 'Responding to an event' },
-                    { id: 'supported-event', label: 'Supported event' },
-                ]}
-            />
+            <TableOfContents sections={content.sections} />
         </div>
     );
 }

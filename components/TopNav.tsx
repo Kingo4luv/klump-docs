@@ -1,12 +1,60 @@
-import React from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import ThemeToggle from './header/ThemeToggle';
 import { useSidebarStore } from '../hooks/useSidebarStore';
 import { usePathname } from 'next/navigation';
+import { SearchResults } from './SearchResults';
+import { searchContent, type SearchResult } from '../lib/search';
+import debounce from 'lodash/debounce';
 
 export function TopNav({ children }) {
   const toggleSidebar = useSidebarStore((state) => state.toggle);
-  const pathname = usePathname(); 
+  const pathname = usePathname();
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const debouncedSearch = useCallback(
+    debounce(async (query: string) => {
+      if (query.trim()) {
+        setIsSearching(true);
+        const results = await searchContent(query);
+        setSearchResults(results);
+        setIsSearching(false);
+      } else {
+        setSearchResults([]);
+      }
+    }, 300),
+    []
+  );
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setShowResults(!!query.trim()); // Only show results if there's a query
+    if (query.trim()) {
+      debouncedSearch(query);
+    } else {
+      setSearchResults([]);
+    }
+  };
+
+  const handleSearchFocus = () => {
+    // Only show results if there's a query or we're actively searching
+    const query = searchInputRef.current?.value;
+    if (query?.trim() || isSearching) {
+      setShowResults(true);
+    }
+  };
+
+  const closeSearch = () => {
+    setShowResults(false);
+    setSearchResults([]);
+    if (searchInputRef.current) {
+      searchInputRef.current.value = '';
+    }
+  };
+
   return (
     <nav className='flex bg-white border border-[#E3E8EE] sticky top-0 z-10 px-0 lg:px-8'>
       <div className='mx-auto flex items-center justify-between w-full py-6 px-4'>
@@ -51,18 +99,38 @@ export function TopNav({ children }) {
           </div>
           <div className='relative h-[44px] w-full lg:w-[424px]'>
             <span className='absolute h-full w-10 flex justify-center items-center'>
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_122_6353)">
-                  <path fillRule="evenodd" clip-rule="evenodd" d="M7.9343 8.86218C7.02202 9.53996 5.88708 9.84745 4.75743 9.7229C3.62778 9.59834 2.5871 9.05096 1.84441 8.19071C1.10172 7.33046 0.712035 6.22105 0.753628 5.08531C0.79522 3.94958 1.26501 2.87165 2.06863 2.06802C2.87226 1.2644 3.95019 0.79461 5.08592 0.753017C6.22166 0.711424 7.33107 1.10111 8.19132 1.8438C9.05157 2.58649 9.59895 3.62717 9.72351 4.75682C9.84806 5.88647 9.54057 7.02141 8.8628 7.93368L11.433 10.5047C11.494 10.5656 11.5424 10.638 11.5754 10.7177C11.6084 10.7973 11.6253 10.8827 11.6253 10.9689C11.6253 11.0552 11.6084 11.1405 11.5754 11.2202C11.5424 11.2998 11.494 11.3722 11.433 11.4332C11.3721 11.4942 11.2997 11.5425 11.22 11.5755C11.1404 11.6085 11.055 11.6255 10.9688 11.6255C10.8826 11.6255 10.7972 11.6085 10.7175 11.5755C10.6379 11.5425 10.5655 11.4942 10.5045 11.4332L7.9343 8.86218ZM8.43755 5.25018C8.43755 6.09556 8.10172 6.90632 7.50395 7.50409C6.90618 8.10186 6.09542 8.43768 5.25004 8.43768C4.40467 8.43768 3.59391 8.10186 2.99614 7.50409C2.39837 6.90632 2.06254 6.09556 2.06254 5.25018C2.06254 4.40481 2.39837 3.59405 2.99614 2.99628C3.59391 2.39851 4.40467 2.06268 5.25004 2.06268C6.09542 2.06268 6.90618 2.39851 7.50395 2.99628C8.10172 3.59405 8.43755 4.40481 8.43755 5.25018Z" fill="#171717" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_122_6353">
-                    <rect width="12" height="12" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
+              {isSearching ? (
+                <svg className="animate-spin h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              ) : (
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clipPath="url(#clip0_122_6353)">
+                    <path fillRule="evenodd" clipRule="evenodd" d="M7.9343 8.86218C7.02202 9.53996 5.88708 9.84745 4.75743 9.7229C3.62778 9.59834 2.5871 9.05096 1.84441 8.19071C1.10172 7.33046 0.712035 6.22105 0.753628 5.08531C0.79522 3.94958 1.26501 2.87165 2.06863 2.06802C2.87226 1.2644 3.95019 0.79461 5.08592 0.753017C6.22166 0.711424 7.33107 1.10111 8.19132 1.8438C9.05157 2.58649 9.59895 3.62717 9.72351 4.75682C9.84806 5.88647 9.54057 7.02141 8.8628 7.93368L11.433 10.5047C11.494 10.5656 11.5424 10.638 11.5754 10.7177C11.6084 10.7973 11.6253 10.8827 11.6253 10.9689C11.6253 11.0552 11.6084 11.1405 11.5754 11.2202C11.5424 11.2998 11.494 11.3722 11.433 11.4332C11.3721 11.4942 11.2997 11.5425 11.22 11.5755C11.1404 11.6085 11.055 11.6255 10.9688 11.6255C10.8826 11.6255 10.7972 11.6085 10.7175 11.5755C10.6379 11.5425 10.5655 11.4942 10.5045 11.4332L7.9343 8.86218ZM8.43755 5.25018C8.43755 6.09556 8.10172 6.90632 7.50395 7.50409C6.90618 8.10186 6.09542 8.43768 5.25004 8.43768C4.40467 8.43768 3.59391 8.10186 2.99614 7.50409C2.39837 6.90632 2.06254 6.09556 2.06254 5.25018C2.06254 4.40481 2.39837 3.59405 2.99614 2.99628C3.59391 2.39851 4.40467 2.06268 5.25004 2.06268C6.09542 2.06268 6.90618 2.39851 7.50395 2.99628C8.10172 3.59405 8.43755 4.40481 8.43755 5.25018Z" fill="#171717" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_122_6353">
+                      <rect width="12" height="12" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              )}
             </span>
-            <input type="text" placeholder="Search here..." className="border border-[#D5DBE1] rounded-md h-full w-full px-10 py-2 placeholder:text-[#A5ADBB] " />
+            <input
+              ref={searchInputRef}
+              type="text"
+              placeholder="Search here..."
+              className="border border-[#D5DBE1] rounded-md h-full w-full px-10 py-2 placeholder:text-[#A5ADBB]"
+              onChange={handleSearchChange}
+              onFocus={handleSearchFocus}
+            />
+            <SearchResults
+              results={searchResults}
+              isVisible={showResults}
+              onClose={closeSearch}
+              isSearching={isSearching}
+            />
           </div>
         </div>
         <div className='hidden lg:flex space-x-4'>

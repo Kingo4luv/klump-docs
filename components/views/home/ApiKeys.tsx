@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react';
-import { FeedbackBox } from '../home/FeedbackBox';
-import ApiKeyImage from '../img/api-key/PageImage';
+import { FeedbackBox } from '../../home/FeedbackBox';
+import ApiKeyImage from '../../img/api-key/PageImage';
 import dynamic from 'next/dynamic';
-import TableOfContents from '../TableOfContents';
+import TableOfContents from '../../TableOfContents';
+import apiKeysContent from '../../../data/content/views/home/api-keys.json';
 
 interface ApiKeysLayoutProps {
     children: ReactNode;
@@ -11,24 +12,10 @@ interface ApiKeysLayoutProps {
     readingTime?: string;
 }
 
-export default function ApiKeysLayout({ children, readingTime, date, title }: ApiKeysLayoutProps) {
-
-    const CodeBlock = dynamic(() => import('../CodeBlock'), {
+export default function ApiKeys({ children, readingTime, date, title }: ApiKeysLayoutProps) {
+    const CodeBlock = dynamic(() => import('../../CodeBlock'), {
         ssr: false,
     });
-    const code = `
-    curl --location --request GET 'https://api.useklump.com/v1/transactions/:reference/verify' \\
-        --header 'Content-Type: application/json' \\
-        --header 'klump-secret-key: {{KLUMP_SEC_KEY}}'
-        `.trim();
-
-    const codeTwo = `<script>  
-    const data = {
-        publicKey: 'klp_pk_1234abdc5678' 
-    }
-</script>
-    `
-    
 
     return (
         <div className="max-w-7xl mx-auto px-4 lg:px-6 py-6 lg:flex gap-8">
@@ -57,9 +44,7 @@ export default function ApiKeysLayout({ children, readingTime, date, title }: Ap
                     {title}
                 </h1>
 
-                {/* Article Content */}
                 <article className="prose prose-blue max-w-none space-y-8 my-6 lg:my-10 text-base text-[#1F1F2D]">
-                    {/* {children} */}
                     <div id='api-keys'>
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M37.6556 34.1678L37.4236 33.7678L30.9636 30.0558L30.0556 29.5358L23.7156 25.8958L22.1076 24.9718C21.3716 22.1758 20.0796 19.4438 18.2316 16.7798C17.2796 15.4118 16.2476 14.2038 15.1356 13.1678C14.0836 12.1798 12.9516 11.3438 11.7556 10.6558C10.8796 10.1518 10.0436 9.77181 9.24357 9.51581C7.48357 8.94781 5.90357 8.97181 4.51157 9.59981L3.99157 9.85981C1.86357 11.0798 0.803568 13.4358 0.811568 16.9278C0.819568 20.4198 1.89557 24.0038 4.03157 27.6718C6.17157 31.3438 8.76757 34.0518 11.8156 35.8038C14.1596 37.1518 16.2756 37.5998 18.1636 37.1478C20.0476 36.6958 21.3716 35.4318 22.1276 33.3558L22.7676 33.7238L26.4356 40.0158L30.0836 37.9238L34.6636 44.6878L41.0436 39.9798L37.6556 34.1678ZM16.4276 29.2918C16.2196 29.5438 15.9676 29.7518 15.6796 29.9158C14.6156 30.5238 13.3236 30.3918 11.7996 29.5158C10.2756 28.6398 8.97957 27.2838 7.90757 25.4518C6.83957 23.6158 6.30357 21.8238 6.29957 20.0798C6.29557 18.3318 6.82357 17.1518 7.88757 16.5438C8.26757 16.3278 8.67957 16.1998 9.12357 16.1718C9.91157 16.1278 10.7956 16.3798 11.7716 16.9398C13.2956 17.8158 14.5916 19.1718 15.6556 21.0038H15.6596C15.7476 21.1558 15.8276 21.3038 15.9076 21.4518C15.9116 21.4558 15.9116 21.4598 15.9156 21.4638C16.8156 23.1398 17.2676 24.7758 17.2716 26.3798C17.2756 27.6518 16.9916 28.6238 16.4276 29.2918Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
@@ -69,23 +54,23 @@ export default function ApiKeysLayout({ children, readingTime, date, title }: Ap
                             <path d="M45.4244 29.7677L37.4244 33.7677L30.9644 30.0557L30.0564 29.5357L23.7164 25.8957L22.1084 24.9717L25.2004 23.4277L30.1084 20.9717L45.4244 29.7677Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M30.1077 20.9723L25.1997 23.4283L22.1077 24.9723C21.3717 22.1763 20.0797 19.4443 18.2317 16.7803C17.2797 15.4123 16.2477 14.2043 15.1357 13.1683C14.0837 12.1803 12.9517 11.3443 11.7557 10.6563C10.8797 10.1523 10.0437 9.77234 9.24372 9.51634C7.48372 8.94834 5.90372 8.97234 4.51172 9.60034L11.9917 5.86034C14.1197 4.64034 16.7077 4.90434 19.7557 6.65634C22.2237 8.07234 24.3837 10.1163 26.2317 12.7803C28.0797 15.4443 29.3717 18.1763 30.1077 20.9723Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <h2 className="text-[22px] font-semibold text-[#1F1F2D] mt-2">API Keys</h2>
+                        <h2 className="text-[22px] font-semibold text-[#1F1F2D] mt-2">
+                            {apiKeysContent.content.apiKeys.title}
+                        </h2>
                         <div className="text-base text-[#1F1F2D] space-y-2 mt-4">
-                            <p>Every API request to Klump's endpoints must include an API key, specifically the Klump secret key. If you do not include an API key with your request, or if you use an incorrect or outdated key, Klump will reject it and return an error.</p>
-                            <p>Klump offers two types of keys: test keys and live keys. When you're ready to go live, use your test keys in your sandbox or development environment, and your live keys when you're ready to go live.</p>
-                            <p>When you sign up for Klump, your API keys are generated automatically. To obtain your keys, please go to the merchant dashboard, click on the Settings link, and look for your API key under the API Keys & Webhook tabs.</p>
-                            <p>The keys you get will be dependent on the state of your application (LIVE or TEST).</p>
-
+                            {apiKeysContent.content.apiKeys.content.map((paragraph, index) => (
+                                <p key={index}>{paragraph}</p>
+                            ))}
                             <div className='pt-4 w-full h-full lg:w-[826px] lg:h-[495px]'>
                                 <ApiKeyImage />
                             </div>
                         </div>
-
                     </div>
+
                     <div id='authorization'>
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M33.7951 37.9129L33.9497 37.8356C34.1952 37.7038 34.4224 37.5356 34.6315 37.3265C35.3088 36.6492 35.6497 35.6265 35.6497 34.2538C35.6497 32.4901 35.1042 30.6674 34.0133 28.7901C33.1269 27.2538 32.0861 26.0492 30.8997 25.1765C30.6315 24.9811 30.3543 24.7992 30.0724 24.6356C28.6088 23.7947 27.3542 23.6311 26.2997 24.1447L26.2634 24.1629C26.2179 24.1856 26.1724 24.2083 26.127 24.2356C25.0406 24.8538 24.4951 26.0492 24.4951 27.8174C24.4951 28.5583 24.5907 29.3129 24.7816 30.072C24.9679 30.8129 25.2451 31.5629 25.6088 32.322C26.1224 33.3811 26.7315 34.3311 27.4497 35.1674C27.7678 35.5492 28.1133 35.9038 28.4769 36.2401V44.7401L30.8679 48.8627L34.0543 47.0491L31.6633 42.9265L34.0543 41.5629L32.0634 38.1265C32.7088 38.2129 33.286 38.1447 33.7951 37.9129ZM31.2088 32.0811C30.8997 32.2538 30.5224 32.2129 30.0724 31.9492C29.6179 31.6901 29.2406 31.2947 28.9361 30.7674C28.6315 30.2447 28.4769 29.722 28.4769 29.2038C28.4769 28.6856 28.6315 28.3401 28.9361 28.1629C29.2406 27.9901 29.6179 28.0311 30.0724 28.2947C30.5224 28.5538 30.8997 28.9492 31.2088 29.4765C31.5133 30.0038 31.6633 30.522 31.6633 31.0401C31.6633 31.5583 31.5133 31.9038 31.2088 32.0811Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.909091" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M31.2094 29.4764C30.9003 28.9491 30.523 28.5537 30.073 28.2946C29.6184 28.031 29.2412 27.99 28.9366 28.1627C28.6321 28.34 28.4775 28.6855 28.4775 29.2037C28.4775 29.7219 28.6321 30.2446 28.9366 30.7673C29.2412 31.2946 29.6184 31.69 30.073 31.9491C30.523 32.2127 30.9003 32.2536 31.2094 32.0809C31.5139 31.9036 31.6639 31.5582 31.6639 31.04C31.6639 30.5218 31.5139 30.0036 31.2094 29.4764Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.909091" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M31.2094 29.4764C30.8997 28.9491 30.523 28.5537 30.073 28.2946C29.6184 28.031 29.2412 27.99 28.9366 28.1627C28.6321 28.34 28.4775 28.6855 28.4775 29.2037C28.4775 29.7219 28.6321 30.2446 28.9366 30.7673C29.2412 31.2946 29.6184 31.69 30.073 31.9491C30.523 32.2127 30.9003 32.2536 31.2094 32.0809C31.5139 31.9036 31.6639 31.5582 31.6639 31.04C31.6639 30.5218 31.5139 30.0036 31.2094 29.4764Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.909091" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M43.1454 42.5039L39.9591 44.3176L30.8682 48.8629L34.0545 47.0492L39.8591 44.1448L43.1454 42.5039Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.909091" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M43.1459 42.5036L39.8595 44.1445L34.055 47.049L31.6641 42.9263L37.5686 39.9763L40.755 38.3809L43.1459 42.5036Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.909091" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M43.1459 37.0176L40.755 38.3812L37.5686 39.9767L31.6641 42.9267L34.055 41.563L37.5686 39.8085L43.1459 37.0176Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.909091" stroke-linecap="round" stroke-linejoin="round" />
@@ -99,23 +84,22 @@ export default function ApiKeysLayout({ children, readingTime, date, title }: Ap
                             <path d="M44.7407 29.708C44.7407 31.0808 44.3998 32.1035 43.7225 32.7808C43.5044 32.9944 43.2725 33.1671 43.018 33.3035L41.4498 34.0899L34.0544 37.7808L33.9498 37.8353C34.1953 37.7035 34.4225 37.5353 34.6316 37.3262C35.3089 36.649 35.6498 35.6262 35.6498 34.2535C35.6498 32.4899 35.1043 30.6671 34.0134 28.7898C33.127 27.2535 32.0862 26.0489 30.8998 25.1762C30.6317 24.9807 30.3544 24.7989 30.0725 24.6353C28.6089 23.7944 27.3544 23.6308 26.2998 24.1444L35.4453 19.5717C36.4908 19.0899 37.7271 19.2625 39.1634 20.0898C40.7044 20.9807 42.0179 22.3625 43.1043 24.2444C44.1952 26.1216 44.7407 27.9444 44.7407 29.708Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.909091" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M41.4501 34.0898L37.5683 36.0307L34.0547 37.7808L41.4501 34.0898Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.909091" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <h2 className="text-[22px] font-semibold text-[#1F1F2D] mt-2">Authorizaton</h2>
+                        <h2 className="text-[22px] font-semibold text-[#1F1F2D] mt-2">
+                            {apiKeysContent.content.authorization.title}
+                        </h2>
                         <div className="text-base text-[#1F1F2D] space-y-2 mt-4">
-                            <p>Every communication with an API will require the secret key, which must be sent via a header klump-secret-key. We strongly advise you to keep your secret key on your own server and only make it available to team members who absolutely need to have it.</p>
-                            <p>See the code sample below for an example.</p>
-
+                            {apiKeysContent.content.authorization.content.map((paragraph, index) => (
+                                <p key={index}>{paragraph}</p>
+                            ))}
                             <div className='py-4 w-full h-full'>
-                                <CodeBlock code={code} lang="javascript" />
+                                <CodeBlock code={apiKeysContent.content.authorization.codeExamples.serverSide} lang="javascript" />
                             </div>
-
-                            <p>When communicating with Klump on the client side, you must include the public Key in the request. You'll need to pass it as a parameter into an instance of a Klump object. In addition, the key must be called</p>
-                        
                             <div className='py-4 w-full h-full'>
-                                <CodeBlock code={codeTwo} lang="javascript" />
+                                <CodeBlock code={apiKeysContent.content.authorization.codeExamples.clientSide} lang="javascript" />
                             </div>
                         </div>
-
                     </div>
+
                     <div id='security'>
                         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M31.5958 18.1255L28.7208 15.2338L20.6833 7.13379L14.5833 6.23379L6.25 5.00879V17.638C6.25 22.8838 7.60833 28.438 10.3333 34.3047C13.0542 40.1755 16.5042 44.9171 20.6833 48.538C23.7 49.4088 26.3375 49.2546 28.5917 48.0755C29.4625 47.6213 30.275 47.0171 31.0333 46.2588C31.45 45.8421 31.8375 45.3921 32.1833 44.9171C34.1417 42.2838 35.1167 38.7463 35.1167 34.3047V21.6755L31.5958 18.1255ZM26.0958 39.2422L22.7375 37.3005L15.2708 32.9922V22.638L16.0042 23.0588L17.075 23.6797V21.613C17.075 20.4713 17.4292 19.7005 18.1333 19.3005C18.8417 18.8963 19.6917 18.9797 20.6833 19.5547C21.0458 19.763 21.3917 20.0171 21.7167 20.3171C21.9542 20.5296 22.175 20.763 22.3875 21.0213C22.6917 21.3838 22.9708 21.7921 23.2333 22.2421C23.3708 22.4796 23.4958 22.7213 23.6042 22.9546C24.0625 23.9213 24.2917 24.863 24.2917 25.7796V27.8463L26.0958 28.888V39.2422Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
@@ -129,15 +113,15 @@ export default function ApiKeysLayout({ children, readingTime, date, title }: Ap
                             <path d="M29.0167 2.96679L20.6833 7.13346L14.5833 6.23345L6.25 5.00846L14.5833 0.841797L29.0167 2.96679Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.833333" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
 
-                        <h2 className="text-[22px] font-semibold text-[#1F1F2D] mt-2">Security</h2>
+                        <h2 className="text-[22px] font-semibold text-[#1F1F2D] mt-2">
+                            {apiKeysContent.content.security.title}
+                        </h2>
                         <div className="text-base text-[#1F1F2D] space-y-2 mt-4">
-                            <p>
-                                While we strongly recommend you to keep your keys private, we recognize that bad things do happen. If your key has been compromised or you suspect something has gone wrong, we strongly advise you to generate a new key right away. When you generate a new key, all previous keys become invalid, and Klump will not honor requests sent with those keys.
-                            </p>
+                            {apiKeysContent.content.security.content.map((paragraph, index) => (
+                                <p key={index}>{paragraph}</p>
+                            ))}
                         </div>
-
                     </div>
-
                 </article>
 
                 {/* Feedback */}
@@ -147,11 +131,7 @@ export default function ApiKeysLayout({ children, readingTime, date, title }: Ap
             </div>
 
             <TableOfContents
-                sections={[
-                    { id: 'api-keys', label: 'API Keys' },
-                    { id: 'authorization', label: 'Authorization' },
-                    { id: 'security', label: 'Security' },
-                ]}
+                sections={apiKeysContent.sections}
             />
         </div>
     );

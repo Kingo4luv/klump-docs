@@ -15,6 +15,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "markdoc/tags/homelayouts.markdocts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "markdoc/tags/homelayouts.markdocts", "components/views/integrating-klump/IntegratingKlumpView.tsx"],
   "exclude": ["node_modules"]
 }

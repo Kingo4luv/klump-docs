@@ -1,0 +1,53 @@
+{
+    "productTesting": {
+        "intro": [
+            "After you must have finished integrating with Klump, we believe the next natural step is to begin to test the product, especially the checkout experience.",
+            "We strongly advise you to set your account to TEST during this testing period. Please note that you can do that from the merchant dashboard.",
+            "Here are a few critical things to note during this test phase:"
+        ],
+        "contentSections": [
+            {
+                "title": "Phone Number & OTP PIN",
+                "description": "When you enter a phone number at the OTP (one-time-password screen), you will get a notification that says OTP has been sent to your mobile phone. Please use 12345 as the default entry. When you switch your account to LIVE, an OTP will be sent to your mobile number.",
+                "warning": {
+                    "title": "PS.",
+                    "description": "Since this is a test environment, feel free to enter a random phone number, it should at least follow Nigeria's approved phone number format 0803XXXXXXX, etc"
+                }
+            },
+            {
+                "title": "Bio Data",
+                "description": "Please use the following information for the biodata section - First name(Samuel) (Last name)Olamide"
+            },
+            {
+                "title": "ID Verification",
+                "description": "We recommend selecting the driver's license option and using the following number ABC12345DE67."
+            },
+            {
+                "title": "Test Bank Account",
+                "description": "When you get to the screen where you're asked to link your bank account, follow the prompt and continue. When you see the list of banks, kindly select Stanbic, Polaris, etc and proceed to link your account using the credentials provided here. On this screen, click the button that says \"fill with test data\" and you should be able to link an account."
+            },
+            {
+                "title": "Test Credentials",
+                "description": "We encourage you to use the test credentials we have provided here."
+            },
+            {
+                "title": "Emails",
+                "description": "Please use a disposable email as much as you can. You can generate one here - https://temp-mail.org/en/. If you don't use a disposable email and use an email that isn't functional, our email service provider penalizes us for that. Now we don't want that, do we?"
+            },
+            {
+                "title": "Password",
+                "description": "As much as you can, use a password with a combination of at least one upper case, lower case, special character and a number. Eg - Password@1."
+            }
+        ],
+        "sections": [
+            { "id": "product-testing", "label": "Product Testing" },
+            { "id": "phone-otp", "label": "Phone Number & OTP" },
+            { "id": "bio-data", "label": "Bio Data" },
+            { "id": "id-verification", "label": "ID Verification" },
+            { "id": "test-bank-account", "label": "Test Bank Account" },
+            { "id": "test-credentials", "label": "Test Credentials" },
+            { "id": "emails", "label": "Emails" },
+            { "id": "password", "label": "Password" }
+        ]
+    }
+}

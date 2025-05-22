@@ -1,0 +1,25 @@
+{
+    "inventoryManagement": {
+        "title": "Klump's ecommerce marketplace",
+        "description": [
+            "Klump Commerce is Klump's ecommerce marketplace. Merchants without a website can create a storefront via https://store.useklump.com and start selling their wares in minutes.",
+            "We recognize that merchants, often have other sources where they sell their goods. This, in itself, isn't a problem. The problem arises when it's time for inventory reconciliation.",
+            "It isn't unusual for merchants to run out of inventory via other outlets, while their storefront on Klump Commerce still shows SKUs as being available. To solve this problem, we developed a bridge between any ecommerce store and Klump.",
+            "The two frequently changed variables on most ecommerce platforms are price and quantity. With Klump's API, merchants can update these parameters as need be thereby helping to keep inventory in sync."
+        ],
+        "codeExamples": {
+            "updateInventory": {
+                "label": "Update Product Inventory",
+                "code": "curl --location --request PATCH 'https://api.useklump.com/v1/products/update-webhook' \\\n--header 'Content-Type: application/json' \\\n--header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n--data '{\"name\": \"iPhone 15\", \"price\": 150000, \"quantity\": 1}'"
+            },
+            "sampleResponse": {
+                "label": "Json",
+                "code": "{\n    \"id\": \"bb343101-612c-4f0c-a252-bc4439e26b8f\",\n    \"merchant_id\": \"936b8f34-59d9-4aca-a2a8-f26013b03bd4\",\n    \"product_category_id\": \"49a685bc-499e-4f04-9b20-c48093a32ab8\",\n    \"product_sub_category_id\": \"54f94900-ac58-4ce7-8e4e-e68fa5cd4aa3\",\n    \"name\": \"iPhone 15\",\n    \"slug\": \"iphone-15-936b8f34-59d9-4aca-a2a8-f26013b03bd4\",\n    \"description\": \"It's a good phone.\",\n    \"old_price\": \"20000.00\",\n    \"deprecated_discount\": 10,\n    \"quantity\": 5,\n    \"preview_image\": null,\n    \"created_at\": \"2023-12-12T15:35:47.445Z\",\n    \"updated_at\": \"2023-12-18T16:51:42.090Z\",\n    \"deleted_at\": null,\n    \"is_deleted\": false,\n    \"is_published\": true,\n    \"summary\": null,\n    \"is_approved\": true,\n    \"price\": \"38784993.00\",\n    \"updated_by\": null,\n    \"size\": null,\n    \"weight\": null\n}"
+            }
+        },
+        "updateNote": "With the code above, Klump will update the price of the item to 150000 and the quantity to 1. Please note, it's important to always include the name of the product you want to update. This is a required field.",
+        "sections": [
+            { "id": "inventory-management", "label": "Inventory Management" }
+        ]
+    }
+}

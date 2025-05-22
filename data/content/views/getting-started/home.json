@@ -1,0 +1,10 @@
+{
+    "title": "Get started",
+    "description": "Create an account and learn how to start using Klump.",
+    "subtitle": "Start using Klump",
+    "content": "Create an account today and explore how you can start using Klump to streamline your transactions and simplify payments.",
+    "cta": {
+        "text": "Go to test environment",
+        "link": "/docs/environment"
+    }
+}

@@ -1,4 +1,5 @@
 import TellUsAboutYourBusiness from "../img/TellUsAboutYourBusiness";
+import gettingStartedContent from "../../data/content/views/getting-started/home.json";
 
 export default function GetStarted() {
     return (
@@ -6,20 +7,20 @@ export default function GetStarted() {
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Left Content */}
                 <div>
-                    <h2 className="text-[34px] font-bold text-[#1F1F2D]">Get started</h2>
+                    <h2 className="text-[34px] font-bold text-[#1F1F2D]">{gettingStartedContent.title}</h2>
                     <p className="text-[22px] text-[#1F1F2D] mb-10">
-                        Create an account and learn how to start using Klump.
+                        {gettingStartedContent.description}
                     </p>
 
-                    <h3 className="text-[22px] font-semibold text-[#1F1F2D] mt-4 lg:mt-28 mb-2">Start using Klump</h3>
+                    <h3 className="text-[22px] font-semibold text-[#1F1F2D] mt-4 lg:mt-28 mb-2">{gettingStartedContent.subtitle}</h3>
                     <p className="text-[#1F1F2D] text-base mb-4 max-w-lg">
-                        Create an account today and explore how you can start using Klump to streamline your transactions and simplify payments.
+                        {gettingStartedContent.content}
                     </p>
                     <a
-                        href="/docs/environment"
+                        href={gettingStartedContent.cta.link}
                         className="inline-flex items-center text-[#192C69] font-medium hover:underline"
                     >
-                        Go to test environment
+                        {gettingStartedContent.cta.text}
                         <span className="ml-1">→</span>
                     </a>
                 </div>
