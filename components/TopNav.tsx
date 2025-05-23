@@ -121,7 +121,7 @@ export function TopNav({ children }) {
               ref={searchInputRef}
               type="text"
               placeholder="Search here..."
-              className="border border-[#D5DBE1] rounded-md h-full w-full px-10 py-2 placeholder:text-[#A5ADBB]"
+              className={`border border-[#D5DBE1] ${showResults ? 'rounded-t-md rounded-b-none' : 'rounded-md'} h-full w-full px-10 py-2 placeholder:text-[#A5ADBB] focus:outline-none`}
               onChange={handleSearchChange}
               onFocus={handleSearchFocus}
             />

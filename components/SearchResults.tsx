@@ -14,7 +14,7 @@ export function SearchResults({ results, isVisible, onClose, isSearching }: Sear
 
   return (
     <>
-      <div className="absolute w-full left-0 right-0 bg-white rounded-b-lg shadow-lg z-30 max-h-[70vh] overflow-y-auto mt-1 border border-[#E3E8EE]">
+      <div className="absolute w-full left-0 right-0 bg-white rounded-b-lg shadow-lg z-30 max-h-[80vh] overflow-y-auto border-x border-b border-[#D5DBE1] -mt-[1px]">
         {isSearching ? (
           <div className="p-4 text-gray-500">Searching...</div>
         ) : results.length === 0 ? (
