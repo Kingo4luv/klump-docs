@@ -1,8 +1,6 @@
-
-
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import ZapIcon from './img/sidebar/ZapIcon';
 import MonitorIcon from './img/sidebar/MonitorIcon';
@@ -72,7 +70,20 @@ export function SideNav() {
   const router = useRouter();
   const pathname = router.pathname;
 
-  const [openSection, setOpenSection] = useState<string | null>('Home');
+  const [openSection, setOpenSection] = useState<string | null>(null);
+
+  // Determine which section should be open based on current pathname
+  useEffect(() => {
+    const activeSection = items.find(section => 
+      pathname === section.href || section.links?.some(link => pathname === link.href)
+    );
+    
+    if (activeSection) {
+      setOpenSection(activeSection.title);
+    } else {
+      setOpenSection(null);
+    }
+  }, [pathname]);
 
   const handleToggle = (title: string) => {
     setOpenSection((prev) => (prev === title ? null : title));
@@ -83,25 +94,26 @@ export function SideNav() {
 
   return (
      <nav
-        className={`fixed top-[130px] left-0 z-50 h-full w-full lg:w-72 bg-white border-r border-gray-200 px-4 py-6 text-sm transform transition-transform ${
+        className={`fixed top-[100px] left-0 z-50 h-[calc(100vh-130px)] w-full lg:w-72 bg-white border-r border-gray-200 px-4 py-6 text-sm transform transition-transform overflow-y-auto ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
-        } lg:translate-x-0 lg:static lg:h-[calc(100vh-4rem)] lg:block`}>
+        } lg:translate-x-0`}>
       <ul className="space-y-6">
         {items.map((section) => {
           const Icon = section.icon;
           const hasChildren = !!section.links;
           const isExpanded = openSection === section.title;
-          const isActive = pathname === section.href || section.links?.some(link => pathname === link.href);
+          const isSectionActive = pathname === section.href || section.links?.some(link => pathname === link.href);
+          const isParentActive = pathname === section.href; // Only true when on the exact parent page
 
           return (
             <li key={section.title}>
-              <div className={`flex-1 text-left flex items-center gap-2 font-medium px-2 py-2 rounded cursor-pointer transition group ${isActive
+              <div className={`flex-1 text-left flex items-center gap-2 font-medium px-2 py-2 rounded cursor-pointer transition group ${isParentActive
                 ? 'text-[#192C69] font-semibold bg-indigo-50 px-2 py-1 rounded'
                 : 'text-gray-700 group-hover:text-gray-900'
                 }`}
                 onClick={() => handleToggle(section.title)}
               >
-                <Icon className="w-4 h-4 shrink-0" />
+                <Icon className="w-4 h-4 shrink-0" isActive={isSectionActive} />
                 <Link
                   href={section.href}
                   onClick={closeSidebar}
@@ -112,7 +124,6 @@ export function SideNav() {
 
               {hasChildren && isExpanded && (
                 <ul className="relative mt-3 ml-[15px]">
-
                   {section.links.map((link, index) => {
                     const isSubActive = pathname === link.href;
                     return (
@@ -126,13 +137,13 @@ export function SideNav() {
                           }`} />
 
                         {index === section.links.length -1 && (
-                          <div className="absolute w-3 h-5 -left-1.5 -bottom-1.5 bg-white z-10" />
+                          <div className="absolute w-3 h-5 -left-1.5 bottom-0.5 bg-white z-10" />
                         )}
 
                         <Link
                           href={link.href}
-                          className={`block transition text-sm ${isSubActive
-                            ? 'text-[#192C69] font-medium'
+                          className={`block transition text-sm px-3 py-1 rounded ${isSubActive
+                            ? 'text-[#192C69] font-medium bg-indigo-50'
                               : 'text-gray-800 hover:text-gray-900'
                             }`}
                             onClick={closeSidebar}

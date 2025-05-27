@@ -77,13 +77,19 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         <meta name="description" content={description} />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" 
+          rel="stylesheet" 
+        />
       </Head>
       <TopNav>
         <Link href="/docs">Docs</Link>
       </TopNav>
       <div className="flex">
         {!hiddenPaths.includes(pathname) && <SideNav />}
-        <main className="w-full flex-1">
+        <main className={`w-full flex-1 ${!hiddenPaths.includes(pathname) ? 'lg:ml-72' : ''}`}>
           <Component {...pageProps} />
         </main>
       </div>

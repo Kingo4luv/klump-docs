@@ -6,6 +6,10 @@
             "Sample code to resend webhook."
         ],
         "note": ":reference is a required field.",
+        "codeSnippets": {
+            "webhookRequest": "curl --location --request GET 'https://api.useklump.com/v1/transactions/:reference/resend-webhook' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}'",
+            "webhookResponse": "{\n    \"state\": \"success\",\n    \"data\": {\n        \"id\": \"65e7c9c6-84cd-4f50-28279a49f81b\",\n        \"reference\": \"KLP-1648-123456-7891\",\n        \"amount\": \"26150.00\",\n        \"status\": \"successful\",\n        \"currency\": \"NGN\",\n        \"meta_data\": {\n            \"customer\": \"Elun Musk\",\n            \"email\": \"elongmusk@spacex.com\",\n            \"phone\": \"9088988888\",\n            \"invoice\": \"65774\",\n            \"user\": \"5074\"\n        },\n        \"is_live\": true,\n        \"shipping_fee\": null,\n        \"created_at\": \"2022-03-28 22:04:30.828+00\",\n        \"customer\": {\n            \"id\": \"b81b9c2a11f-ab60-a2b2ba2a1cde\",\n            \"firstname\": \"Elon\",\n            \"lastname\": \"Musk\",\n            \"email\": \"elon@spacex.com\",\n            \"phone\": \"+23470000000\"\n        },\n        \"items\": [\n            {\n                \"id\": \"ff1b-e25b-4b9c-b0e7-29755d2897d2\",\n                \"transaction_id\": \"65e7-84cd-4f50-8262-28279a49f81b\",\n                \"name\": \"Hosting - Invoice #65774\",\n                \"image_url\": \"https://s3.eu-west-1.amazonaws.com/stagingcdn.useklump.com/logo/1645969953584_logo.png\",\n                \"item_url\": \"https://merchant.com/product/football-shoes\",\n                \"unit_price\": \"26150.00\",\n                \"quantity\": 1,\n                \"created_at\": \"2022-03-28 22:04:30.834+00\",\n                \"updated_at\": null,\n                \"environment\": \"live\"\n            }\n        ]\n    }\n}"
+        },
         "sections": [
             {
                 "id": "resend-webhook",

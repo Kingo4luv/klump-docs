@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
-import { FeedbackBox } from '../../home/FeedbackBox';
-import TableOfContents from '../../TableOfContents';
+import DocumentationPageLayout from '../../Layouts/DocumentationPageLayout';
+import ContentSection from '../../Layouts/ContentSection';
 import Callout from '../../Callout';
 import content from '../../../data/content/views/integrating-klump/product-testing.json';
 
@@ -27,7 +27,7 @@ export default function ProductTesting({ children, readingTime, date, title }: P
                         <path d="M48.8755 25.5862L44.8017 27.6231L42.0804 28.9838L40.6789 29.6846L39.9453 29.2625L38.5437 28.451L33.5642 25.578L29.1953 23.0534L33.5642 20.869L37.392 18.9551L48.8755 25.5862Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.819672" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M40.6789 29.6849V47.2504L29.1953 40.6234V36.2299L29.4453 36.3734L36.851 40.648V37.7217L32.1666 35.0168L31.9125 34.8693L31.7486 34.775V31.8488L33.5642 32.898L34.6297 33.5127L36.851 34.7955V31.8652L34.4658 30.4881L33.5642 29.9676L33.5232 29.9431L30.8019 28.3734L29.1953 27.4472V23.0537L33.5642 25.5783L38.5437 28.4513L39.9453 29.2627L40.6789 29.6849Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.819672" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M31.7483 31.8481V34.7744L31.9123 34.8686L29.1951 36.2293V36.4998L25.3672 38.4137V34.0203L29.486 31.9588L33.5229 29.9424L33.5639 29.967V30.9424L31.7483 31.8481Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.819672" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M21.5385 23.0241V25.9545L16.9771 23.3192L13.8828 21.5323L16.6 20.1758L16.9771 20.393L21.5385 23.0241Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.819672" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21.5385 23.0241V25.9545L16.9771 23.3192L13.8828 21.5323L16.6 20.1758L16.9771 20.393R21.5385 23.0241Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.819672" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M20.4281 28.2415L17.7109 29.5981V26.6719L20.4281 28.2415Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.819672" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M33.5224 29.943L29.4855 31.9594L25.3667 34.0209L17.7109 29.5987L20.4281 28.2422L25.3667 31.0905L26.7642 30.3897L30.8011 28.3733L33.5224 29.943Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.819672" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M29.1951 23.0535V27.4469L30.8016 28.3731L26.7647 30.3895L25.3672 31.0904V20.8445L26.7688 20.1436L29.4901 18.783L33.5639 16.7461V20.869L29.1951 23.0535Z" fill="#C8E7FF" stroke="#006BFC" stroke-width="0.819672" stroke-linecap="round" stroke-linejoin="round" />
@@ -158,66 +158,37 @@ export default function ProductTesting({ children, readingTime, date, title }: P
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 lg:px-6 py-6 lg:flex gap-8">
-            {/* Main content */}
-            <div className="w-full lg:w-3/4">
-                {/* Meta info */}
-                <div className="mb-4 flex text-sm text-gray-500 items-center space-x-3">
-                    {readingTime && (
-                        <div className="flex items-center space-x-1">
-                            <span className="text-[#444453]">Reading time</span>
-                            <span className="text-[#1F1F2D]">{readingTime}</span>
-                        </div>
-                    )}
-                    {date && (
-                        <div className="flex items-center space-x-1">
-                            <span className="text-[#444453]">Published</span>
-                            <span className="text-[#1F1F2D]">{date}</span>
-                        </div>
-                    )}
-                </div>
+        <DocumentationPageLayout
+            title={title}
+            readingTime={readingTime}
+            date={date}
+            sections={productTesting.sections}
+            titleId="getting-started"
+        >
+            <ContentSection>
+                {productTesting.intro.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                ))}
+            </ContentSection>
 
-                {/* Page Title */}
-                <h1 id='getting-started' className="text-3xl font-bold text-[#1F1F2D] my-6">
-                    {title}
-                </h1>
-
-                {/* Article Content */}
-                <article className="prose prose-blue max-w-none space-y-8 my-6 text-base text-[#1F1F2D]">
-                    <div>
-                        <div className="text-base text-[#1F1F2D] space-y-2">
-                            {productTesting.intro.map((paragraph, index) => (
-                                <p key={index}>{paragraph}</p>
-                            ))}
-                        </div>
+            <ContentSection className="border-t border-[#E3E8EE] pt-6 space-y-6 lg:space-y-12">
+                {productTesting.contentSections.map((section, index) => (
+                    <div key={index} className='mb-8 lg:mb-12'>
+                        <span>
+                            {renderSVGIcon(index)}
+                        </span>
+                        <h2 className="text-lg text-[#1F1F2D] font-semibold mt-3">{section.title}</h2>
+                        <p className="mb-4">{section.description}</p>
+                        {section.warning && (
+                            <Callout title={section.warning.title} type="warning">
+                                <div className="text-[#1F1F2D] space-y-3">
+                                    <p>{section.warning.description}</p>
+                                </div>
+                            </Callout>
+                        )}
                     </div>
-                    <div className='border-t border-[#E3E8EE] pt-6 space-y-6 lg:space-y-12'>
-                        {productTesting.contentSections.map((section, index) => (
-                            <div key={index}>
-                                <span>
-                                    {renderSVGIcon(index)}
-                                </span>
-                                <h2 className='text-lg text-[#1F1F2D] font-semibold mt-3'>{section.title}</h2>
-                                <p className='mb-4'>{section.description}</p>
-                                {section.warning && (
-                                    <Callout title={section.warning.title} type="warning">
-                                        <div className="text-[#1F1F2D] space-y-3">
-                                            <p>{section.warning.description}</p>
-                                        </div>
-                                    </Callout>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </article>
-
-                {/* Feedback */}
-                <div className="mt-10">
-                    <FeedbackBox />
-                </div>
-            </div>
-
-            <TableOfContents sections={productTesting.sections} />
-        </div>
+                ))}
+            </ContentSection>
+        </DocumentationPageLayout>
     );
 }

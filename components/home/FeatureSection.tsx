@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import EnvIcon from '../img/EnvIcon';
 import IntegrateIcon from '../img/IntegrateIcon';
 import CommerceIcon from '../img/CommerceIcon';
@@ -27,19 +28,20 @@ export default function FeatureSection() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                    {featureContent.features.map(({ title, description, icon }) => {
+                    {featureContent.features.map(({ title, description, icon, url }) => {
                         const Icon = iconComponents[icon];
                         return (
-                            <div
+                            <Link
                                 key={title}
-                                className="bg-white transition"
+                                href={url}
+                                className="bg-white transition hover:scale-105 block rounded-lg p-4 border border-gray-100"
                             >
                                 <div className="mb-4 aspect-[3/2] rounded-lg overflow-hidden flex items-center justify-center">
                                     <Icon className="w-full h-full object-contain" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
                                 <p className="mt-2 text-sm text-gray-600">{description}</p>
-                            </div>
+                            </Link>
                         );
                     })}
                 </div>
