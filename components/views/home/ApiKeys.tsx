@@ -4,6 +4,8 @@ import DocumentationPageLayout from '../../Layouts/DocumentationPageLayout';
 import ContentSection from '../../Layouts/ContentSection';
 import CodeBlockWrapper from '../../Layouts/CodeBlockWrapper';
 import apiKeysContent from '../../../data/content/views/home/api-keys.json';
+import { CodeTabs } from '../../Codetabs';
+import CodeBlock from '../../CodeBlock';
 
 interface ApiKeysLayoutProps {
     children: ReactNode;
@@ -67,14 +69,26 @@ export default function ApiKeys({ children, readingTime, date, title }: ApiKeysL
                 {apiKeysContent.content.authorization.content.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                 ))}
-                <CodeBlockWrapper 
-                    code={apiKeysContent.content.authorization.codeExamples.serverSide} 
-                    lang="javascript" 
-                />
-                <CodeBlockWrapper 
-                    code={apiKeysContent.content.authorization.codeExamples.clientSide} 
-                    lang="javascript" 
-                />
+                <CodeTabs tabs={[
+                    {
+                        label: 'cURL',
+                        content: (
+                            <div className='py-2 w-full h-full'>
+                                <CodeBlock code={apiKeysContent.content.authorization.codeExamples.serverSide} lang="bash" />
+                            </div>
+                        )
+                    }
+                ]} />
+                <CodeTabs tabs={[
+                    {
+                        label: 'JavaScript',
+                        content: (
+                            <div className='py-2 w-full h-full'>
+                                <CodeBlock code={apiKeysContent.content.authorization.codeExamples.clientSide} lang="javascript" />
+                            </div>
+                        )
+                    }
+                ]} />
             </ContentSection>
 
             <ContentSection

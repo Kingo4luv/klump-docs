@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import DocumentationPageLayout from '../../Layouts/DocumentationPageLayout';
 import ContentSection from '../../Layouts/ContentSection';
 import dynamic from 'next/dynamic';
+import { CodeTabs } from '../../Codetabs';
 import content from '../../../data/content/views/webhooks/resend-webhooks.json';
 
 interface ResendWebhooksViewProps {
@@ -32,11 +33,29 @@ export default function ResendWebhooks({ children, readingTime, date, title }: R
                 
                 <div className='space-y-3'>
                     <div className='py-2 w-full h-full'>
-                        <CodeBlock code={resendWebhooks.codeSnippets.webhookRequest} lang="javascript" />
+                        <CodeTabs tabs={[
+                            {
+                                label: 'Resend Webhook',
+                                content: (
+                                    <div className='py-2 w-full h-full'>
+                                        <CodeBlock code={resendWebhooks.codeSnippets.webhookRequest} lang="javascript" />
+                                    </div>
+                                )
+                            }
+                        ]} />
                     </div>
                     <p>{resendWebhooks.note}</p>
                     <div className='py-2 w-full h-full'>
-                        <CodeBlock code={resendWebhooks.codeSnippets.webhookResponse} lang="javascript" />
+                        <CodeTabs tabs={[
+                            {
+                                label: 'Sample response',
+                                content: (
+                                    <div className='py-2 w-full h-full'>
+                                        <CodeBlock code={resendWebhooks.codeSnippets.webhookResponse} lang="javascript" />
+                                    </div>
+                                )
+                            }
+                        ]} />
                     </div>
                 </div>
             </ContentSection>

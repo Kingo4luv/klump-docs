@@ -28,7 +28,10 @@
         "signatureVerification": {
             "title": "Signature and webhook verification",
             "description": "All HTTP requests can be verified as coming from Klump (and not tampered with by a 3rd party) by analyzing the signature attached to the request. Every request includes an HTTP header called \"X-Klump-Signature\" containing a cryptographic signature of the message. Your webhook endpoint can validate that payload and signature match.",
-            "codeExample": "const crypto = require('crypto');\nconst secret = process.env.KLUMP_SECRET_KEY;\n\n/**\n* Grab the body of the event.\n*/\nconst { body } = req;\nconst hash = crypto.createHmac('sha512', secret).update(JSON.stringify(body)).digest('hex');\nif (hash === req.headers['x-klump-signature']) {\n    /**\n    * The request is verified and it's coming from Klump\n    * Go ahead and process it. While at it, return a 200 status code. when you are done.\n    */\n    res.status(200).send('OK');\n}"
+            "codeExamples": {
+                "javascript": "const crypto = require('crypto');\nconst secret = process.env.KLUMP_SECRET_KEY;\n\n/**\n* Grab the body of the event.\n*/\nconst { body } = req;\nconst hash = crypto.createHmac('sha512', secret).update(JSON.stringify(body)).digest('hex');\nif (hash === req.headers['x-klump-signature']) {\n    /**\n    * The request is verified and it's coming from Klump\n    * Go ahead and process it. While at it, return a 200 status code. when you are done.\n    */\n    res.status(200).send('OK');\n}",
+                "php": "$klump_event_payload = json_decode(file_get_contents('php://input'), true);\n$hash = hash_hmac('sha512', $klump_event_payload, $klump_secret_key);\nif ($hash === $_SERVER['x-klump-signature']) {\n    /**\n    * The request is verified and it's coming from Klump\n    * Go ahead and process it. While at it, return a 200 status code. when you are done.\n    */\n    header(\"HTTP/1.1 200 OK\");\n    http_response_code(200);\n}"
+            }
         },
         "respondingToEvent": {
             "title": "Responding to an event",

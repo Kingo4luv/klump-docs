@@ -7,6 +7,7 @@ import CheckoutWidget from '../../img/integrating-klump/CheckoutWidget';
 import Callout from '../../Callout';
 import CallToAction from '../../img/integrating-klump/CallToAction';
 import content from '../../../data/content/views/integrating-klump/getting-started.json';
+import { CodeTabs } from '../../Codetabs';
 
 interface GettingStartedViewProps {
     children: ReactNode;
@@ -29,7 +30,16 @@ export default function IntegratingKlumpGettingStarted({ children, readingTime, 
                 {gettingStarted.intro.description.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                 ))}
-                <CodeBlockWrapper code={gettingStarted.intro.scriptExample} lang="javascript" />
+                <CodeTabs tabs={[
+                    {
+                        label: 'JavaScript',
+                        content: (
+                            <div className="py-2 w-full h-full">
+                                <CodeBlockWrapper code={gettingStarted.intro.scriptExample} lang="javascript" />
+                            </div>
+                        ),
+                    },
+                ]} />
             </ContentSection>
 
             <ContentSection
@@ -51,10 +61,18 @@ export default function IntegratingKlumpGettingStarted({ children, readingTime, 
                     <CheckoutWidget />
                 </div>
                 <p className="mt-3">{gettingStarted.checkoutWidget.initializationExample.description}</p>
-                <CodeBlockWrapper 
-                    code={gettingStarted.checkoutWidget.initializationExample.code} 
-                    lang="javascript" 
-                />
+                <div className="py-2 w-full h-full">
+                    <CodeTabs tabs={[
+                        {
+                            label: 'JavaScript',
+                            content: (
+                                <div className="py-2 w-full h-full">
+                                    <CodeBlockWrapper code={gettingStarted.checkoutWidget.initializationExample.code} lang="javascript" />
+                                </div>
+                            ),
+                        },
+                    ]}/>
+                </div>
                 <div className="space-y-3">
                     {gettingStarted.checkoutWidget.afterCodeDescription.map((paragraph, index) => (
                         <p key={index}>{paragraph}</p>

@@ -12,7 +12,7 @@ export function CodeTabs({ tabs }) {
                         key={tab.label}
                         onClick={() => setActiveIndex(index)}
                         className={`px-4 py-2 ${activeIndex === index
-                            ? 'text-[#5DE3FF] border-b-2 border-[#5DE3FF] font-semibold bg-black'
+                            ? 'text-[#5DE3FF] border-b-2 border-[#5DE3FF] font-semibold bg-black rounded-t-md'
                             : 'hover:[#5DE3FF text-[#9394A1]'
                             }`}
                     >
@@ -22,7 +22,7 @@ export function CodeTabs({ tabs }) {
             </div>
 
             {/* Tab content */}
-            <div className="bg-black">
+            <div className="bg-black rounded-md">
                 {tabs[activeIndex].content}
             </div>
         </div>

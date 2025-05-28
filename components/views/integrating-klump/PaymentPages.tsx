@@ -5,6 +5,7 @@ import CodeBlockWrapper from '../../Layouts/CodeBlockWrapper';
 import PaymentPagesDashboard from '../../img/integrating-klump/PaymentPagesDashboard';
 import PaymentPagesModal from '../../img/integrating-klump/PaymentPagesModal';
 import content from '../../../data/content/views/integrating-klump/payment-pages.json';
+import { CodeTabs } from '../../Codetabs';
 
 interface PaymentPagesViewProps {
     children: ReactNode;
@@ -41,11 +42,24 @@ export default function PaymentPages({ children, readingTime, date, title }: Pay
                 className="border-t border-[#E3E8EE] pt-6"
             >
                 <p>{paymentPages.api.description[0]}</p>
-                <CodeBlockWrapper 
-                    code={paymentPages.api.example.code} 
-                    lang="javascript" 
-                    className="py-2 w-full h-full"
-                />
+                <CodeTabs tabs={[
+                    {
+                        label: 'Payment Page without a fixed amount',
+                        content: (
+                            <div className="py-2 w-full h-full">
+                                <CodeBlockWrapper code={paymentPages.api.example.code} lang="bash" />
+                            </div>
+                        ),
+                    },
+                    {
+                        label: 'Payment Page with a fixed amount',
+                        content: (
+                            <div className="py-2 w-full h-full">
+                                <CodeBlockWrapper code={paymentPages.api.example2.code} lang="bash" />
+                            </div>
+                        ),
+                    },
+                ]} />
                 <p>{paymentPages.api.description[1]}</p>
             </ContentSection>
         </DocumentationPageLayout>

@@ -119,7 +119,26 @@ export default function WebhookGettingStarted({ children, readingTime, date, tit
                 title={gettingStarted.signatureVerification.title}
             >
                 <p>{gettingStarted.signatureVerification.description}</p>
-                <CodeBlockWrapper code={gettingStarted.signatureVerification.codeExample} lang="javascript" className="py-2 w-full h-full" />
+                <div className="py-2 w-full h-full">
+                    <CodeTabs tabs={[
+                        {
+                            label: 'JavaScript',
+                            content: (
+                                <div className="py-2 w-full h-full">
+                                    <CodeBlockWrapper code={gettingStarted.signatureVerification.codeExamples.javascript} lang="javascript" />
+                                </div>
+                            ),
+                        },
+                        {
+                            label: 'PHP',
+                            content: (
+                                <div className="py-2 w-full h-full">
+                                    <CodeBlockWrapper code={gettingStarted.signatureVerification.codeExamples.php} lang="php" />
+                                </div>
+                            ),
+                        },
+                    ]}/>
+                </div>
             </ContentSection>
 
             <ContentSection

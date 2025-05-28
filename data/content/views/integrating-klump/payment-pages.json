@@ -1,20 +1,25 @@
 {
     "paymentPages": {
         "merchantDashboard": {
-            "title": "Create Payment Pages via Merchant Dashboard",
+            "title": "Klump Access via Merchant Dashboard",
             "description": [
-                "The Klump payment page builder allows you to create payment pages for various purposes. An example could be a fundraiser for a birthday party or product/service you wish to sell to your customers.",
-                "You can create a Klump Payment Page directly from the merchant dashboard. Simply log in, locate and click on Payment Pages in the sidebar menu. Follow the prompt to create your first payment page."
+                "Every API request to Klump's endpoints must include an API key, specifically the Klump secret key. If you do not include an API key with your request, or if you use an incorrect or outdated key, Klump will reject it and return an error.",
+                "To use Klump Access, log into your merchant dashboard and select the Klump Access menu on the navigation bar - make sure to change your environment to LIVE, or else every page you create in your test environment will only work for test transactions - and create a page.",
+                "Enter a title for the page, a description for the page, and an image and amount to create a Klump Access page. There are two types of amount options: fixed and free-flowing. The fixed amount requires your customer to pay a set amount, whereas the free-flowing amount allows your customer to pay whatever amount they want.",
+                "To deactivate a payment page, click the visibility button on the payment page details page."
             ]
         },
         "api": {
-            "title": "Create Payment Pages via API",
+            "title": "Klump Access via API",
             "description": [
-                "You can also create payment pages programmatically by making an API call to our payment page endpoint.",
-                "The process is pretty straightforward. When you make this request, a payment page URL will be generated which can then be used to collect payments."
+                "If you have an app, you can use an API to generate a Klump Access page for your users. This is useful if you want to offer the BNPL option to your customers without integrating through the Klump JS or using one of the provided plugins and libraries.",
+                "In the case where the is_fixed_amount is true, you will be required to give an amount not less than N25,000."
             ],
             "example": {
-                "code": "curl --location --request GET 'https://api.useklump.com/v1/transactions/:reference/resend-webhook' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}'\\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair"
+                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair down.\", \"currency\": \"NGN\", \"is_fixed_amount\": false, \"is_published\": true}'"
+            },
+            "example2": {
+                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair down.\", \"currency\": \"NGN\", \"is_fixed_amount\": true, \"fixed_amount\": 30000, \"is_published\": true}'"
             }
         },
         "sections": [

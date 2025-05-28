@@ -3,6 +3,7 @@ import DocumentationPageLayout from '../../Layouts/DocumentationPageLayout';
 import ContentSection from '../../Layouts/ContentSection';
 import CodeBlockWrapper from '../../Layouts/CodeBlockWrapper';
 import content from '../../../data/content/views/verification/transaction-verification.json';
+import { CodeTabs } from '../../Codetabs';
 
 interface TransactionVerificationViewProps {
     children: ReactNode;
@@ -39,19 +40,29 @@ export default function TransactionVerification({ children, readingTime, date, t
                 <p>{transactionVerification.intro.additionalNote}</p>
                 
                 <p>{transactionVerification.codeExamples.verificationRequest.description}</p>
-                <CodeBlockWrapper 
-                    code={transactionVerification.codeExamples.verificationRequest.code} 
-                    lang="javascript" 
-                    className="py-2 w-full h-full"
-                />
+                <CodeTabs tabs={[
+                    {
+                        label: 'cURL',
+                        content: (
+                            <div className="py-2 w-full h-full">
+                                <CodeBlockWrapper code={transactionVerification.codeExamples.verificationRequest.code} lang="bash" />
+                            </div>
+                        ),
+                    },
+                ]} />
                 <p>{transactionVerification.codeExamples.verificationRequest.note}</p>
                 
                 <p>{transactionVerification.codeExamples.verificationResponse.description}</p>
-                <CodeBlockWrapper 
-                    code={transactionVerification.codeExamples.verificationResponse.code} 
-                    lang="javascript" 
-                    className="py-2 w-full h-full"
-                />
+                <CodeTabs tabs={[
+                    {
+                        label: 'JSON',
+                        content: (
+                            <div className="py-2 w-full h-full">
+                                <CodeBlockWrapper code={transactionVerification.codeExamples.verificationResponse.code} lang="javascript" />
+                            </div>
+                        ),
+                    },
+                ]} />
             </ContentSection>
         </DocumentationPageLayout>
     );
