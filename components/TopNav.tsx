@@ -20,6 +20,8 @@ export function TopNav({ children }) {
     debounce(async (query: string) => {
       if (query.trim()) {
         setIsSearching(true);
+        // Add a small delay to ensure spinner is visible
+        await new Promise(resolve => setTimeout(resolve, 500));
         const results = await searchContent(query);
         setSearchResults(results);
         setIsSearching(false);
@@ -125,7 +127,7 @@ export function TopNav({ children }) {
           <div ref={searchContainerRef} className='relative h-[44px] w-full lg:w-[424px]'>
             <span className='absolute h-full w-10 flex justify-center items-center'>
               {isSearching ? (
-                <svg className="animate-spin h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin h-4 w-4 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
@@ -165,7 +167,7 @@ export function TopNav({ children }) {
             <span className='text-[#192C69] font-medium whitespace-nowrap'>Get Started</span>
             <span>
               <svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.25 3L0.75 0.75V5.25L4.25 3Z" fill="#192C69" stroke="#192C69" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M4.25 3L0.75 0.75V5.25L4.25 3Z" fill="#192C69" stroke="#192C69" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
           </Link>

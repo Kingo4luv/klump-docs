@@ -5,15 +5,15 @@
             "description": "Join our official Discord server to chat with us directly and become a part of the community.",
             "cta": {
                 "text": "Join Slack",
-                "url": "#"
+                "url": "https://useklump.com/slack"
             }
         },
         {
             "title": "Need help?",
-            "description": "Contact us through Discord, Twitter, or email to receive answers to your questions and learn more.",
+            "description": "Contact us through our email to receive answers to your questions and learn more.",
             "cta": {
                 "text": "Get help",
-                "url": "#"
+                "url": "mailto:engineering@useklump.com"
             }
         }
     ]

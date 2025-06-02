@@ -7,14 +7,14 @@ export default function ErrorsTable() {
             meaning: 'OK',
             description: "Everything is fine. You're cleared for take off.",
             color: 'bg-[#D8FFD933]',
-            errorCodeColor: 'text-[#E09805]'
+            errorCodeColor: 'text-[#359811]'
         },
         {
             code: '201',
             meaning: 'Created',
             description: "Everything is still fine, but this time around, we created a resource for you on our end. We are kind like that.",
             color: 'bg-[#D8FFD933]',
-            errorCodeColor: 'text-[#E09805]'
+            errorCodeColor: 'text-[#359811]'
         },
         {
             code: '400',
@@ -55,7 +55,7 @@ export default function ErrorsTable() {
             code: '5xx',
             meaning: 'Server Error',
             description: "We messed up and we are sorry. 😔",
-            color: 'bg-[#D8FFD933]',
+            color: 'bg-[#FFE9E866]/40',
             errorCodeColor: 'text-[#D3271F]'
         },
     ];
@@ -77,7 +77,7 @@ export default function ErrorsTable() {
             {errors.map((error, idx) => (
                 <div
                     key={idx}
-                    className={`flex items-start px-6 py-4 rounded-md border border-gray-200 text-gray-900 ${error.color} text-sm`}
+                    className={`flex items-start px-6 py-4 rounded-md border border-[#E3E8EE] text-gray-900 ${error.color} text-sm`}
                 >
                     {/* Code and Meaning */}
                     <div className="w-36 lg:w-56 flex gap-6">

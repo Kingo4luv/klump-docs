@@ -11,12 +11,13 @@ export function Hero() {
                     <p className="text-xs tracking-widest uppercase text-blue-200">
                         {heroContent.tagline}
                     </p>
-                    <h1 className="mt-4 text-4xl font-bold sm:text-6xl leading-tight">
+                    <h1 className="mt-4 text-3xl font-bold sm:text-6xl leading-tight">
                         {heroContent.title.split(' ').map((word, i, arr) => (
-                            <>
+                            <span key={i}>
                                 {word}
-                                {i < arr.length - 1 && (i === 1 ? <br className="hidden lg:block" /> : ' ')}
-                            </>
+                                {i === 1 && <br className="hidden lg:block" />}
+                                {i < arr.length - 1 && ' '}
+                            </span>
                         ))}
                     </h1>
                     <p className="mt-6 text-base text-blue-200 md:max-w-lg mx-auto xl:mx-0 text-center lg:text-left">
