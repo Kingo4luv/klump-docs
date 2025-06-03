@@ -1,2 +1,4 @@
-{% intro title="Introduction" readingTime="5m" date="25/09/2024" %}
-{% /intro %}
+{% intro title="Introduction" %}
+
+
+{% / intro %}

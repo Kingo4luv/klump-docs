@@ -3,9 +3,10 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "node scripts/generate-dates.js && next build",
 		"start": "next start",
-		"serve": "PORT=3010 NODE_PATH=. pm2 start npm --name docs-v2 -- start"
+		"serve": "PORT=3010 NODE_PATH=. pm2 start npm --name docs-v2 -- start",
+		"generate-dates": "node scripts/generate-dates.js"
 	},
 	"dependencies": {
 		"@markdoc/markdoc": "latest",

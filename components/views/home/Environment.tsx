@@ -13,24 +13,22 @@ interface EnvironmentLayoutProps {
 }
 
 export default function Environment({ children, readingTime, date, title }: EnvironmentLayoutProps) {
-    const { content, sections } = environmentContent;
-    
     return (
         <DocumentationPageLayout
             title={title}
             readingTime={readingTime}
             date={date}
-            sections={sections}
-            titleId="environment"
+            pageId="environment"
+            sections={environmentContent.sections}
         >
             <ContentSection>
-                <p>{content.main}</p>
+                <p>{environmentContent.content.main}</p>
                 
                 <EnvironmentTable />
 
-                <Callout title={content.callout.title} type="warning">
+                <Callout title={environmentContent.content.callout.title} type="warning">
                     <div className="text-[#1F1F2D] space-y-2">
-                        {content.callout.content.map((paragraph, index) => (
+                        {environmentContent.content.callout.content.map((paragraph, index) => (
                             <p key={index}>{paragraph}</p>
                         ))}
                     </div>

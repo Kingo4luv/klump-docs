@@ -50,6 +50,7 @@ export default function WebhookGettingStarted({ children, readingTime, date, tit
             title={title}
             readingTime={readingTime}
             date={date}
+            pageId="webhookgettingstarted"
             sections={content.sections}
         >
             <ContentSection>

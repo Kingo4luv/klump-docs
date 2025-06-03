@@ -20,6 +20,7 @@ export default function ApiKeys({ children, readingTime, date, title }: ApiKeysL
             title={title}
             readingTime={readingTime}
             date={date}
+            pageId="apikeys"
             sections={apiKeysContent.sections}
         >
             <ContentSection

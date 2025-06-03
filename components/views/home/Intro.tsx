@@ -13,17 +13,13 @@ interface IntoLayoutProps {
 }
 
 export default function Intro({ children, readingTime, date, title }: IntoLayoutProps) {
-    const sections = [
-        { id: 'introduction', label: 'Introduction' },
-    ];
-
     return (
         <DocumentationPageLayout
             title={title}
             readingTime={readingTime}
             date={date}
-            sections={sections}
-            titleId="introduction"
+            pageId="intro"
+            sections={introContent.sections}
         >
             <ContentSection>
                 <div className="w-full lg:w-[821px] h-[419px]">

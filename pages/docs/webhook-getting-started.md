@@ -1,4 +1,4 @@
-{% webhookgettingstarted title="Getting Started" readingTime="5m" date="25/09/2024" %}
+{% webhookgettingstarted title="Getting Started" %}
 
 
 {% / webhookgettingstarted %}
