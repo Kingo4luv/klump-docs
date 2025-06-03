@@ -3,7 +3,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "node scripts/generate-dates.js && next build",
+		"build": "next build",
 		"start": "next start",
 		"serve": "PORT=3010 NODE_PATH=. pm2 start npm --name docs-v2 -- start",
 		"generate-dates": "node scripts/generate-dates.js"

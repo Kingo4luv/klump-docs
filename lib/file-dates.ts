@@ -30,16 +30,23 @@ export function formatDate(date: Date): string {
  * @returns Date string in DD/MM/YYYY format or current date as fallback
  */
 export function getPageDate(pageId: string): string {
-  // Get date from pre-generated data
-  const pageDate = pageDatesData[pageId as keyof typeof pageDatesData];
-  
-  if (pageDate) {
-    return pageDate;
+  try {
+    // Get date from pre-generated data
+    const pageDate = pageDatesData[pageId as keyof typeof pageDatesData];
+    
+    if (pageDate) {
+      console.log(`✓ Found date for ${pageId}: ${pageDate}`);
+      return pageDate;
+    }
+    
+    // Fallback to current date if page not found
+    console.warn(`⚠️ No date found for page: ${pageId}, using current date. Available pages:`, Object.keys(pageDatesData));
+    return getCurrentDate();
+  } catch (error) {
+    console.error(`❌ Error getting page date for ${pageId}:`, error);
+    console.warn(`📝 Generated dates data:`, pageDatesData);
+    return getCurrentDate();
   }
-  
-  // Fallback to current date if page not found
-  console.warn(`No date found for page: ${pageId}, using current date`);
-  return getCurrentDate();
 }
 
 /**
