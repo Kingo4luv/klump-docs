@@ -109,8 +109,13 @@ function extractTitleFromMarkdoc(markdoc: any): string | null {
 
 // SEO mapping for better page-specific metadata
 const PAGE_SEO_MAP: Record<string, { title: string; description: string; section?: string }> = {
+  '/': {
+    title: 'Klump Documentation - Buy Now, Pay Later Integration',
+    description: 'Official documentation for Klump payment solutions. Learn how to integrate buy now, pay later functionality into your e-commerce platform with our comprehensive guides and APIs.',
+    section: 'Home'
+  },
   '/docs': {
-    title: 'Introduction',
+    title: 'Documentation Home',
     description: 'Complete documentation for integrating Klump payment solutions. Learn how to implement buy now, pay later functionality for your e-commerce platform.',
     section: 'Getting Started'
   },
@@ -209,70 +214,51 @@ const PAGE_SEO_MAP: Record<string, { title: string; description: string; section
 export type MyAppProps = MarkdocNextJsPageProps
 
 export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
-  const { markdoc } = pageProps;
-
   const router = useRouter();
-  const pathname = router.pathname;
-
-  // Extract SEO information
-  const pageId = getPageIdFromPath(pathname);
-  const publishedDate = getPageDate(pageId);
-
-  // Get page-specific SEO data
-  const pageSEO = PAGE_SEO_MAP[pathname];
   
-  // Default SEO values
-  let title = 'Klump Documentation';
-  let description = 'Complete documentation for integrating Klump payment solutions. Learn how to implement buy now, pay later functionality for your e-commerce platform.';
-  let section = getSectionFromPath(pathname);
+  // Get page date
+  const pageDate = getPageDate(router.pathname);
+  const publishedTimeISO = pageDate ? new Date(pageDate).toISOString() : undefined;
+
+  // Get page metadata from frontmatter or SEO mapping
+  const frontmatter = pageProps.markdoc?.frontmatter || {};
+  const pageId = getPageIdFromPath(router.pathname);
+  const seoData = PAGE_SEO_MAP[router.pathname] || PAGE_SEO_MAP[pageId];
+  
+  // Extract title - simplified approach without suffixes
+  const title = frontmatter.title || 
+               seoData?.title || 
+               extractTitleFromMarkdoc(pageProps.markdoc) || 
+               'Documentation';
+
+  // Use description from frontmatter, SEO mapping, or default
+  const description = frontmatter.description || 
+                     seoData?.description || 
+                     'Klump payment solutions documentation and integration guides.';
+
+  let section = frontmatter.section || seoData?.section || getSectionFromPath(router.pathname);
   let type: 'website' | 'article' = 'website';
 
-  // Priority order for SEO data:
-  // 1. Frontmatter (highest priority)
-  // 2. Page SEO mapping
-  // 3. Extracted title from Markdoc tags
-  // 4. Defaults
-
-  if (markdoc) {
-    // 1. Check frontmatter first
-    if (markdoc.frontmatter.title) {
-      title = `${markdoc.frontmatter.title} | Klump Documentation`;
-      type = 'article';
-    } else if (pageSEO) {
-      // 2. Use page SEO mapping
-      title = `${pageSEO.title} | Klump Documentation`;
-      description = pageSEO.description;
-      section = pageSEO.section || section;
-      type = 'article';
-    } else {
-      // 3. Try to extract title from Markdoc tags
-      const extractedTitle = extractTitleFromMarkdoc(markdoc);
-      if (extractedTitle) {
-        title = `${extractedTitle} | Klump Documentation`;
-        type = 'article';
-      }
-    }
-
-    if (markdoc.frontmatter.description) {
-      description = markdoc.frontmatter.description;
-    }
-  } else if (pageSEO) {
-    // Use page SEO mapping even without markdoc
-    title = `${pageSEO.title} | Klump Documentation`;
-    description = pageSEO.description;
-    section = pageSEO.section || section;
+  // Set type to article for documentation pages
+  if (router.pathname.startsWith('/docs/')) {
     type = 'article';
   }
 
-  // Convert DD/MM/YYYY to ISO format for meta tags
-  const publishedTimeISO = publishedDate ? (() => {
-    const [day, month, year] = publishedDate.split('/');
-    return new Date(`${year}-${month}-${day}`).toISOString();
-  })() : undefined;
+  let toc;
+  if (pageProps.markdoc) {
+    toc = collectHeadings(pageProps.markdoc.content);
+  }
 
-  const toc = pageProps.markdoc?.content
-    ? collectHeadings(pageProps.markdoc.content)
-    : [];
+  // Debug logging (remove in production)
+  console.log('SEO Debug:', {
+    pathname: router.pathname,
+    title,
+    description,
+    section,
+    type,
+    frontmatter: pageProps.markdoc?.frontmatter,
+    pageSEO: seoData
+  });
 
   const hiddenPaths = ['/', '/integrating-klump'];
 
@@ -291,8 +277,8 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
         <Link href="/docs">Docs</Link>
       </TopNav>
       <div className="flex">
-        {!hiddenPaths.includes(pathname) && <SideNav />}
-        <main className={`w-full flex-1 ${!hiddenPaths.includes(pathname) ? 'lg:ml-72' : ''}`}>
+        {!hiddenPaths.includes(router.pathname) && <SideNav />}
+        <main className={`w-full flex-1 ${!hiddenPaths.includes(router.pathname) ? 'lg:ml-72' : ''}`}>
           <Component {...pageProps} />
         </main>
       </div>

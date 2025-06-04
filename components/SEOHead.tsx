@@ -61,7 +61,7 @@ export default function SEOHead({
   // Ensure image is absolute URL using current environment
   const imageUrl = image.startsWith('http') ? image : `${baseUrl}${image}`;
   
-  // Create comprehensive title
+  // Create comprehensive title - avoid duplication
   const fullTitle = title === DEFAULT_SEO.title ? title : `${title} | ${DEFAULT_SEO.siteName}`;
 
   return (
