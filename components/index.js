@@ -7,3 +7,4 @@ export * from './TopNav';
 export * from './Table';
 export * from './Image';
 export * from './Hero';
+export { default as SEOHead } from './SEOHead';

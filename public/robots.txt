@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://docs.useklump.com/sitemap.xml
+
+# Crawl-delay for bots
+Crawl-delay: 1
