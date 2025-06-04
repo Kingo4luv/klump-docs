@@ -38,10 +38,28 @@ export default function SEOHead({
   tags = [],
 }: SEOProps) {
   const router = useRouter();
-  const currentUrl = url || `https://docs.useklump.com${router.asPath}`;
   
-  // Ensure image is absolute URL
-  const imageUrl = image.startsWith('http') ? image : `https://docs.useklump.com${image}`;
+  // Get base URL from environment variable or fallback to current origin
+  const getBaseUrl = () => {
+    // Use environment variable if available
+    if (process.env.NEXT_PUBLIC_BASE_URL) {
+      return process.env.NEXT_PUBLIC_BASE_URL;
+    }
+    
+    // Fallback to window.location on client-side
+    if (typeof window !== 'undefined') {
+      return window.location.origin;
+    }
+    
+    // Final fallback for SSR
+    return 'https://docs.useklump.com';
+  };
+  
+  const baseUrl = getBaseUrl();
+  const currentUrl = url || `${baseUrl}${router.asPath}`;
+  
+  // Ensure image is absolute URL using current environment
+  const imageUrl = image.startsWith('http') ? image : `${baseUrl}${image}`;
   
   // Create comprehensive title
   const fullTitle = title === DEFAULT_SEO.title ? title : `${title} | ${DEFAULT_SEO.siteName}`;
