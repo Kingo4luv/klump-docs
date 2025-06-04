@@ -249,16 +249,7 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
     toc = collectHeadings(pageProps.markdoc.content);
   }
 
-  // Debug logging (remove in production)
-  console.log('SEO Debug:', {
-    pathname: router.pathname,
-    title,
-    description,
-    section,
-    type,
-    frontmatter: pageProps.markdoc?.frontmatter,
-    pageSEO: seoData
-  });
+ 
 
   const hiddenPaths = ['/', '/integrating-klump'];
 
