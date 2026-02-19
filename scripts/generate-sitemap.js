@@ -8,8 +8,21 @@ const pageDates = require('../data/generated-page-dates.json');
  * Convert DD/MM/YYYY to ISO format for sitemap
  */
 function convertToISODate(ddmmyyyy) {
-  const [day, month, year] = ddmmyyyy.split('/');
-  return new Date(year, month - 1, day).toISOString();
+  try {
+    const [day, month, year] = ddmmyyyy.split('/');
+    const date = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+    
+    // Check if the date is valid
+    if (isNaN(date.getTime())) {
+      throw new Error(`Invalid date: ${ddmmyyyy}`);
+    }
+    
+    return date.toISOString();
+  } catch (error) {
+    console.warn(`Error converting date ${ddmmyyyy} to ISO format:`, error.message);
+    // Return current date as fallback
+    return new Date().toISOString();
+  }
 }
 
 /**

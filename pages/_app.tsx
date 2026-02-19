@@ -218,7 +218,11 @@ export default function MyApp({ Component, pageProps }: AppProps<MyAppProps>) {
   
   // Get page date
   const pageDate = getPageDate(router.pathname);
-  const publishedTimeISO = pageDate ? new Date(pageDate).toISOString() : undefined;
+  const publishedTimeISO = pageDate ? (() => {
+    // Convert DD/MM/YYYY to ISO format
+    const [day, month, year] = pageDate.split('/');
+    return new Date(parseInt(year), parseInt(month) - 1, parseInt(day)).toISOString();
+  })() : undefined;
 
   // Get page metadata from frontmatter or SEO mapping
   const frontmatter = pageProps.markdoc?.frontmatter || {};
