@@ -41,7 +41,9 @@ export default function PaymentPages({ children, readingTime, date, title }: Pay
                 title={paymentPages.api.title}
                 className="border-t border-[#E3E8EE] pt-6"
             >
-                <p>{paymentPages.api.description[0]}</p>
+                {paymentPages.api.description.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                ))}
                 <CodeTabs tabs={[
                     {
                         label: 'Payment Page without a fixed amount',
@@ -60,7 +62,6 @@ export default function PaymentPages({ children, readingTime, date, title }: Pay
                         ),
                     },
                 ]} />
-                <p>{paymentPages.api.description[1]}</p>
             </ContentSection>
         </DocumentationPageLayout>
     );

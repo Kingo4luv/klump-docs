@@ -13,13 +13,14 @@
             "title": "Klump Access via API",
             "description": [
                 "If you have an app, you can use an API to generate a Klump Access page for your users. This is useful if you want to offer the BNPL option to your customers without integrating through the Klump JS or using one of the provided plugins and libraries.",
+                "You can optionally supply a reference (merchant_reference) for each payment page. This value is stored on transactions and returned in webhooks and API responses. Supplying a unique reference per page is recommended, especially for fixed-amount pages, so you can match payments to the correct order.",
                 "In the case where the is_fixed_amount is true, you will be required to give an amount not less than N25,000."
             ],
             "example": {
-                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair down.\", \"currency\": \"NGN\", \"is_fixed_amount\": false, \"is_published\": true}'"
+                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair down.\", \"currency\": \"NGN\", \"is_fixed_amount\": false, \"reference\": \"BRD2025001\", \"is_published\": true}'"
             },
             "example2": {
-                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair down.\", \"currency\": \"NGN\", \"is_fixed_amount\": true, \"fixed_amount\": 30000, \"is_published\": true}'"
+                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair down.\", \"currency\": \"NGN\", \"is_fixed_amount\": true, \"fixed_amount\": 30000, \"reference\": \"BRD2025JER01\", \"is_published\": true}'"
             }
         },
         "sections": [
