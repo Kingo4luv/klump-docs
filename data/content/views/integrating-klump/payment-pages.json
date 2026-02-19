@@ -17,10 +17,10 @@
                 "In the case where the is_fixed_amount is true, you will be required to give an amount not less than N25,000."
             ],
             "example": {
-                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair down.\", \"currency\": \"NGN\", \"is_fixed_amount\": false, \"reference\": \"BRD2025001\", \"is_published\": true}'"
+                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\n  \"name\": \"Jerande's 30th Birthday\",\n  \"description\": \"This is a great opportunity to let your hair down.\",\n  \"currency\": \"NGN\",\n  \"is_fixed_amount\": false,\n  \"reference\": \"BRD2025001\",\n  \"is_published\": true\n}'"
             },
             "example2": {
-                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\"name\": \"Jerande's 30th Birthday\", \"description\": \"This is a great opportunity to let your hair down.\", \"currency\": \"NGN\", \"is_fixed_amount\": true, \"fixed_amount\": 30000, \"reference\": \"BRD2025JER01\", \"is_published\": true}'"
+                "code": "curl --location --request POST 'https://api.useklump.com/v1/payment-pages' \\\n    --header 'Content-Type: application/json' \\\n    --header 'klump-secret-key: {{KLUMP_SEC_KEY}}' \\\n    -d '{\n  \"name\": \"Jerande's 30th Birthday\",\n  \"description\": \"This is a great opportunity to let your hair down.\",\n  \"currency\": \"NGN\",\n  \"is_fixed_amount\": true,\n  \"fixed_amount\": 30000,\n  \"reference\": \"BRD2025JER01\",\n  \"is_published\": true\n}'"
             }
         },
         "sections": [
